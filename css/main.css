@@ -22,6 +22,12 @@
 body {
   font-family: "Karla", sans-serif;
   background-color: var(--light-gray);
+
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .container {
@@ -57,7 +63,7 @@ body {
 
 .community p {
   color: var(--grayish-blue);
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 /* plan box */
@@ -97,15 +103,61 @@ body {
   box-shadow: -1px 1px 6px 0px rgba(0, 0, 0, 0.2);
 }
 
- /* Why us section*/
+/* Why us section*/
 
- .why-us{
-   background-color: var(--cyan-lighter);
-   color: var(--white001);
-   border-bottom-left-radius: 5px;
+.why-us {
+  background-color: var(--cyan-lighter);
+  color: var(--white001);
+  border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
- }
+}
 
- .why-us p {
-   color: var(--light-gray);
- }
+.why-us p {
+  color: var(--light-gray);
+}
+
+/* Tablet view */
+@media screen and (min-width: 500px) and (max-width: 700px) {
+  .box {
+    margin: 0 auto;
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+  .box {
+    margin: 0 auto;
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1001px) {
+  .box {
+    padding: 2rem;
+  }
+  .container {
+    width: 700px;
+    margin: 0 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .community {
+    width: 100%;
+  }
+  .plan,
+  .why-us {
+    width: 50%;
+  }
+
+  .plan {
+    border-bottom-left-radius: 5px;
+  }
+
+  .why-us {
+    border-bottom-left-radius: 0px;
+  }
+
+  footer {
+    margin-top: 2rem;
+  }
+}
