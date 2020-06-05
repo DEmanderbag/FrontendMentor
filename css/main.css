@@ -72,7 +72,9 @@ section p {
 .card img {
   align-self: flex-end;
 }
-
+.card:last-child {
+  margin-bottom: 0;
+}
 .color-cyan {
   border-top-color: var(--cyan001);
 }
@@ -85,3 +87,31 @@ section p {
 .color-blue {
   border-top-color: var(--blue001);
 }
+
+/* tablet settings */
+
+@media screen and (min-width: 600px) and (max-width: 980px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  section {
+    max-width: 30rem;
+  }
+
+  .card {
+    width: 45%;
+  }
+
+  .card:nth-child(2),
+  .card:nth-child(4) {
+    margin-right: 1.5rem;
+  }
+
+  .card:last-child {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* laptop settings */
