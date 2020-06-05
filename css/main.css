@@ -71,6 +71,7 @@ section p {
 }
 .card img {
   align-self: flex-end;
+  justify-self: flex-end;
 }
 .card:last-child {
   margin-bottom: 0;
@@ -115,3 +116,49 @@ section p {
 }
 
 /* laptop settings */
+
+@media screen and (min-width: 981px) {
+  body {
+    font-size: 1.025rem;
+  }
+
+  .container {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 50px max-content repeat(4, 1fr) 50px;
+    gap: 3rem;
+  }
+
+  section {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+  }
+
+  section p {
+    width: 35rem;
+    margin: 0 auto;
+  }
+
+  .card {
+    margin-bottom: 0;
+    padding: 2rem;
+  }
+
+  .color-cyan {
+    grid-column: 2 / 4;
+    grid-row: 4 / 6;
+  }
+  .color-red {
+    grid-column: 4 / 6;
+    grid-row: 3 / 5;
+  }
+  .color-orange {
+    grid-column: 4 / 6;
+    grid-row: 5 / 7;
+  }
+  .color-blue {
+    grid-column: 6 / 8;
+    grid-row: 4 / 6;
+  }
+}
