@@ -54,7 +54,7 @@ section p {
   border: none;
   padding: 0.7rem 5.5rem;
   border-radius: 20px;
-
+  background-color: #fff;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   color: var(--violet);
@@ -73,5 +73,5 @@ footer img {
   border-radius: 50%;
   padding: 0.5rem;
   border: 1px solid #fff;
-  
+
 }
