@@ -75,3 +75,8 @@ footer img {
   border: 1px solid #fff;
 
 }
+
+.attribution a {
+  font-family: "Open Sans", sans-serif;
+  color: aliceblue;
+}
