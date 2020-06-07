@@ -340,10 +340,10 @@ footer {
   .special {
     margin: 0 auto;
     top: 92%;
-    left: 35%;
+    left: 31%;
     display: flex;
     flex-direction: column;
-    padding: 3rem;
+    padding: 4rem 6rem;
   }
 
   .special h3 {
@@ -352,5 +352,63 @@ footer {
   .special button {
     padding: 1rem 3rem;
     font-size: 1.125rem;
+  }
+
+  .footer {
+    font-size: 1.125rem;
+  }
+
+  .fo-info {
+    margin-top: 10rem;
+    padding: 0 9rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .footer-logo {
+    width: 100vw;
+  }
+  .footer-logo img {
+    width: 15rem;
+  }
+
+  .test {
+    display: flex;
+    flex-direction: column;
+    width: 33.333%;
+    font-size: 1.25rem;
+
+  }
+
+  .additional-links {
+    margin: 0;
+    display: flex;
+    width: 33.333%;
+  }
+
+  .another-box {
+    width: 100%;
+  }
+
+  .another-box a {
+    font-size: 1.25rem;
+  }
+
+  .social {
+    align-self: flex-start;
+    width: 33.333%;
+  }
+
+  .social img {
+    width: 2.5rem;
+  }
+
+  .copyright {
+    width: 100%;
+    text-align: right;
+    margin-bottom: 2rem;
+  }
+
+  .credit {
+    margin: 0 auto;
   }
 }
