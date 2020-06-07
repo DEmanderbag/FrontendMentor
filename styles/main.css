@@ -22,7 +22,7 @@ body {
 }
 
 header {
-  background-color: teal;
+  background-color: var(--very-pale-cyan);
 }
 
 nav {
@@ -38,7 +38,7 @@ nav img {
 
 nav button {
   margin-left: auto;
-  background-color: var(--very-pale-cyan);
+  background-color: #fff;
 }
 
 nav button a {
@@ -66,7 +66,6 @@ a {
 
 /* Ending of repeating elements */
 
-
 .about {
   padding: 1.5rem;
   text-align: center;
@@ -84,7 +83,7 @@ a {
 
 .about button {
   background-color: var(--very-pink-pink);
-  padding: .7rem 1.75rem;
+  padding: 0.7rem 1.75rem;
 }
 .about button a {
   color: var(--very-pale-cyan);
@@ -92,4 +91,37 @@ a {
 }
 .site-illustration {
   padding: 2rem;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  background-color: #f5f5f5;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.illustration {
+  margin-bottom: 1.5rem;
+}
+
+.about-topic {
+  text-align: center;
+}
+
+.about-topic h2 {
+  color: var(--very-dark-cyan);
+  margin-bottom: 1rem;
+}
+
+.about-topic p {
+  color: var(--grayish-blue);
 }
