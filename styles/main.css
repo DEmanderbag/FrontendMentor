@@ -11,11 +11,6 @@
   --grayish-blue: hsl(208, 11%, 55%);
 }
 
-/* 
-font-family: 'Open Sans', sans-serif;
-font-family: 'Poppins', sans-serif; 
-*/
-
 body {
   font-size: 0.875rem;
   font-family: "Open Sans", sans-serif;
@@ -108,10 +103,9 @@ a {
   margin-bottom: 2rem;
 }
 
-.card:nth-child(3){
+.card:nth-child(3) {
   margin-bottom: 8rem;
 }
-
 
 .illustration {
   margin-bottom: 1.5rem;
@@ -143,7 +137,6 @@ a {
   background-color: var(--very-pink-pink);
   align-self: center;
   padding: 0.7rem 1.75rem;
-
 }
 
 .special button a {
@@ -166,11 +159,9 @@ footer {
 }
 
 .footer-logo {
-  margin-bottom: 1rem;
   width: 10rem;
   margin-bottom: 1.25rem;
 }
-
 
 .location,
 .telephone,
@@ -196,7 +187,7 @@ footer {
   margin-bottom: 1.25rem;
 }
 
-.another{
+.another {
   width: 87%;
 }
 .box a {
@@ -219,13 +210,12 @@ footer {
   margin-bottom: 1rem;
 }
 
-
 .social img {
   width: 2.125rem;
   margin-right: 1.5rem;
   border: 1px solid var(--very-pale-cyan);
   border-radius: 50%;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 .copyright {
@@ -240,4 +230,127 @@ footer {
 
 .credit a {
   color: var(--grayish-blue);
+}
+
+@media screen and (min-width: 1000px) {
+  header {
+    height: 100vh;
+  }
+  nav {
+    padding: 3rem 6rem;
+    margin-bottom: 2rem;
+  }
+
+  nav img {
+    width: 10rem;
+  }
+
+  nav button {
+    padding: 1rem 4rem;
+  }
+
+  .container {
+    display: flex;
+    padding: 0 6rem;
+  }
+
+  .about {
+    width: 30%;
+    padding: 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 3rem;
+  }
+
+  .about h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    line-height: 1.5;
+  }
+
+  .about h3 {
+    font-weight: 400;
+    width: 28rem;
+    line-height: 1.5;
+    margin-bottom: 2.125rem;
+  }
+
+  .about button {
+    align-self: flex-start;
+    padding: 1rem 3rem;
+  }
+  .site-illustration {
+    width: 60%;
+    margin-left: auto;
+  }
+
+  .main-content {
+    padding: 4rem 9rem;
+    background-color: #f5f5f5;
+    position: relative;
+  }
+  .card {
+    padding: 2rem;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .about-topic {
+    width: 50%;
+    padding: 0 6rem;
+  }
+
+  .about-topic h2 {
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  .about-topic p {
+    font-size: 1.125rem;
+    text-align: left;
+    line-height: 1.75;
+    width: 85%;
+  }
+  .illustration {
+    width: 30rem;
+    margin-left: auto;
+    margin-right: 5rem;
+  }
+  .order {
+    order: 1;
+  }
+
+  .special-card .illustration {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .special-card {
+    padding-left: 6rem;
+  }
+
+  .special-card .about-topic {
+    margin-left: auto;
+  }
+
+  .special {
+    margin: 0 auto;
+    top: 92%;
+    left: 35%;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+  }
+
+  .special h3 {
+    font-size: 2rem;
+  }
+  .special button {
+    padding: 1rem 3rem;
+    font-size: 1.125rem;
+  }
 }
