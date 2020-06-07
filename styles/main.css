@@ -233,9 +233,6 @@ footer {
 }
 
 @media screen and (min-width: 1000px) {
-  header {
-    height: 100vh;
-  }
   nav {
     padding: 3rem 6rem;
     margin-bottom: 2rem;
