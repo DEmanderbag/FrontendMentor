@@ -6,11 +6,171 @@
 
 :root {
   --strong-cyan: hsl(171, 66%, 44%);
+  --strong-cyan-dark: hsl(171, 64%, 34%);
   --light-blue: hsl(233, 100%, 69%);
+  --light-blue-dark: hsl(233, 100%, 63%);
   --dark-blue: hsl(210, 10%, 33%);
   --light-gray: hsl(201, 11%, 66%);
+  --bg-gray: hsl(201, 11%, 95%);
 }
 
 body {
   font-family: "Bai Jamjuree", sans-serif;
+}
+
+header {
+  background-image: url(/images/bg-header-mobile.png);
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+header,
+section,
+footer {
+  padding: 2.25rem 1.5rem;
+}
+
+.logo {
+  margin: 2rem 0;
+}
+
+header h1 {
+  text-align: center;
+}
+
+h1,
+h2 {
+  color: var(--dark-blue);
+  margin-bottom: 1rem;
+}
+
+p {
+  color: var(--light-gray);
+  font-weight: 400;
+}
+header p {
+  text-align: center;
+  padding: 0 0.4rem;
+  margin-bottom: 2rem;
+}
+
+.cta-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cta-section button:first-child {
+  margin-bottom: 1.25rem;
+  background-color: var(--strong-cyan);
+  border-bottom: 3px solid var(--strong-cyan-dark);
+}
+
+button {
+  font-weight: 400;
+  color: #fff;
+  font-size: 1.0625rem;
+  border: none;
+  padding: 1rem 5rem;
+  border-radius: 50px;
+}
+
+button:last-of-type {
+  background-color: var(--light-blue);
+  border-bottom: 3px solid var(--light-blue-dark);
+}
+
+section {
+}
+
+section h2 {
+  text-align: center;
+}
+
+section p {
+  text-align: center;
+  padding: 0 0.8rem;
+  margin-bottom: 3rem;
+}
+
+section img {
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+
+.workflow-features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.workflow-features img {
+  width: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.partners {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.partners-logo {
+  width: 80%;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.partners-logo img {
+  width: 6rem;
+  margin-bottom: 0;
+}
+
+.download {
+  margin: 3rem 0;
+}
+
+footer {
+  background-color: var(--bg-gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer img {
+  width: 3rem;
+  margin-bottom: 2rem;
+}
+
+footer p {
+  margin-bottom: 1rem;
+}
+footer a {
+  text-decoration: none;
+  color: var(--dark-blue);
+}
+
+.social {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.social-logo {
+  margin-right: 2.5rem;
+}
+
+.social-logo img {
+  width: 1.5rem;
+}
+
+.social-logo:last-child {
+  margin-right: 0;
 }
