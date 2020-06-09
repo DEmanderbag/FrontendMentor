@@ -5,6 +5,7 @@
 }
 
 :root {
+  /* colors */
   --strong-cyan: hsl(171, 66%, 44%);
   --strong-cyan-dark: hsl(171, 64%, 34%);
   --light-blue: hsl(233, 100%, 69%);
@@ -12,6 +13,13 @@
   --dark-blue: hsl(210, 10%, 33%);
   --light-gray: hsl(201, 11%, 66%);
   --bg-gray: hsl(201, 11%, 95%);
+
+  /* margin variable */
+  --margin-1: 1rem;
+  --margin-125: 1.25rem;
+  --margin-2: 2rem;
+  --margin-25: 2.5rem;
+  --margin-3: 3rem;
 }
 
 body {
@@ -20,12 +28,13 @@ body {
 
 header {
   background-image: url(/images/bg-header-mobile.png);
+  background-size: contain;
   background-repeat: no-repeat;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 3rem;
+  margin-bottom: var(--margin-3);
 }
 
 header,
@@ -35,39 +44,23 @@ footer {
 }
 
 .logo {
-  margin: 2rem 0;
+  margin: var(--margin-2) 0;
 }
 
 header h1 {
   text-align: center;
 }
 
+/* global styles */
 h1,
 h2 {
   color: var(--dark-blue);
-  margin-bottom: 1rem;
+  margin-bottom: var(--margin-1);
 }
 
 p {
   color: var(--light-gray);
   font-weight: 400;
-}
-header p {
-  text-align: center;
-  padding: 0 0.4rem;
-  margin-bottom: 2rem;
-}
-
-.cta-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.cta-section button:first-child {
-  margin-bottom: 1.25rem;
-  background-color: var(--strong-cyan);
-  border-bottom: 3px solid var(--strong-cyan-dark);
 }
 
 button {
@@ -77,6 +70,26 @@ button {
   border: none;
   padding: 1rem 5rem;
   border-radius: 50px;
+}
+
+/* mobile styles */
+
+header p {
+  text-align: center;
+  padding: 0 0.4rem;
+  margin-bottom: var(--margin-2);
+}
+
+.cta-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cta-section button:first-child {
+  margin-bottom: var(--margin-125);
+  background-color: var(--strong-cyan);
+  border-bottom: 3px solid var(--strong-cyan-dark);
 }
 
 button:last-of-type {
@@ -94,12 +107,12 @@ section h2 {
 section p {
   text-align: center;
   padding: 0 0.8rem;
-  margin-bottom: 3rem;
+  margin-bottom: var(--margin-3);
 }
 
 section img {
   width: 100%;
-  margin-bottom: 2.5rem;
+  margin-bottom: var(--margin-25);
 }
 
 .workflow-features {
@@ -110,7 +123,7 @@ section img {
 
 .workflow-features img {
   width: 2.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: var(--margin-2);
 }
 
 .partners {
@@ -134,7 +147,7 @@ section img {
 }
 
 .download {
-  margin: 3rem 0;
+  margin: var(--margin-3) 0;
 }
 
 footer {
@@ -147,11 +160,11 @@ footer {
 
 footer img {
   width: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: var(--margin-2);
 }
 
 footer p {
-  margin-bottom: 1rem;
+  margin-bottom: var(--margin-1);
 }
 footer a {
   text-decoration: none;
@@ -160,11 +173,11 @@ footer a {
 
 .social {
   display: flex;
-  margin-top: 2rem;
+  margin-top: var(--margin-2);
 }
 
 .social-logo {
-  margin-right: 2.5rem;
+  margin-right: var(--margin-25);
 }
 
 .social-logo img {
