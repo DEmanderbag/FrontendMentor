@@ -167,6 +167,7 @@ footer img {
 
 footer p {
   margin-bottom: var(--margin-1);
+  text-align: center;
 }
 footer a {
   text-decoration: none;
@@ -185,9 +186,25 @@ footer a {
 .social-logo img {
   width: 1.5rem;
 }
-
 .social-logo:last-child {
   margin-right: 0;
+}
+.icon {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  background-size: cover;
+}
+
+.facebook {
+  background-image: url(/images/footer-facebook.svg);
+}
+.twitter {
+  background-image: url(/images/twitter.svg);
+  width: 2rem;
+}
+.instagram {
+  background-image: url(/images/icon-instagram.svg);
 }
 
 .second-footer {
@@ -376,6 +393,10 @@ footer a {
   .link-three {
     align-self: flex-start;
   }
+
+  footer p {
+    text-align: left;
+  }
   footer p a {
     font-weight: 600;
   }
@@ -386,21 +407,36 @@ footer a {
   }
   .social-logo {
     margin: 0 0.7rem;
+    display: inline-block;
   }
 
   .social-logo img:hover {
     background-color: var(--cyan-hover);
   }
 
-
   .second-footer p {
     color: var(--dark-blue);
     font-weight: 600;
   }
 
-  .second-footer a{
+  .second-footer a {
     text-decoration: none;
   }
   .second-footer a:hover {
     color: var(--cyan-hover);
+  }
+
+  .facebook:hover,
+  .facebook:focus {
+    background-image: url(/images/footer-facebook-hover.svg);
+  }
+  .twitter:hover,
+  .twitter:focus {
+    background-image: url(/images/twitter-hover.svg);
+  }
+
+  .instagram:hover,
+  .instagram:focus {
+    background-image: url(/images/icon-instagram-hover.svg);
+  }
 }
