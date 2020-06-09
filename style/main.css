@@ -190,6 +190,17 @@ footer a {
   margin-right: 0;
 }
 
+.second-footer {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  background-color: var(--bg-gray);
+}
+
+.second-footer p {
+  width: 70%;
+  text-align: center;
+}
 /* Desktop version */
 
 @media screen and (min-width: 1000px) {
@@ -381,11 +392,6 @@ footer a {
     background-color: var(--cyan-hover);
   }
 
-  .second-footer {
-    background-color: var(--bg-gray);
-    display: flex;
-    justify-content: center;
-  }
 
   .second-footer p {
     color: var(--dark-blue);
