@@ -14,6 +14,9 @@
   --light-gray: hsl(201, 11%, 66%);
   --bg-gray: hsl(201, 11%, 95%);
 
+  /* hover colors */
+  --cyan-hover: hsl(171, 66%, 50%);
+  --blue-hover: hsl(233, 100%, 75%);
   /* margin variable */
   --margin-1: 1rem;
   --margin-125: 1.25rem;
@@ -28,7 +31,7 @@ body {
 
 header {
   background-image: url(/images/bg-header-mobile.png);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 
   display: flex;
@@ -97,11 +100,10 @@ button:last-of-type {
   border-bottom: 3px solid var(--light-blue-dark);
 }
 
-section {
-}
-
 section h2 {
   text-align: center;
+  width: 80%;
+  margin: 0 auto 1rem auto;
 }
 
 section p {
@@ -186,4 +188,213 @@ footer a {
 
 .social-logo:last-child {
   margin-right: 0;
+}
+
+/* Desktop version */
+
+@media screen and (min-width: 1000px) {
+  /* global */
+  section {
+    padding: 0;
+  }
+  /* header section */
+  header {
+    background-image: url(/images/bg-header-desktop.png);
+    padding-top: 10rem;
+  }
+
+  header h1 {
+    font-size: 3rem;
+  }
+
+  header p {
+    width: 42rem;
+    font-size: 1.25rem;
+    padding: 0;
+  }
+
+  .cta-section {
+    flex-direction: row;
+    margin-bottom: var(--margin-3);
+  }
+
+  button {
+    padding: 1rem 3rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .cta-section button:first-child {
+    margin-bottom: 0;
+    margin-right: var(--margin-125);
+  }
+
+  .cta-section button:first-child:hover {
+    background-color: var(--cyan-hover);
+  }
+
+  .cta-section button:last-child:hover {
+    background-color: var(--blue-hover);
+  }
+  /* about-section */
+  section h2 {
+    font-size: 2rem;
+    margin-bottom: var(--margin-125);
+  }
+
+  .special-size {
+    width: 40rem;
+    margin: 0 auto 4rem auto;
+  }
+
+  .about-features {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 6rem;
+  }
+  .box {
+    width: 45%;
+    overflow: hidden;
+  }
+  .box img {
+    margin-left: -7rem;
+    margin-bottom: 0;
+    width: 100%;
+  }
+
+  .feature {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .feature-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 0 2rem 2rem;
+  }
+
+  .feature-box h2 {
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .feature-box p {
+    padding: 0;
+    width: 22rem;
+    text-align: left;
+    margin: 0;
+  }
+
+  .image-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+  }
+  .image-size {
+    width: 55rem;
+    margin: 0;
+  }
+
+  .different-size {
+    border: 3px solid orchid;
+    width: 40rem;
+    margin: 0 auto 5rem auto;
+    font-size: 1.025rem;
+  }
+
+  .features-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10rem;
+  }
+  .workflow-features {
+    width: 25%;
+  }
+
+  .workflow-features p {
+    width: 26rem;
+    margin-bottom: 0;
+  }
+
+  .partners {
+    flex-direction: row;
+    margin-bottom: 10rem;
+  }
+
+  .partners-logo img {
+    width: 9rem;
+    margin-bottom: 0;
+  }
+
+  .download p {
+    width: 40rem;
+    margin: 0 auto;
+  }
+
+  .download .cta-section {
+    margin: 4rem 0 6rem 0;
+    justify-content: center;
+  }
+
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2.5rem 7rem;
+  }
+
+  footer a:hover {
+    color: var(--cyan-hover);
+  }
+  .about-link {
+    display: flex;
+    width: 50%;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .link-one,
+  .link-two {
+    margin-right: 5rem;
+  }
+
+  .link-three {
+    align-self: flex-start;
+  }
+  footer p a {
+    font-weight: 600;
+  }
+
+  .social {
+    margin: 0;
+    align-self: flex-start;
+  }
+  .social-logo {
+    margin: 0 0.7rem;
+  }
+
+  .social-logo img:hover {
+    background-color: var(--cyan-hover);
+  }
+
+  .second-footer {
+    background-color: var(--bg-gray);
+    display: flex;
+    justify-content: center;
+  }
+
+  .second-footer p {
+    color: var(--dark-blue);
+    font-weight: 600;
+  }
+
+  .second-footer a{
+    text-decoration: none;
+  }
+  .second-footer a:hover {
+    color: var(--cyan-hover);
 }
