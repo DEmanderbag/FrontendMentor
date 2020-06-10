@@ -62,10 +62,10 @@ header {
   margin-bottom: 4rem;
 
   /* TODO: Work on this when it gets darker, I literary can't see because of all the light*/
-  /* background-image: url(/images/bg-curvy-mobile.svg);
+  background-image: url(/images/bg-curvy-mobile.svg);
   background-repeat: no-repeat;
   background-size: contain;
-  background-position-y: 70%; */
+  background-position-y: 39%;
 }
 
 nav,
@@ -263,7 +263,7 @@ ul li:last-child {
 .card-avatar img {
   width: 2.5rem;
   border-radius: 50%;
-  margin-right: 0.5rem;
+  margin-right: 0.7rem;
 }
 
 .card-user > p:first-child {
