@@ -52,7 +52,16 @@ a {
 }
 
 button {
+  font-weight: 700;
+  border: none;
   color: var(--white);
+  background-image: linear-gradient(
+    45deg,
+    hsl(176, 68%, 64%) 0%,
+    hsl(198, 60%, 50%) 60%,
+    hsl(198, 60%, 50%) 100%
+  );
+  border-radius: 50px;
 }
 /* header styles */
 
@@ -60,8 +69,6 @@ header {
   padding-top: 2rem;
   background-color: var(--dark-blue-email);
   margin-bottom: 4rem;
-
-  /* TODO: Work on this when it gets darker, I literary can't see because of all the light*/
   background-image: url(/images/bg-curvy-mobile.svg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -128,16 +135,7 @@ ul li:last-child {
 }
 
 .introduction button {
-  border: none;
-  background-image: linear-gradient(
-    45deg,
-    hsl(176, 68%, 64%) 0%,
-    hsl(198, 60%, 50%) 60%,
-    hsl(198, 60%, 50%) 100%
-  );
-  font-weight: 700;
   padding: 1rem 6rem;
-  border-radius: 50px;
 }
 
 /* features section */
@@ -219,6 +217,7 @@ ul li:last-child {
 .testimonials {
   padding: 0 1.5rem;
   position: relative;
+  margin-bottom: 15rem;
 }
 
 .testimonials::before {
@@ -269,4 +268,46 @@ ul li:last-child {
 .card-user > p:first-child {
   margin-bottom: 0.3rem;
   font-weight: 700;
+}
+
+.sign-up {
+  padding: 1rem;
+  background-color: var(--dark-blue-footer);
+}
+
+.sign-up-card {
+  border-radius: 10px;
+  background-color: var(--dark-blue-email);
+  padding: 2rem;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sign-up-card h3 {
+  margin-bottom: 1.5rem;
+}
+
+.sign-up-card p {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.sign-up-card button {
+  width: 100%;
+  padding: 1rem 0;
+}
+
+input[type='email'] {
+  border: none;
+  padding: 1rem;
+  border-radius: 50px;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+footer {
+  border: 2px solid red;
+  background-color: var(--dark-blue-footer);
 }
