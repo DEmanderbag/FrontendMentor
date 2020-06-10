@@ -67,12 +67,8 @@ button {
 
 header {
   padding-top: 2rem;
-  background-color: var(--dark-blue-email);
+  background-color: var(--dark-blue-main);
   margin-bottom: 4rem;
-  background-image: url(/images/bg-curvy-mobile.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position-y: 50%;
 }
 
 nav,
@@ -165,7 +161,7 @@ ul li:last-child {
 }
 
 .about {
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -183,7 +179,7 @@ ul li:last-child {
 }
 
 .about p {
-  width: 86%;
+  width: 91%;
   margin-bottom: 1rem;
 }
 
@@ -194,6 +190,9 @@ ul li:last-child {
   align-items: flex-start;
 }
 
+.about-text {
+  padding: 0 0 0 1.5rem;
+}
 .about-link {
   display: flex;
   border-bottom: 1px solid var(--cyan);
@@ -216,11 +215,11 @@ ul li:last-child {
 /* testimonials section */
 .testimonials {
   padding: 0 1.5rem;
-  position: relative;
+
   margin-bottom: 6rem;
 }
 
-.testimonials::before {
+.testimonials-card:first-child::before {
   position: absolute;
   content: "";
   background-image: url(/images/bg-quotes.png);
@@ -229,10 +228,10 @@ ul li:last-child {
   width: 2rem;
   height: 2rem;
   top: -1.6rem;
-  left: 2rem;
 }
 
 .testimonials-card {
+  position: relative;
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
@@ -371,7 +370,7 @@ footer {
   margin-right: 2rem;
   border-radius: 50%;
   border: 1px solid var(--white);
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 .credit {
@@ -384,4 +383,173 @@ footer {
 
 .credit a {
   color: var(--cyan);
+}
+
+@media screen and (min-width: 1000px) {
+  header {
+    padding-top: 0;
+    background-image: none;
+    background-color: var(--dark-blue-main);
+  }
+
+  nav {
+    padding: 5rem;
+  }
+  .logo img {
+    width: 10rem;
+  }
+  ul li {
+    display: inline-block;
+    margin-right: 3rem;
+    font-weight: 700;
+  }
+  ul li:last-child {
+    margin-right: 0;
+  }
+
+  .illustration {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
+  .illustration img {
+    width: 45%;
+    margin-bottom: 5rem;
+  }
+  .introduction {
+    margin-bottom: 10rem;
+  }
+
+  .introduction h1,
+  .introduction h3 {
+    width: 30rem;
+    margin: 0 auto 2rem auto;
+  }
+
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-bottom: 10rem;
+  }
+
+  .feature-card {
+    width: 40%;
+    margin: 0 auto;
+  }
+
+  .feature-card p {
+    width: 28rem;
+  }
+
+  .feature-card:nth-child(1),
+  .feature-card:nth-child(2) {
+    margin-bottom: 5rem;
+  }
+
+  .about {
+    flex-direction: row;
+    padding: 0 3rem;
+    max-width: 1240px;
+    margin: 0 auto 10rem auto;
+  }
+
+  .about-img {
+    width: 45%;
+  }
+
+  .about-text {
+    margin-left: 3rem;
+  }
+  .about-text h3 {
+    font-size: 2rem;
+    width: 20rem;
+  }
+
+  .testimonials {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10rem;
+  }
+
+  .testimonials-card {
+    width: 25%;
+    margin-bottom: 10rem;
+    margin-right: 3rem;
+    padding: 2rem;
+  }
+  .testimonials-card:last-child {
+    margin-right: 0;
+    margin-bottom: 10rem;
+  }
+  .testimonials-card:first-child::before {
+    width: 3rem;
+    height: 3rem;
+    top: -1.7rem;
+    left: -0.8rem;
+  }
+  
+  .sign-up {
+    width: 60rem;
+    margin: 0 auto;
+  }
+
+  .sign-up h3 {
+    font-size: 2rem;
+  }
+  .sign-up p {
+    width: 40rem;
+  }
+  .group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+  }
+
+  input[type="email"]{
+    margin-bottom: 0;
+    margin-right: 2rem;
+  }
+  
+  .group button {
+    flex-shrink: 2;
+  }
+  .sign-up-card{
+    transform: translateY(-50%);
+  }
+
+  footer {
+    padding: 0 5rem;
+    margin: 0 auto;
+  }
+  .group-footer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .footer-logo {
+    width: 100%;
+  }
+  .map {
+    width: 25%;
+    margin-right: 5rem;
+  }
+  .group-box {
+    width: 25%;
+  }
+
+  .additional-links {
+    margin-top: 0;
+    display: flex;
+    width: 25%;
+  }
+
+  .another-box:first-child {
+    margin-right: 5rem;
+  }
+
+  .social {
+    justify-self: flex-end;
+  }
 }
