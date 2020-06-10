@@ -17,17 +17,9 @@
   /* colors */
   --white: hsl(0, 0%, 100%);
   --cyan: hsl(176, 68%, 64%);
+  --cyan-hover: hsl(176, 68%, 40%);
   --blue: hsl(198, 60%, 50%);
-  /* gradient */
-
-  /* background-image: linear-gradient(45deg, hsl(176, 68%, 64%) 2%, hsl(198, 60%, 50%) 99%, hsl(198, 60%, 50%) 100%); */
 }
-
-/* Body
-font-family: 'Open Sans', sans-serif; */
-
-/* Headings, Call-to-actions, Header Navigation
-font-family: 'Raleway', sans-serif;  */
 
 body {
   font-size: 14px;
@@ -386,6 +378,18 @@ footer {
 }
 
 @media screen and (min-width: 1000px) {
+  button {
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-image: linear-gradient(
+      45deg,
+      hsl(176, 68%, 50%) 0%,
+      hsl(198, 60%, 40%) 60%,
+      hsl(198, 60%, 40%) 100%
+    );
+  }
   header {
     padding-top: 0;
     background-image: none;
@@ -403,6 +407,11 @@ footer {
     margin-right: 3rem;
     font-weight: 700;
   }
+
+  ul li a:hover {
+    color: var(--cyan);
+  }
+
   ul li:last-child {
     margin-right: 0;
   }
@@ -467,6 +476,14 @@ footer {
     width: 20rem;
   }
 
+  .about-link a:hover {
+    color: var(--cyan-hover);
+  }
+
+  .about-link:hover {
+    border-bottom: 1px solid var(--cyan-hover);
+  }
+
   .testimonials {
     display: flex;
     justify-content: center;
@@ -489,7 +506,7 @@ footer {
     top: -1.7rem;
     left: -0.8rem;
   }
-  
+
   .sign-up {
     width: 60rem;
     margin: 0 auto;
@@ -508,15 +525,15 @@ footer {
     width: 80%;
   }
 
-  input[type="email"]{
+  input[type="email"] {
     margin-bottom: 0;
     margin-right: 2rem;
   }
-  
+
   .group button {
     flex-shrink: 2;
   }
-  .sign-up-card{
+  .sign-up-card {
     transform: translateY(-50%);
   }
 
@@ -551,5 +568,9 @@ footer {
 
   .social {
     justify-self: flex-end;
+  }
+
+  footer a:hover {
+    color: var(--cyan);
   }
 }
