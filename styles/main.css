@@ -18,11 +18,9 @@
   --white: hsl(0, 0%, 100%);
   --cyan: hsl(176, 68%, 64%);
   --blue: hsl(198, 60%, 50%);
-}
+  /* gradient */
 
-body {
-  font-size: 14px;
-  font-family: "Open Sans", sans-serif;
+  /* background-image: linear-gradient(45deg, hsl(176, 68%, 64%) 2%, hsl(198, 60%, 50%) 99%, hsl(198, 60%, 50%) 100%); */
 }
 
 /* Body
@@ -30,3 +28,112 @@ font-family: 'Open Sans', sans-serif; */
 
 /* Headings, Call-to-actions, Header Navigation
 font-family: 'Raleway', sans-serif;  */
+
+body {
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--dark-blue-main);
+}
+
+nav,
+h1,
+h3 {
+  font-family: "Raleway", sans-serif;
+}
+/* global styles */
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* header styles */
+
+header {
+  padding-top: 3rem;
+  background-color: var(--dark-blue-email);
+  margin-bottom: 3rem;
+
+  /* TODO: Work on this when it gets darker, I literary can't see because of all the light*/
+  /* background-image: url(/images/bg-curvy-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-y: 70%; */
+}
+
+nav,
+.illustration,
+.introduction {
+  padding: 0 1rem;
+}
+nav {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.logo img {
+  width: 6rem;
+}
+
+ul li {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+li a {
+  color: var(--white);
+}
+
+ul li:last-child {
+  margin-right: 0;
+}
+
+.illustration {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.illustration img {
+  width: 80%;
+}
+
+.introduction {
+  background-color: var(--dark-blue-main);
+  color: var(--white);
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+.introduction h3 {
+  font-weight: 400;
+  line-height: 1.5;
+}
+.introduction h1,
+.introduction h3 {
+  margin-bottom: 1.5rem;
+}
+
+.introduction button {
+  border: none;
+  background-image: linear-gradient(
+    45deg,
+    hsl(176, 68%, 64%) 0%,
+    hsl(198, 60%, 50%) 60%,
+    hsl(198, 60%, 50%) 100%
+  );
+  color: var(--white);
+  font-weight: 700;
+  padding: 1rem 6rem;
+  border-radius: 50px;
+}
