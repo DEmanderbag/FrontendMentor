@@ -33,6 +33,7 @@ body {
   font-size: 14px;
   font-family: "Open Sans", sans-serif;
   background-color: var(--dark-blue-main);
+  color: var(--white);
 }
 
 nav,
@@ -50,12 +51,15 @@ a {
   text-decoration: none;
 }
 
+button {
+  color: var(--white);
+}
 /* header styles */
 
 header {
   padding-top: 2rem;
   background-color: var(--dark-blue-email);
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 
   /* TODO: Work on this when it gets darker, I literary can't see because of all the light*/
   /* background-image: url(/images/bg-curvy-mobile.svg);
@@ -110,7 +114,6 @@ ul li:last-child {
 
 .introduction {
   background-color: var(--dark-blue-main);
-  color: var(--white);
   text-align: center;
   margin: 0 auto;
 }
@@ -133,8 +136,30 @@ ul li:last-child {
     hsl(198, 60%, 50%) 60%,
     hsl(198, 60%, 50%) 100%
   );
-  color: var(--white);
   font-weight: 700;
   padding: 1rem 6rem;
   border-radius: 50px;
+}
+
+/* features section */
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.feature-card img {
+  margin-bottom: 1.5rem;
+}
+
+.feature-card h2 {
+  margin-bottom: 1rem;
+  padding: 0 2.5rem;
+}
+
+.feature-card p {
+  text-align: center;
+  padding: 0 3rem;
 }
