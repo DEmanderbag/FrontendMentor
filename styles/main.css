@@ -118,7 +118,6 @@ ul li:last-child {
   margin: 0 auto;
 }
 
-
 .introduction h3 {
   font-weight: 400;
   line-height: 1.5;
@@ -142,6 +141,9 @@ ul li:last-child {
 }
 
 /* features section */
+.features {
+  margin-bottom: 4rem;
+}
 .feature-card {
   display: flex;
   flex-direction: column;
@@ -161,5 +163,54 @@ ul li:last-child {
 
 .feature-card p {
   text-align: center;
-  padding: 0 3rem;
+  padding: 0 1.8rem;
+}
+
+.about {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-direction: column;
+}
+
+.about img {
+  width: 80%;
+  margin-bottom: 2rem;
+}
+
+.about h3 {
+  margin-bottom: 1rem;
+}
+
+.about p {
+  width: 86%;
+  margin-bottom: 1rem;
+}
+
+.about-link-box {
+  width: 86%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.about-link {
+  display: flex;
+  border-bottom: 1px solid var(--cyan);
+  padding-bottom: 0.3rem;
+}
+
+.about-link p {
+  width: auto;
+  margin: 0 0.5rem 0 0;
+}
+
+.about-link a {
+  color: var(--cyan);
+}
+.about-link img {
+  width: 1.25rem;
+  margin: 0;
 }
