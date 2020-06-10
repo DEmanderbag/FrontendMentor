@@ -217,7 +217,7 @@ ul li:last-child {
 .testimonials {
   padding: 0 1.5rem;
   position: relative;
-  margin-bottom: 15rem;
+  margin-bottom: 6rem;
 }
 
 .testimonials::before {
@@ -232,9 +232,6 @@ ul li:last-child {
   left: 2rem;
 }
 
-.testimonials p {
-  font-size: 0.8rem;
-}
 .testimonials-card {
   padding: 2rem 1rem;
   display: flex;
@@ -242,6 +239,10 @@ ul li:last-child {
   background-color: var(--dark-blue-testimonials);
   border-radius: 10px;
   margin-bottom: 2rem;
+}
+
+.testimonials-card:last-child {
+  margin-bottom: 0;
 }
 .card-comment {
   margin-bottom: 1rem;
@@ -272,14 +273,13 @@ ul li:last-child {
 
 .sign-up {
   padding: 1rem;
-  background-color: var(--dark-blue-footer);
 }
 
 .sign-up-card {
   border-radius: 10px;
   background-color: var(--dark-blue-email);
   padding: 2rem;
-  transform: translateY(-50%);
+  transform: translateY(-25%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -299,7 +299,7 @@ ul li:last-child {
   padding: 1rem 0;
 }
 
-input[type='email'] {
+input[type="email"] {
   border: none;
   padding: 1rem;
   border-radius: 50px;
@@ -308,6 +308,79 @@ input[type='email'] {
 }
 
 footer {
-  border: 2px solid red;
+  padding: 0 1rem;
   background-color: var(--dark-blue-footer);
+}
+
+.footer-logo,
+.map,
+.box,
+.additional-links,
+.social {
+  padding: 0 2rem;
+}
+
+.footer-logo {
+  margin-bottom: 2rem;
+}
+
+.map {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.box {
+  margin-bottom: 1rem;
+}
+
+.box a {
+  color: var(--white);
+}
+.map img {
+  align-self: flex-start;
+}
+
+.map img,
+.box img {
+  margin-right: 1.5rem;
+}
+
+.additional-links {
+  margin-top: 2.5rem;
+}
+
+.another-box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.another-box a {
+  margin-bottom: 1rem;
+  color: var(--white);
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+}
+
+.social img {
+  width: 2rem;
+  margin-right: 2rem;
+  border-radius: 50%;
+  border: 1px solid var(--white);
+  padding: .5rem;
+}
+
+.credit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark-blue-footer);
+  padding: 2rem;
+}
+
+.credit a {
+  color: var(--cyan);
 }
