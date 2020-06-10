@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* intro and email sign up background */
+  --dark-blue-email: hsl(217, 28%, 15%);
+  /* main background */
+  --dark-blue-main: hsl(218, 28%, 13%);
+  /* footer background */
+  --dark-blue-footer: hsl(216, 53%, 9%);
+  /* testimonials background */
+  --dark-blue-testimonials: hsl(219, 30%, 18%);
+
+  /* colors */
+  --white: hsl(0, 0%, 100%);
+  --cyan: hsl(176, 68%, 64%);
+  --blue: hsl(198, 60%, 50%);
+}
+
+body {
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Body
+font-family: 'Open Sans', sans-serif; */
+
+/* Headings, Call-to-actions, Header Navigation
+font-family: 'Raleway', sans-serif;  */
