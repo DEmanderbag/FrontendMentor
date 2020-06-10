@@ -367,6 +367,7 @@ footer {
 
 .social img {
   width: 2rem;
+  height: 2rem;
   margin-right: 2rem;
   border-radius: 50%;
   border: 1px solid var(--white);
