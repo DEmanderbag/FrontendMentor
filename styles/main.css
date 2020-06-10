@@ -84,7 +84,7 @@ nav {
 }
 
 .logo img {
-  width: 6rem;
+  width: 5rem;
 }
 
 ul li {
@@ -171,7 +171,7 @@ ul li:last-child {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 6rem;
   flex-direction: column;
 }
 
@@ -213,4 +213,60 @@ ul li:last-child {
 .about-link img {
   width: 1.25rem;
   margin: 0;
+}
+
+/* testimonials section */
+.testimonials {
+  padding: 0 1.5rem;
+  position: relative;
+}
+
+.testimonials::before {
+  position: absolute;
+  content: "";
+  background-image: url(/images/bg-quotes.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 2rem;
+  height: 2rem;
+  top: -1.6rem;
+  left: 2rem;
+}
+
+.testimonials p {
+  font-size: 0.8rem;
+}
+.testimonials-card {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--dark-blue-testimonials);
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+.card-comment {
+  margin-bottom: 1rem;
+}
+
+.card-comment p {
+  font-weight: 400;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+}
+
+.card-avatar {
+  width: fit-content;
+}
+.card-avatar img {
+  width: 2.5rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.card-user > p:first-child {
+  margin-bottom: 0.3rem;
+  font-weight: 700;
 }
