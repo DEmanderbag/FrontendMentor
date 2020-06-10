@@ -53,7 +53,7 @@ a {
 /* header styles */
 
 header {
-  padding-top: 3rem;
+  padding-top: 2rem;
   background-color: var(--dark-blue-email);
   margin-bottom: 3rem;
 
@@ -101,7 +101,7 @@ ul li:last-child {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .illustration img {
