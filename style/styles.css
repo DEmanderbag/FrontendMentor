@@ -155,3 +155,39 @@ footer a {
 footer a:hover {
   color: steelblue;
 }
+
+@media screen and (min-width: 1080px) {
+  body {
+    background-image: url(/images/bg-intro-desktop.png);
+    background-repeat: repeat;
+    border: 1px solid green;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .container {
+    flex-direction: row;
+    align-items: center;
+    max-width: 1080px;
+    margin: 0 auto;
+    flex: 1;
+  }
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .intro h1 {
+    padding: 0;
+    font-size: 3rem;
+  }
+
+  .form {
+    margin-left: auto;
+  }
+}
