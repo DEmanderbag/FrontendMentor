@@ -93,7 +93,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   background-color: var(--white);
   border-radius: 5px;
   padding: 1.5rem;
@@ -105,7 +104,6 @@ input {
   width: 100%;
   text-transform: capitalize;
   padding: 1rem;
-  margin-bottom: 1rem;
   border: 1px solid var(--grayish-blue);
   border-radius: 5px;
 }
@@ -159,16 +157,39 @@ footer a:hover {
   color: steelblue;
 }
 
+/* Form validation */
+.form-field {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.form-field img {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.5rem;
+}
+
+.errormsg {
+  text-align: right;
+  font-size: 0.75rem;
+  margin-top: 0.3rem;
+  color: var(--red);
+}
+
+.errorborder {
+  border: 3px solid #ff3333;
+}
+
 @media screen and (min-width: 1080px) {
   body {
     background-image: url(/images/bg-intro-desktop.png);
     background-repeat: repeat;
-    border: 1px solid green;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
+
   .container {
     flex-direction: row;
     align-items: center;
@@ -183,6 +204,11 @@ footer a:hover {
     justify-content: flex-start;
     align-items: flex-start;
     text-align: left;
+    width: 50%;
+  }
+
+  .form {
+    width: 40%;
   }
 
   .intro h1 {

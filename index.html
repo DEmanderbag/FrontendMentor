@@ -33,11 +33,23 @@
       </div>
       <div class="form-section">
         <form action="">
-          <input type="text" name="first-name" id="first-name" placeholder="First name">
-          <input type="text" name="last-name" id="last-name" placeholder="Last name">
-          <input type="email" name="email" id="email" placeholder="Email Address">
-          <input type="password" name="password" id="password" placeholder="Password">
-          <button class="submit">Claim your free trail</button>
+          <div class="form-field first-name">
+            <input type="text" name="first-name" id="first-name" placeholder="First name">
+            <img src="images/icon-error.svg" alt="exclamation icon" class="error-img">
+          </div>
+          <div class="form-field last-name">
+            <input type="text" name="last-name" id="last-name" placeholder="Last name">
+            <img src="images/icon-error.svg" alt="exclamation icon" class="error-img">
+          </div>
+          <div class="form-field email">
+            <input type="email" name="email" id="email" placeholder="Email Address">
+            <img src="images/icon-error.svg" alt="exclamation icon" class="error-img">
+          </div>
+          <div class=" form-field password">
+            <input type="password" name="password" id="password" placeholder="Password">
+            <img src="images/icon-error.svg" alt="exclamation icon" class="error-img">
+          </div>
+          <button class="submit" type="button">Claim your free trail</button>
           <div class="submit-glow"></div>
         </form>
         <p class="terms">By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
@@ -50,6 +62,8 @@
       Coded by <a href="https://github.com/DEmanderbag">DEmanderbag</a>.
     </p>
   </footer>
+
+  <script src="app.js"></script>
 </body>
 
 </html>
