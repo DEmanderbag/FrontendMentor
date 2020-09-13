@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <section class="intro">
+      <h1>Learn to code by watching others</h1>
+      <p> See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+        but understanding how developers think is invaluable.</p>
+    </section>
+    <section class="form">
+      <div class="button-div">
+        <button class="trail-button">
+          <span class="time-period">Try it free 7 days</span> then <br> $20/mo. thereafter
+        </button>
+      </div>
+      <div class="form-section">
+        <form action="">
+          <div class="form-field first-name">
+            <input type="text" name="first-name" id="first-name" placeholder="First name">
+            <img src="images/icon-error.svg" alt="exclamation icon" class="error-img img1">
+          </div>
+          <div class="form-field last-name">
+            <input type="text" name="last-name" id="last-name" placeholder="Last name">
+            <img src="images/icon-error.svg" alt="exclamation icon" class="error-img img2">
+          </div>
+          <div class="form-field email">
+            <input type="email" name="email" id="email" placeholder="Email Address">
+            <img src="images/icon-error.svg" alt="exclamation icon" class="error-img img3">
+          </div>
+          <div class=" form-field password">
+            <input type="password" name="password" id="password" placeholder="Password">
+            <img src="images/icon-error.svg" alt="exclamation icon" class="error-img img4">
+          </div>
+          <button class="submit" type="button">Claim your free trail</button>
+        </form>
+        <p class="terms">By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
+      </div>
+    </section>
+  </div>
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. <br>
+      Coded by <a href="https://github.com/DEmanderbag">DEmanderbag</a>.
+    </p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
