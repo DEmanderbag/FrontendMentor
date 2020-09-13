@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --red001: hsl(0, 78%, 62%);
+  --cyan001: hsl(180, 62%, 55%);
+  --orange001: hsl(34, 97%, 64%);
+  --blue001: hsl(212, 86%, 64%);
+
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --very-white: #fff;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9375rem;
+  background-color: var(--very-light-gray);
+}
+
+.container {
+  padding: 3.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  color: var(--grayish-blue);
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+section h2 {
+  font-weight: 200;
+  text-align: center;
+}
+
+.bolder {
+  font-weight: 600;
+  color: var(--very-dark-blue);
+  margin-bottom: 1rem;
+}
+
+section p {
+  text-align: center;
+}
+
+.card {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  border-top: 3px solid;
+  -webkit-box-shadow: 3px 18px 24px -6px rgba(163, 165, 174, 1);
+  -moz-box-shadow: 3px 18px 24px -6px rgba(163, 165, 174, 1);
+  box-shadow: 3px 18px 24px -6px rgba(163, 165, 174, 1);
+}
+
+.card h3 {
+  color: var(--very-dark-blue);
+}
+.card p {
+  margin-bottom: 1.5rem;
+}
+.card img {
+  align-self: flex-end;
+  justify-self: flex-end;
+}
+.card:last-child {
+  margin-bottom: 0;
+}
+.color-cyan {
+  border-top-color: var(--cyan001);
+}
+.color-red {
+  border-top-color: var(--red001);
+}
+.color-orange {
+  border-top-color: var(--orange001);
+}
+.color-blue {
+  border-top-color: var(--blue001);
+}
+
+/* tablet settings */
+
+@media screen and (min-width: 600px) and (max-width: 980px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  section {
+    max-width: 30rem;
+  }
+
+  .card {
+    width: 45%;
+  }
+
+  .card:nth-child(2),
+  .card:nth-child(4) {
+    margin-right: 1.5rem;
+  }
+
+  .card:last-child {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* laptop settings */
+
+@media screen and (min-width: 981px) {
+  body {
+    font-size: 1.025rem;
+  }
+
+  .container {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 50px max-content repeat(4, 1fr) 50px;
+    gap: 3rem;
+  }
+
+  section {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+  }
+
+  section p {
+    width: 35rem;
+    margin: 0 auto;
+  }
+
+  .card {
+    margin-bottom: 0;
+    padding: 2rem;
+  }
+
+  .color-cyan {
+    grid-column: 2 / 4;
+    grid-row: 4 / 6;
+  }
+  .color-red {
+    grid-column: 4 / 6;
+    grid-row: 3 / 5;
+  }
+  .color-orange {
+    grid-column: 4 / 6;
+    grid-row: 5 / 7;
+  }
+  .color-blue {
+    grid-column: 6 / 8;
+    grid-row: 4 / 6;
+  }
+}
