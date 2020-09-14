@@ -67,6 +67,7 @@ nav img {
 
 input[type="email"] {
   color: var(--desaturated-red);
+  background-color: #faf7f9;
   border: none;
   border-radius: 20px;
   padding: 0.5rem 1rem;
