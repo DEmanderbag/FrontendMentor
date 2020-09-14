@@ -10,9 +10,75 @@
   --dark-greyish: hsl(0, 6%, 24%);
 
   /* - Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%) */
-  /* - Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%) */
+
+  --margin-medium: 2rem;
 }
 
 body {
   font-family: "Josefin Sans", sans-serif;
+  background-color: #faf7f9;
+  height: 100vh;
+}
+
+nav {
+  padding: 1.5rem;
+}
+
+nav img {
+  width: 7.5rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--dark-greyish);
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  margin: var(--margin-medium) 0;
+}
+
+.lighter {
+  color: var(--desaturated-red);
+  font-weight: 300;
+}
+
+.main p {
+  color: var(--desaturated-red);
+  text-align: center;
+  line-height: 1.3;
+  padding: 0 1rem;
+  margin-bottom: var(--margin-medium);
+}
+
+.form-section {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--desaturated-red);
+  border-radius: 20px;
+}
+
+input[type="email"] {
+  color: var(--desaturated-red);
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+}
+
+input[type="email"]::placeholder {
+  color: var(--desaturated-red);
+}
+
+.form-section img {
+  background: linear-gradient(135deg, hsl(0, 80%, 86%) 0%, hsl(0, 74%, 74%) 100%);
+  /* transform: translateX(-1rem); */
+  padding: 0.5rem 2rem;
+  border-radius: 15px;
 }
