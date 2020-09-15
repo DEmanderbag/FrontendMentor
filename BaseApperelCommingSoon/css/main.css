@@ -63,6 +63,7 @@ nav img {
 }
 
 .main p {
+  font-size: 1rem;
   color: var(--desaturated-red);
   text-align: center;
   line-height: 1.3;
@@ -81,6 +82,7 @@ nav img {
 
 input[type="email"] {
   color: var(--desaturated-red);
+  font-size: 1rem;
   background-color: #faf7f9;
   border: none;
   border-radius: 20px;
