@@ -12,7 +12,8 @@
 
   <!-- Feel free to remove these styles or customize in your own stylesheet 👍 -->
   <link rel="stylesheet" href="css/main.css">
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap"
+    rel="stylesheet">
 
   <!-- <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -40,9 +41,12 @@
         Add your email below to stay up-to-date with announcements and our launch deals.</p>
 
       <form class="form-section">
-        <input type="email" name="" id="" placeholder="Email Address">
-        <img src="/images/icon-arrow.svg" alt="">
+        <input type="email" name="" id="email" placeholder="Email Address"
+          class="email form--invalid">
+        <img src="images/icon-error.svg" alt="" class="error-img">
+        <img src="/images/icon-arrow.svg" alt="Arrow pointing to the right" class="submit">
       </form>
+      <div class="message"></div>
 
     </div>
   </section>
@@ -52,6 +56,7 @@
       Coded by <a href="#">Your Name Here</a>.
     </p>
   </footer> -->
+  <script src="validation.js"></script>
 </body>
 
 </html>

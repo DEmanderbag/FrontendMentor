@@ -88,13 +88,14 @@ input[type="email"] {
   border-radius: 20px;
   width: 90%;
   padding: 0.5rem 1rem;
+  position: relative;
 }
 
 input[type="email"]::placeholder {
   color: var(--desaturated-red);
 }
 
-.form-section img {
+.form-section .submit {
   cursor: pointer;
   background: linear-gradient(135deg, hsl(0, 80%, 86%) 0%, hsl(0, 74%, 74%) 100%);
   padding: 0.5rem 2rem;
@@ -103,8 +104,27 @@ input[type="email"]::placeholder {
 }
 
 /* Added JavaScript error class */
-.form-error {
+.form--invalid {
   border: 3px solid var(--soft-red);
+}
+
+.form--valid {
+  border: 3px solid green;
+}
+.error-img {
+  margin-right: 0.5rem;
+}
+
+.message {
+  margin-top: 1rem;
+}
+
+.message--valid {
+  color: green;
+}
+
+.message--invalid {
+  color: var(--soft-red);
 }
 
 @media screen and (min-width: 1000px) {
@@ -169,7 +189,7 @@ input[type="email"]::placeholder {
     padding: 1rem 2rem;
   }
 
-  .form-section img {
+  .form-section .submit {
     padding: 1rem 2rem;
   }
 
