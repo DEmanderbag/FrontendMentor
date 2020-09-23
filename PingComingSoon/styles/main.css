@@ -144,9 +144,12 @@ footer a {
 
 @media screen and (min-width: 750px) {
   body {
-    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    padding-top: 4rem;
     min-height: 100vh;
   }
+
   .logo {
     width: 4.5rem;
   }
@@ -155,10 +158,12 @@ footer a {
   }
 
   .main {
+    flex: 1;
   }
   .main p {
     margin-bottom: 2rem;
   }
+
   form {
     width: 60%;
     flex-direction: row;
@@ -175,6 +180,6 @@ footer a {
 
   .preview {
     width: 60%;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
 }
