@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Primary color*/
+  --blue: hsl(223, 87%, 63%);
+
+  /* Secondary color */
+  --pale-blue: hsl(223, 100%, 88%);
+  --light-red: hsl(354, 100%, 66%);
+
+  /* Neutral color */
+  --gray: hsl(0, 0%, 59%);
+  --very-dark-blue: hsl(209, 33%, 12%);
+}
+
+img {
+  display: block;
+}
+
+body {
+  font-family: "Libre Franklin", sans-serif;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 4rem;
+  margin-bottom: 2rem;
+}
+
+.main h1 {
+  font-weight: 300;
+  color: var(--gray);
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  font-weight: 700;
+  color: var(--very-dark-blue);
+}
+
+.main p {
+  margin-bottom: 1rem;
+  font-weight: 400;
+  color: var(--very-dark-blue);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  width: 70%;
+}
+
+.form__input {
+  border-radius: 20px;
+  padding: 0.75rem 1rem;
+}
+
+input[type="email"] {
+  border: 1px solid var(--pale-blue);
+  margin-bottom: 0.5rem;
+}
+
+input[type="email"]::placeholder {
+  color: var(--pale-blue);
+}
+
+button {
+  border: none;
+  background-color: var(--blue);
+  color: #ffffff;
+
+  box-shadow: 0 1px 1px rgba(194, 211, 255, 0.7), 0 2px 2px rgba(194, 211, 255, 0.7),
+    0 4px 4px rgba(194, 211, 255, 0.7), 0 6px 8px rgba(194, 211, 255, 0.7),
+    0 8px 16px rgba(194, 211, 255, 0.7);
+}
+
+.preview {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.preview img {
+  width: 100%;
+}
+
+.social {
+  display: flex;
+}
+
+.social__icon {
+  border: 1px solid var(--blue);
+  border-radius: 50%;
+  padding: 0.25rem;
+}
+
+.social__icon:not(:last-child) {
+  margin-right: 0.75rem;
+}
+
+footer {
+  margin-top: 1rem;
+  text-align: center;
+  color: var(--gray);
+  font-size: 0.75rem;
+}
