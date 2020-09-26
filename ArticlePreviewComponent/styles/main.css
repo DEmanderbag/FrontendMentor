@@ -32,71 +32,115 @@ article {
   border-radius: 10px;
 }
 
-.article--hero {
+.article__hero {
   height: 13rem;
   width: 100%;
   overflow: hidden;
 }
 
-.article--hero img {
+.article__hero img {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   width: 100%;
 }
 
-.article--details,
-.author--details {
+.article__details,
+.author__details {
   padding: 1rem 2rem;
 }
 
-.article--details {
+.article__details {
   padding-top: 2rem;
 }
 
-.article--header {
+.article__header {
   color: var(--very-dark-grayish-blue);
   margin-bottom: 1rem;
   font-size: 1.1rem;
 }
 
-.article--description {
+.article__description {
   color: var(--desaturated-dark-blue);
   font-size: 0.875rem;
 }
 
-.author--details {
+.author__details {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 4.5rem;
 }
 
-.author--picture {
+.author__picture {
   width: 2.5rem;
   height: 2.5rem;
   margin-right: 1rem;
 }
 
-.author--picture img {
+.author__picture img {
   width: 100%;
   border-radius: 50%;
 }
 
-.author--name {
+.author__name {
   font-size: 0.875rem;
   font-weight: 700;
   color: var(--very-dark-grayish-blue);
 }
 
-.article--date {
+.article__date {
   font-size: 0.75rem;
   color: var(--desaturated-dark-blue);
 }
 
-.article--share {
+.article__share {
   cursor: pointer;
   display: flex;
   padding: 0.5rem;
   border-radius: 50%;
   margin-left: auto;
   background-color: var(--background-blue);
+}
+
+/* Share section */
+.wrapper {
+  position: relative;
+}
+
+.share {
+  z-index: -10;
+  position: absolute;
+  top: 0;
+  padding: 0 2rem;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: var(--very-dark-grayish-blue);
+  width: 100%;
+  height: 4.5rem;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition: 0.5s ease-out opacity;
+}
+
+.share p {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: var(--background-blue);
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  margin-right: 1.25rem;
+}
+
+.share__social {
+  display: flex;
+}
+
+.share__social img {
+  margin-right: 1.25rem;
+}
+
+.share--dark {
+  background-color: var(--desaturated-dark-blue);
 }
