@@ -10,17 +10,14 @@
   --grayish-blue: hsl(212, 23%, 69%);
   --light-grayish-blue: hsl(210, 46%, 95%);
 
-  --background-blue: hsl(212, 23%, 89%);
-}
-
-img {
-  display: block;
+  --background-blue: hsl(212, 23%, 93%);
 }
 
 body {
   font-family: "Manrope", sans-serif;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: var(--background-blue);
@@ -28,7 +25,7 @@ body {
 
 article {
   margin: 0 1rem;
-  background-color: var(--light-grayish-blue);
+  background-color: #fff;
   border-radius: 10px;
 
   display: flex;
@@ -44,7 +41,7 @@ article {
 .article__hero img {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  max-width: 100%;
+  width: 100%;
 }
 
 .article__details,
@@ -102,7 +99,7 @@ article {
   padding: 0.5rem;
   border-radius: 50%;
   margin-left: auto;
-  background-color: var(--background-blue);
+  background-color: var(--grayish-blue);
 }
 
 /* Share section */
@@ -144,11 +141,15 @@ article {
 .share__social img {
   margin-right: 1.25rem;
 }
-
-.share--dark {
-  background-color: var(--desaturated-dark-blue);
+.share__social img:last-child {
+  margin-right: 0;
 }
 
+.attribution {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 12px;
+}
 @media screen and (min-width: 700px) {
   article {
     margin: 0;
@@ -156,11 +157,43 @@ article {
     max-width: 700px;
   }
   .article__hero {
-    border: 1px solid red;
-    height: 100%;
+    height: 16.5rem;
   }
   .article__hero img {
+    width: auto;
+    height: 100%;
     border-top-right-radius: 0;
     border-bottom-left-radius: 10px;
+  }
+
+  .share--dark {
+    position: absolute;
+    bottom: -3.2rem;
+    right: 6rem;
+  }
+
+  .share--desktop {
+    position: absolute;
+    top: -3rem;
+    right: -4rem;
+    background-color: var(--very-dark-grayish-blue);
+
+    height: 3rem;
+    width: auto;
+    padding: 0 2rem;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+  }
+
+  .share--desktop::after {
+    content: "";
+    border-top: 10px solid var(--very-dark-grayish-blue);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
   }
 }
