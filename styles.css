@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+img {
+  display: block;
+}
+
+header {
+  background-color: royalblue;
+  width: 100%;
+  height: 10vh;
+}
+
+section {
+  padding: 1rem;
+}
+
+a {
+  text-decoration: none;
+  padding: 0.025rem;
+}
+
+.link--style {
+  color: royalblue;
+  background-image: linear-gradient(120deg, #90959e 0%, #c2e9fb 100%);
+  background-size: 100% 10%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease-out;
+  background-position: bottom;
+}
+
+.link--style:hover {
+  background-size: 100% 100%;
+}
+
+/* Styles for card */
+.card {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card__preview {
+  width: 100%;
+  height: 15rem;
+}
+
+.card__preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card__info {
+  padding: 1rem;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+.info__title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.info__about {
+  margin-bottom: 0.5rem;
+}
+
+.info__date {
+  position: absolute;
+  top: calc(15rem - 2rem);
+}
+
+.cta {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+button {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.cta--secondary {
+  margin-right: 1rem;
+  border: 1px solid hsl(6, 100%, 80%);
+  background-color: transparent;
+}
+
+.cta--primary {
+  background-image: linear-gradient(to right, hsl(6, 100%, 80%) 0%, hsl(335, 100%, 65%) 100%);
+}
