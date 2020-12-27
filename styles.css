@@ -31,7 +31,7 @@ a {
 
 .link--style {
   color: royalblue;
-  background-image: linear-gradient(120deg, #90959e 0%, #c2e9fb 100%);
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
   background-size: 100% 10%;
   background-repeat: no-repeat;
   transition: background-size 0.3s ease-out;
@@ -49,7 +49,7 @@ a {
   flex-direction: column;
   border-radius: 10px;
   overflow: hidden;
-  position: relative;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11);
 }
 
 .card__preview {
@@ -65,21 +65,26 @@ a {
 
 .card__info {
   padding: 1rem;
-  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  /* background-image: linear-gradient(to right, #434343 0%, black 100%); */
+  display: flex;
+  flex-direction: column;
 }
 
 .info__title {
   font-size: 1.25rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .info__about {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .info__date {
-  position: absolute;
-  top: calc(15rem - 2rem);
+  order: -1;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: gray;
+  margin-bottom: 0.5rem;
 }
 
 .cta {
@@ -90,16 +95,17 @@ a {
 
 button {
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.25rem;
   border-radius: 5px;
+  font-weight: bold;
 }
 
 .cta--secondary {
   margin-right: 1rem;
-  border: 1px solid hsl(6, 100%, 80%);
+  border: 1px solid #a1c4fd;
   background-color: transparent;
 }
 
 .cta--primary {
-  background-image: linear-gradient(to right, hsl(6, 100%, 80%) 0%, hsl(335, 100%, 65%) 100%);
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 }
