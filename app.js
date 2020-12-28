@@ -90,6 +90,7 @@ const projects = [
 ]
 
 const projectCount = document.querySelector(".project__count");
+const cardWrapper = document.querySelector(".card__wrapper");
 let numberOfProjects = projects.length;
 projectCount.innerText = `I've complited ${numberOfProjects} so far`;
 

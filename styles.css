@@ -50,11 +50,13 @@ a {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11);
+  /* height: 30rem; */
 }
 
 .card__preview {
   width: 100%;
-  height: 15rem;
+  flex: 1;
+  max-height: 25rem;
 }
 
 .card__preview img {
@@ -65,7 +67,6 @@ a {
 
 .card__info {
   padding: 1rem;
-  /* background-image: linear-gradient(to right, #434343 0%, black 100%); */
   display: flex;
   flex-direction: column;
 }
@@ -102,10 +103,59 @@ button {
 
 .cta--secondary {
   margin-right: 1rem;
-  border: 1px solid #a1c4fd;
+  border: 2px solid #a1c4fd;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .cta--primary {
   background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 580px) {
+  .project {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .project__count {
+    grid-column: span 2;
+  }
+  .card {
+    margin-top: 0;
+  }
+  .card__preview {
+    height: 13rem;
+  }
+  .card__info {
+    height: calc(100% - 13rem);
+  }
+
+  .info__about {
+    flex: 1;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  .hero {
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+  .project {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+  .project__count {
+    grid-column: span 3;
+  }
+
+  .card__preview {
+    height: 18rem;
+  }
+
+  .card__info {
+    height: calc(100% - 18rem);
+  }
 }
