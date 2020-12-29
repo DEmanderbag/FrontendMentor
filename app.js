@@ -5,7 +5,7 @@ const projects = [
     "date": new Date("2020-06-03"),
     "photo": "FyloDataStorageComponent/design/desktop-preview.jpg",
     "code": "https://github.com/DEmanderbag/FrontendMentor/tree/master/FyloDataStorageComponent",
-    "demo": "https://frontend-mentor-challenges-beta.now.sh/"
+    "demo": "https://stoic-meninsky-7d6f57.netlify.app/fylodatastoragecomponent/"
   },
   {
     "title": "Single price grid component",
@@ -13,7 +13,7 @@ const projects = [
     "date": new Date("2020-06-04"),
     "photo": "SinglePriceGridComponent/design/desktop-preview.jpg",
     "code": "https://github.com/DEmanderbag/FrontendMentor/tree/master/SinglePriceGridComponent",
-    "demo": "https://single-price-grid-component-black.now.sh/"
+    "demo": "https://stoic-meninsky-7d6f57.netlify.app/singlepricegridcomponent/"
   },
   {
     "title": "Four card feature section",
@@ -21,7 +21,7 @@ const projects = [
     "date": new Date("2020-06-05"),
     "photo": "FourCardFeatureSection/design/desktop-preview.jpg",
     "code": "https://github.com/DEmanderbag/FrontendMentor/tree/master/FourCardFeatureSection",
-    "demo": "https://four-card-section-frontend-mentor.now.sh/"
+    "demo": "https://stoic-meninsky-7d6f57.netlify.app/fourcardfeaturesection/"
   },
   {
     "title": "Huddle landing page with a single introductory section",
@@ -29,7 +29,7 @@ const projects = [
     "date": new Date("2020-06-06"),
     "photo": "HuddleLandingPageHero/design/desktop-preview.jpg",
     "code": "https://github.com/DEmanderbag/FrontendMentor/tree/master/HuddleLandingPageHero",
-    "demo": "https://huddle-landing-page-nine-omega.now.sh/"
+    "demo": "https://stoic-meninsky-7d6f57.netlify.app/huddlelandingpagehero/"
   },
   {
     "title": "Huddle landing page with alternating feature blocks",
@@ -37,7 +37,7 @@ const projects = [
     "date": new Date("2020-06-07"),
     "photo": "HuddleLandingPageFeatureBlocks/design/desktop-preview.jpg",
     "code": "https://github.com/DEmanderbag/FrontendMentor/tree/master/HuddleLandingPageFeatureBlocks",
-    "demo": "https://huddle-landing-page-version2.now.sh/"
+    "demo": "https://stoic-meninsky-7d6f57.netlify.app/huddlelandingpagefeatureblocks/"
   },
   {
     "title": "Clipboard landing page",
@@ -45,7 +45,7 @@ const projects = [
     "date": new Date("2020-06-09"),
     "photo": "ClipboardLandingPage/design/desktop-preview.jpg",
     "code": "https://github.com/DEmanderbag/FrontendMentor/tree/master/ClipboardLandingPage",
-    "demo": "https://clipboard-landing-page-theta-one.now.sh/"
+    "demo": "https://stoic-meninsky-7d6f57.netlify.app/clipboardlandingpage/"
   },
   {
     "title": "Fylo dark theme landing page",
@@ -53,7 +53,7 @@ const projects = [
     "date": new Date("2020-06-10"),
     "photo": "FyloDarkThemeLandingPage/design/desktop-preview.jpg",
     "code": "https://github.com/DEmanderbag/FrontendMentor/tree/master/FyloDarkThemeLandingPage",
-    "demo": "https://fylo-dark-theme-landing-page-drab.now.sh/"
+    "demo": "https://stoic-meninsky-7d6f57.netlify.app/fylodarkthemelandingpage/"
   },
   {
     "title": "Intro component with sign-up form",
@@ -61,15 +61,15 @@ const projects = [
     "date": new Date("2020-09-13"),
     "photo": "SignUpForm/design/desktop-preview.jpg",
     "code": "https://github.com/DEmanderbag/FrontendMentor/tree/master/SignUpForm",
-    "demo": "https://signup-component-mu.vercel.app/"
+    "demo": "https://stoic-meninsky-7d6f57.netlify.app/signupform/"
   },
   {
     "title": "Base Apparel coming soon page",
     "description": "This layout looks simple enough, but there are some interesting details to it that will test your CSS skills. You'll also get to practice basic form validation.",
     "date": new Date("2020-09-22"),
-    "photo": "BaseApperelCommingSoon/design/desktop-preview.jpg",
+    "photo": "BaseApperelComingSoon/design/desktop-preview.jpg",
     "code": "https://github.com/DEmanderbag/FrontendMentor/tree/master/BaseApperelCommingSoon",
-    "demo": "https://baseapperal.vercel.app/"
+    "demo": "https://stoic-meninsky-7d6f57.netlify.app/baseapperelcomingsoon/"
   },
   {
     "title": "Ping single column coming soon page",
@@ -77,7 +77,7 @@ const projects = [
     "date": new Date("2020-09-24"),
     "photo": "PingComingSoon/design/desktop-preview.jpg",
     "code": "https://github.com/DEmanderbag/FrontendMentor/tree/master/PingComingSoon",
-    "demo": "https://pingcomingsoon.vercel.app/"
+    "demo": "https://stoic-meninsky-7d6f57.netlify.app/pingcomingsoon/"
   },
   {
     "title": "Article preview component",
@@ -85,7 +85,7 @@ const projects = [
     "date": new Date("2020-09-27"),
     "photo": "ArticlePreviewComponent/design/desktop-preview.jpg",
     "code": "https://github.com/DEmanderbag/FrontendMentor/tree/master/ArticlePreviewComponent",
-    "demo": "https://articlepreviewcomponent-qa0mwjx7p.vercel.app/"
+    "demo": "https://stoic-meninsky-7d6f57.netlify.app/articlepreviewcomponent/"
   },
   {
     "title": "Profile card component",
