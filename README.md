@@ -8,7 +8,7 @@ It's a website where you practice by building real-life projects. Improve your f
 
 ### How it works?
 
-![Frontend Mentor](Image.png)
+![Frontend Mentor](assetsMaster/Image.png)
 
 #### Choose your [challenge](https://www.frontendmentor.io/challenges)
 
