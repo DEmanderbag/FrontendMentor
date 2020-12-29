@@ -87,6 +87,14 @@ const projects = [
     "code": "https://github.com/DEmanderbag/FrontendMentor/tree/master/ArticlePreviewComponent",
     "demo": "https://articlepreviewcomponent-qa0mwjx7p.vercel.app/"
   },
+  {
+    "title": "Profile card component",
+    "description": "This is a perfect challenge to test your layout skills. The card layout doesn't shift, so it's also great for those that haven't dived into responsive websites yet!",
+    "date": new Date("2020-12-29"),
+    "photo": "profileCardComponent/assets/design/desktop-preview.jpg",
+    "code": "https://github.com/DEmanderbag/FrontendMentor/tree/master/profileCardComponent",
+    "demo": "https://stoic-meninsky-7d6f57.netlify.app/profilecardcomponent/"
+  },
 ]
 
 const projectCount = document.querySelector(".project__count");
