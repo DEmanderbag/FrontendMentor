@@ -2,7 +2,7 @@
 
 Live version can be found [here](https://stoic-meninsky-7d6f57.netlify.app/profilecardcomponent/)
 
-![Design preview for the Profile card component coding challenge](/assets/design/desktop-preview.jpg)
+![Design preview for the Profile card component coding challenge](./assets/design/desktop-preview.jpg)
 
 ## Welcome! 👋
 
