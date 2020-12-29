@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark001: hsl(229, 23%, 23%);
+  --gray001: hsl(227, 10%, 46%);
+  --gray002: hsl(0, 0%, 59%);
+  --light001: hsl(0, 100%, 100%);
+  --primary: hsl(185, 75%, 39%);
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(185, 75%, 39%);
+  position: relative;
+  overflow: hidden;
+}
+
+.card {
+  z-index: 10;
+  width: 21rem;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: var(--light001);
+}
+
+.card__wrapper {
+  height: 13rem;
+  position: relative;
+}
+
+.card__avatar {
+  position: absolute;
+  top: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  overflow: hidden;
+  width: 7rem;
+  height: 7rem;
+  border: 5px solid var(--light001);
+}
+
+.card__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card__about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.card__name {
+  font-size: 1.25rem;
+  color: var(--dark001);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.card__age {
+  color: var(--gray001);
+  font-weight: 400;
+  margin-left: 0.5rem;
+}
+
+.card__location {
+  color: var(--gray001);
+}
+
+.card__stats {
+  border-top: 1px solid lightgray;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem 0;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.875rem;
+  color: var(--gray001);
+}
+
+.stats__number {
+  font-weight: 700;
+  color: var(--dark001);
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  color: var(--dark001);
+  position: absolute;
+  bottom: 1rem;
+}
+
+footer a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--dark001);
+}
+
+@media screen and (min-width: 750px) {
+  .pattern__top {
+    background: url(images/bg-pattern-top.svg);
+    right: 20%;
+    bottom: 48%;
+  }
+
+  .pattern__bottom {
+    background: url(images/bg-pattern-bottom.svg);
+    left: 65%;
+    top: 50%;
+  }
+
+  .pattern {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    background-repeat: no-repeat;
+  }
+}
