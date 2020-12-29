@@ -105,6 +105,9 @@ footer {
   color: var(--dark001);
   position: absolute;
   bottom: 1rem;
+  font-size: 0.875rem;
+  text-align: center;
+  width: 60%;
 }
 
 footer a {
@@ -115,13 +118,13 @@ footer a {
 
 @media screen and (min-width: 750px) {
   .pattern__top {
-    background: url(images/bg-pattern-top.svg);
+    background: url(../images/bg-pattern-top.svg);
     right: 20%;
     bottom: 48%;
   }
 
   .pattern__bottom {
-    background: url(images/bg-pattern-bottom.svg);
+    background: url(../images/bg-pattern-bottom.svg);
     left: 65%;
     top: 50%;
   }
