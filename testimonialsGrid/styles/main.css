@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --moderate-violet: hsl(263, 55%, 52%);
+  --dark-gray-blue: hsl(217, 19%, 35%);
+  --dark-black-blue: hsl(219, 29%, 14%);
+  --light: hsl(0, 0%, 100%);
+  --light-gray: hsl(0, 0%, 81%);
+  --light-gray-blue: hsl(210, 46%, 95%);
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  display: grid;
+  background-color: var(--light-gray-blue);
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.card {
+  padding: 1.5rem;
+  margin: 1rem;
+  border-radius: 10px;
+}
+
+.card:last-child {
+  margin-bottom: 2rem;
+}
+
+.card__user {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.user__avatar {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 1rem;
+}
+
+.avatar--border-light {
+  border: 2px solid var(--light-gray);
+}
+
+.user__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card__name {
+  font-weight: 600;
+}
+
+.card__name--light {
+  color: var(--light-gray);
+}
+
+.name--light {
+  opacity: 50%;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.header--light {
+  color: var(--light);
+  font-size: 1.5rem;
+}
+
+.review__header {
+  margin-bottom: 1rem;
+}
+
+.review__text {
+  opacity: 70%;
+}
+
+.text--light {
+  color: var(--light);
+}
+
+.card--primary {
+  background-color: var(--moderate-violet);
+  position: relative;
+}
+
+.card__decoration {
+  position: absolute;
+  top: 0;
+  right: 2rem;
+  width: 6rem;
+  height: 6rem;
+  z-index: 0;
+  opacity: 40%;
+}
+
+.card--gray {
+  background-color: var(--dark-gray-blue);
+}
+
+.card--light {
+  background-color: var(--light);
+}
+
+.header--dark {
+  color: var(--dark-gray-blue);
+}
+
+.card--dark {
+  background-color: var(--dark-black-blue);
+}
+
+.avatar__border--primary {
+  border: 2px solid var(--moderate-violet);
+}
+
+footer {
+  text-align: center;
+  color: var(--dark-gray-blue);
+  font-size: 0.875rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--moderate-violet);
+}
