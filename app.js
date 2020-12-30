@@ -95,6 +95,14 @@ const projects = [
     "code": "https://github.com/DEmanderbag/FrontendMentor/tree/master/profileCardComponent",
     "demo": "https://stoic-meninsky-7d6f57.netlify.app/profilecardcomponent/"
   },
+  {
+    "title": "Testimonials grid section",
+    "description": "This challenge will be perfect practice for anyone wanting to test their CSS Grid skills. Grid is such a powerful addition to CSS, so it's worth getting to grips with it!",
+    "date": new Date("2020-12-30"),
+    "photo": "testimonialsGrid/design/desktop-preview.jpg",
+    "code": "https://github.com/DEmanderbag/FrontendMentor/tree/master/testimonialsGrid",
+    "demo": "https://stoic-meninsky-7d6f57.netlify.app/testimonialsgrid/"
+  },
 ]
 
 const projectCount = document.querySelector(".project__count");
