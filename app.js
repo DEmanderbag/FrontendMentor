@@ -103,6 +103,14 @@ const projects = [
     "code": "https://github.com/DEmanderbag/FrontendMentor/tree/master/testimonialsGrid",
     "demo": "https://stoic-meninsky-7d6f57.netlify.app/testimonialsgrid/"
   },
+  {
+    "title": "FAQ accordion card",
+    "description": "In this challenge, you'll be building out an FAQ accordion. This is an extremely common front-end pattern, so it's a great opportunity to get some practice in!",
+    "date": new Date("2020-12-31"),
+    "photo": "faqComponent/design/desktop-preview.jpg",
+    "code": "https://github.com/DEmanderbag/FrontendMentor/tree/master/faqComponent",
+    "demo": "https://stoic-meninsky-7d6f57.netlify.app/faqcomponent/"
+  },
 ]
 
 const projectCount = document.querySelector(".project__count");
