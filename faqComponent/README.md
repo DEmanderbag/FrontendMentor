@@ -1,5 +1,7 @@
 # Frontend Mentor - FAQ Accordion Card
 
+Live version can be found [here](https://stoic-meninsky-7d6f57.netlify.app/faqcomponent/)
+
 ![Design preview for the FAQ Accordion Card coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
