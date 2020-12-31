@@ -17,11 +17,23 @@
 <body>
   <section class="faq">
     <div class="faq__preview">
-      <img src="images/illustration-woman-online-mobile.svg" alt="illustration">
-      <img src="images/bg-pattern-mobile.svg" alt="illustration shadow" class="preview__shadow">
+      <picture>
+        <source media="(min-width: 720px)" srcset="images/illustration-woman-online-desktop.svg">
+        <source media="(min-width: 320px)" srcset="images/illustration-woman-online-mobile.svg">
+        <img src="images/illustration-woman-online-mobile.svg" alt="IfItDoesntMatchAnyMedia">
+      </picture>
+      <picture class="preview__shadow">
+        <source media="(min-width: 720px)" srcset="images/bg-pattern-desktop.svg">
+        <source media="(min-width: 320px)" srcset="images/bg-pattern-mobile.svg">
+        <img src="images/illustration-woman-online-mobile.svg" alt="IfItDoesntMatchAnyMedia">
+      </picture>
     </div>
-    <h1 class="faq__title">FAQ</h1>
+    <div class="box">
+      <img src="images/illustration-box-desktop.svg" alt="">
+    </div>
+
     <div class="questions">
+      <h1 class="faq__title">FAQ</h1>
       <div class="question__section">
         <div class="question__title">How many team members can I invite?
           <img src="images/icon-arrow-down.svg" alt="">
