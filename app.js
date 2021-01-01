@@ -111,6 +111,14 @@ const projects = [
     "code": "https://github.com/DEmanderbag/FrontendMentor/tree/master/faqComponent",
     "demo": "https://stoic-meninsky-7d6f57.netlify.app/faqcomponent/"
   },
+  {
+    "title": "Social proof section",
+    "description": "This project will test your layout skills. If you're starting to get confident with Flexbox or Grid, this will provide a nice challenge!",
+    "date": new Date("2021-01-01"),
+    "photo": "socialProof/design/desktop-preview.jpg",
+    "code": "https://github.com/DEmanderbag/FrontendMentor/tree/master/socialProof",
+    "demo": "https://stoic-meninsky-7d6f57.netlify.app/socialproof/"
+  },
 ]
 
 const projectCount = document.querySelector(".project__count");
