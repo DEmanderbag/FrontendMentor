@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* colors */
+  --dark-magenta: hsl(300, 43%, 22%);
+  --dark-gray-magenta: hsl(303, 10%, 53%);
+  --light-gray-magenta: hsl(300, 24%, 96%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --light: hsl(0, 0%, 100%);
+
+  /* spasing */
+  --x-small: 0.25rem;
+  --small: 0.5rem;
+  --medium: 1rem;
+  --large: 1.5rem;
+  --x-large: 2rem;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light);
+}
+
+section {
+  padding: 5rem var(--large);
+  background-image: url(/images/bg-pattern-top-mobile.svg);
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.section__title {
+  color: var(--dark-magenta);
+  font-size: 2rem;
+  line-height: 1.1;
+  margin-bottom: var(--large);
+}
+
+.section__about {
+  color: var(--dark-gray-magenta);
+  line-height: 1.5;
+  font-weight: 500;
+  font-size: 0.875rem;
+  margin-bottom: var(--x-large);
+}
+
+.review__section {
+  margin-bottom: var(--x-large);
+}
+
+.review__card {
+  background-color: var(--light-gray-magenta);
+  padding: var(--medium) 0;
+  border-radius: 7px;
+}
+
+.review__card:not(:last-child) {
+  margin-bottom: var(--medium);
+}
+
+.review__text {
+  font-weight: 700;
+  color: var(--dark-magenta);
+  font-size: 0.875rem;
+  margin-top: var(--small);
+}
+
+.buyer__card {
+  background-color: var(--dark-magenta);
+  border-radius: 7px;
+  margin-bottom: var(--medium);
+  padding: 1.5rem;
+  text-align: left;
+  color: var(--light-gray-magenta);
+}
+
+.buyer__info {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--large);
+}
+
+.info__picture {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: var(--medium);
+}
+
+.info__picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.buyer__about {
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.buyer__name {
+  color: var(--light-gray-magenta);
+  margin-bottom: var(--x-small);
+  opacity: 90%;
+}
+
+.buyer__verification {
+  color: var(--soft-pink);
+  opacity: 80%;
+  font-weight: 500;
+}
+
+.buyer__review {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  opacity: 90%;
+}
