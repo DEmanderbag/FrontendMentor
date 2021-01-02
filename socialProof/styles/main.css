@@ -12,7 +12,7 @@
   --soft-pink: hsl(333, 80%, 67%);
   --light: hsl(0, 0%, 100%);
 
-  /* spasing */
+  /* spacing */
   --x-small: 0.25rem;
   --small: 0.5rem;
   --medium: 1rem;
@@ -37,14 +37,14 @@ section {
   text-align: center;
 }
 
-.section__title {
+.about__title {
   color: var(--dark-magenta);
   font-size: 2rem;
   line-height: 1.1;
   margin-bottom: var(--large);
 }
 
-.section__about {
+.about__description {
   color: var(--dark-gray-magenta);
   line-height: 1.5;
   font-weight: 500;
@@ -52,7 +52,7 @@ section {
   margin-bottom: var(--x-large);
 }
 
-.review__section {
+.review {
   margin-bottom: var(--x-large);
 }
 
@@ -91,7 +91,7 @@ section {
   margin-bottom: var(--large);
 }
 
-.info__picture {
+.buyer__picture {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
@@ -99,7 +99,7 @@ section {
   margin-right: var(--medium);
 }
 
-.info__picture img {
+.buyer__picture img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -140,21 +140,21 @@ section {
     flex: 1;
   }
 
-  .section__wrapper {
+  .about {
     display: flex;
     margin-bottom: 5rem;
   }
 
-  .section__about__wrapper {
+  .about__wrapper {
     width: 50%;
   }
 
-  .section__title {
+  .about__title {
     font-size: 2.5rem;
     max-width: 25rem;
   }
 
-  .review__section {
+  .review {
     margin-left: auto;
     width: 40%;
   }
@@ -171,7 +171,7 @@ section {
     margin-left: var(--large);
   }
 
-  .review__buyer__card {
+  .buyer {
     display: flex;
   }
 
@@ -180,8 +180,8 @@ section {
     margin-right: var(--large);
   }
 
-  .section__about,
-  .review__section {
+  .about__description,
+  .review {
     margin-bottom: 0;
   }
 }
@@ -192,7 +192,7 @@ section {
     margin: 0 auto;
   }
 
-  .section__about {
+  .about__description {
     max-width: 27rem;
   }
 
