@@ -1,0 +1,233 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Colors */
+  --light001: hsl(0, 0%, 100%);
+  --light002: hsl(240, 78%, 98%);
+  --light003: hsl(234, 14%, 74%);
+  --gray001: hsl(233, 13%, 49%);
+  --gray002: hsl(232, 13%, 33%);
+
+  /* Gradient */
+  --primary-light: hsl(236, 72%, 79%);
+  --primary: hsl(237, 63%, 64%);
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  background-size: 10rem;
+  color: var(--gray001);
+  background-color: var(--light002);
+  background-image: url(../images/bg-top.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.switch {
+  position: relative;
+  width: 3rem;
+  height: 1.8rem;
+  background: linear-gradient(to right, var(--primary-light), var(--primary));
+  border-radius: 2rem;
+  margin: 0 auto;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.3rem;
+  width: 1.3rem;
+  background-color: var(--light001);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  left: 4px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+input:checked + .slider:before {
+  transform: translateX(97%) translateY(-50%);
+}
+
+.slider--round:before {
+  border-radius: 50%;
+}
+
+section {
+  padding: 5rem 2rem;
+}
+
+.section__title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.pricing {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  max-width: 15rem;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  color: var(--light003);
+  font-size: 0.875rem;
+}
+
+.card {
+  background-color: var(--light001);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 0.875rem;
+  max-width: 20rem;
+  margin: 0 auto 2rem auto;
+}
+
+.card__tier {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.card__price {
+  font-size: 3.5rem;
+  color: var(--gray002);
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--light003);
+}
+
+.card__plan {
+  list-style: none;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--light003);
+}
+
+.card__btn {
+  margin-top: 2rem;
+  padding: 0.75rem 0;
+  font-weight: bold;
+  font-size: 0.875rem;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  color: var(--primary);
+  background-color: var(--light001);
+  border: 1px solid transparent;
+  transition: 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946) all;
+}
+
+.card__btn--primary {
+  color: var(--light001);
+  background: linear-gradient(to right, var(--primary-light), var(--primary));
+}
+
+.card--primary {
+  color: var(--light001);
+  background: linear-gradient(to bottom, var(--primary-light), var(--primary));
+}
+
+.card__price--light {
+  color: var(--light001);
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    background-image: url(../images/bg-top.svg), url(../images/bg-bottom.svg);
+    background-position: top right, bottom left;
+    background-size: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  section {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .section__title {
+    width: 100%;
+  }
+
+  .pricing {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+  }
+
+  .switch {
+    margin: 0 3rem;
+  }
+
+  .card {
+    width: 16.5rem;
+    max-width: 23rem;
+    margin: 0;
+  }
+
+  .card:nth-child(3) {
+    margin-left: auto;
+  }
+  .card:nth-child(5) {
+    margin-right: auto;
+  }
+
+  .card__btn {
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 1085px) {
+  .card {
+    width: 22rem;
+  }
+
+  .card--primary {
+    transform: scale(1.1);
+  }
+}
+
+@media (hover: hover) {
+  .slider:hover {
+    border-radius: 45%;
+    background-color: var(--primary-light);
+  }
+
+  .card__btn:hover {
+    background-color: var(--primary);
+    color: var(--light001);
+    border: 1px solid var(--light001);
+  }
+
+  .card__btn--primary:hover {
+    background: var(--light001);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+  }
+}
