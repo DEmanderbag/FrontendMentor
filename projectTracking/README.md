@@ -1,6 +1,6 @@
 # Frontend Mentor - Project tracking intro component
 
-Live version can be found [here](https://stoic-meninsky-7d6f57.netlify.app/projectracking)
+Live version can be found [here](https://stoic-meninsky-7d6f57.netlify.app/projecttracking)
 
 ![Design preview for the Project tracking intro component coding challenge](./design/desktop-preview.jpg)
 
