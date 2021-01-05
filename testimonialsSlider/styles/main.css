@@ -66,6 +66,7 @@ img {
   padding: 0.5rem 0.75rem;
   border: 0;
   background-color: var(--light);
+  cursor: pointer;
 }
 
 .btn img {
