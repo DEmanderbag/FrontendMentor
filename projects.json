@@ -142,7 +142,8 @@
     "code": "https://github.com/DEmanderbag/FrontendMentor/tree/master/testimonialsSlider",
     "demo": "https://stoic-meninsky-7d6f57.netlify.app/testimonialsslider/",
     "id": 16
-  },{
+  },
+  {
     "title": "Coding bootcamp testimonials slider",
     "description": "This challenge will be a nice test if you're new to JavaScript. It's also a great opportunity to play around with content animations and transitions.",
     "date": "2021-01-04",
@@ -150,5 +151,14 @@
     "code": "https://github.com/DEmanderbag/FrontendMentor/tree/master/pricingComponent",
     "demo": "https://stoic-meninsky-7d6f57.netlify.app/pricingcomponent/",
     "id": 17
+  },
+  {
+    "title": "Project tracking intro component",
+    "description": "Some interesting layout and code challenges are baked into this design. Perfect if you're a beginner who is starting to get a bit more confident with your layouts.",
+    "date": "2021-01-05",
+    "photo": "projectTracking/design/desktop-preview.jpg",
+    "code": "https://github.com/DEmanderbag/FrontendMentor/tree/master/projectTracking",
+    "demo": "https://stoic-meninsky-7d6f57.netlify.app/projectTracking/",
+    "id": 18
   }
 ]
