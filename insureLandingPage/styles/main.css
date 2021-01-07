@@ -119,6 +119,7 @@ a {
   background-image: url(../images/bg-pattern-mobile-nav.svg);
   background-repeat: no-repeat;
   background-position: bottom;
+  background-size: contain;
 }
 
 .is-open {
@@ -148,6 +149,18 @@ a {
   color: var(--light);
   margin-bottom: 2rem;
   text-transform: uppercase;
+}
+
+.hero {
+  width: 100%;
+  max-height: 40rem;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .intro {
@@ -219,6 +232,7 @@ a {
   text-align: center;
   margin-bottom: 3rem;
   padding: 0 2rem;
+  max-width: 24.3rem;
 }
 
 .card img {
@@ -258,6 +272,7 @@ footer {
   flex-direction: column;
   background-image: url(../images/bg-pattern-footer-mobile.svg);
   background-repeat: no-repeat;
+  background-size: contain;
   padding-top: 5rem;
 }
 
