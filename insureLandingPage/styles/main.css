@@ -45,7 +45,6 @@ nav {
   display: flex;
   align-items: center;
   padding: 2rem 1rem;
-  background-color: var(--light);
 }
 
 li {
@@ -250,6 +249,7 @@ a {
 
 .card--primary {
   background-color: var(--dark002);
+  text-align: center;
   margin: 2rem;
   padding: 5rem 2rem;
   background-image: url(../images/bg-pattern-how-we-work-mobile.svg);
@@ -265,6 +265,7 @@ a {
 }
 
 footer {
+  background-color: var(--light);
   margin-top: 5rem;
   display: flex;
   justify-content: center;
@@ -272,7 +273,7 @@ footer {
   flex-direction: column;
   background-image: url(../images/bg-pattern-footer-mobile.svg);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-position: top left;
   padding-top: 5rem;
 }
 
@@ -283,11 +284,20 @@ footer {
 .footer__social {
   display: flex;
   align-items: center;
-  margin-bottom: 3rem;
+}
+
+.footer__group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer__social > img:not(:last-child) {
   margin-right: 1rem;
+}
+
+.footer__logo img {
+  margin-right: 0;
 }
 
 .footer__links {
@@ -296,7 +306,6 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
 .links__section {
@@ -314,7 +323,6 @@ footer {
 }
 
 .footer__list li:last-child {
-  text-align: center;
   margin-bottom: 3rem;
 }
 
@@ -326,6 +334,17 @@ footer {
 }
 
 @media screen and (min-width: 860px) {
+  body {
+    background-color: white;
+  }
+
+  header,
+  .about__title,
+  .group {
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+
   nav {
     display: flex;
     justify-content: center;
@@ -346,7 +365,7 @@ footer {
     top: 0;
     height: auto;
     background-image: none;
-    background-color: var(--light);
+    background-color: white;
   }
 
   .list__item:first-child {
@@ -390,11 +409,15 @@ footer {
   .intro {
     order: -1;
     text-align: left;
-    border: 1px solid red;
     background-image: none;
-    width: 30rem;
+    width: 38rem;
+    height: auto;
+    align-items: flex-start;
   }
 
+  .intro__title {
+    width: 16ch;
+  }
   .hero {
     width: 35rem;
     height: 50rem;
@@ -422,16 +445,47 @@ footer {
     width: 100%;
   }
 
+  .intro__title,
+  .about__title {
+    font-size: 3rem;
+    font-weight: 400;
+  }
+
+  .about__title {
+    padding-bottom: 6rem;
+  }
+
+  .group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card__text {
+    width: 94%;
+  }
+
   .card {
     padding: 0;
     text-align: left;
-    max-width: 30rem;
-    border: 1px solid red;
+    margin-bottom: 0;
+    max-width: 100%;
+    flex: 1;
+    align-items: flex-start;
+  }
+
+  .card:not(:last-child) {
+    margin-right: 3rem;
   }
 
   .card--primary {
+    max-width: 1240px;
+    margin: 5rem auto;
     flex-direction: row;
     background-image: url(../images/bg-pattern-how-we-work-desktop.svg);
+    padding: 5rem;
+    display: flex;
+    align-items: center;
   }
 
   .card__title--primary {
@@ -445,30 +499,30 @@ footer {
     margin-left: auto;
   }
 
-  header,
-  .about__title,
-  .card--primary {
-    max-width: 1240px;
-    margin: 0 auto;
-  }
-
   footer {
     flex-direction: row;
     flex-wrap: wrap;
     background-image: url(../images/bg-pattern-footer-desktop.svg);
     background-position: top left;
-    background-size: 70%;
+    background-size: 30%;
   }
 
-  .footer__logo,
-  .footer__social {
-    width: 50%;
-    margin-bottom: 0;
+  .footer__group {
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1240px;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--gray002);
+  }
+
+  .footer__logo {
+    margin-bottom: 0;
   }
 
   .footer__social {
-    justify-content: flex-end;
+    margin-left: auto;
   }
 
   .links {
@@ -477,7 +531,14 @@ footer {
     align-items: space-between;
     width: 100%;
   }
+
   .footer__links {
     flex-direction: row;
+    max-width: 1240px;
+  }
+
+  .links__section,
+  .footer__list li {
+    text-align: left;
   }
 }
