@@ -393,7 +393,7 @@ footer {
 
   nav {
     display: flex;
-    padding: var(--large) 0;
+    padding: var(--medium) 0;
   }
 
   .menu {
@@ -434,6 +434,13 @@ footer {
   .list__link--cta {
     color: var(--dark001);
     padding: 0.6rem var(--medium);
+  }
+
+  .list__item:first-child,
+  .list__item:nth-child(2),
+  .list__item:nth-child(3),
+  .list__item:nth-child(4) {
+    animation: menuOpen 0s forwards;
   }
 
   .container {
