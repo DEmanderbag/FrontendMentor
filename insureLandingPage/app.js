@@ -11,6 +11,7 @@ menu.addEventListener("click", () =>{
 })
 
 menuItems.forEach(e => e.addEventListener("click", () =>{
+  body.classList.toggle("open");
   menuLine.classList.toggle("menu__line--open");
   menuList.classList.toggle("is-open");
 }));
