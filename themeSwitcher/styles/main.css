@@ -1,0 +1,254 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --positive: hsl(163, 72%, 41%);
+  --negative: hsl(356, 69%, 56%);
+  --facebook: hsl(208, 92%, 53%);
+  --twitter: hsl(203, 89%, 53%);
+  --instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+  --youtube: hsl(348, 97%, 39%);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  transition: color, background-color 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  display: block;
+}
+
+section {
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  width: 100%;
+}
+
+.section__title {
+  color: var(--text001);
+  grid-column: 1 / -1;
+}
+
+.section__count {
+  color: var(--text002);
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--text002);
+  padding: 1rem 0;
+  grid-column: 1 / -1;
+}
+
+.toggle-switch__label {
+  margin-right: auto;
+  font-weight: 700;
+  color: var(--text002);
+}
+
+.switch {
+  position: relative;
+  width: 3.5rem;
+  height: 1.8rem;
+  background: linear-gradient(to right, var(--toggle001), var(--toggle002));
+  border-radius: 2rem;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: var(--bg-card);
+  transition: 0.3s;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+input:checked + .slider:before {
+  transform: translateX(103%) translateY(-50%);
+}
+
+.slider--round:before {
+  border-radius: 50%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-card);
+  padding: 2rem;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  width: 100%;
+  height: 5px;
+}
+.card--facebook::before {
+  background-color: var(--facebook);
+}
+
+.card--twitter::before {
+  background-color: var(--twitter);
+}
+
+.card--instagram::before {
+  background-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+}
+
+.card--youtube::before {
+  background-color: var(--youtube);
+}
+
+.card__account {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.account__name {
+  margin-left: 0.5rem;
+  font-weight: 700;
+  color: var(--text002);
+  font-size: 0.875rem;
+}
+
+.card__followers {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.followers__count {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text001);
+}
+
+.followers__text {
+  letter-spacing: 3px;
+  color: var(--text002);
+  text-transform: uppercase;
+}
+
+.card__new {
+  display: flex;
+  align-items: center;
+}
+
+.new__data {
+  margin-left: 0.25rem;
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: var(--positive);
+}
+
+.new__data--negative {
+  color: var(--negative);
+}
+
+/* other data cards */
+.other {
+  width: 100%;
+}
+
+.data {
+  background-color: var(--bg-card);
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  border-radius: 5px;
+}
+
+.data__about {
+  margin-bottom: 1rem;
+}
+.data__about,
+.data__source {
+  display: flex;
+}
+
+.data__from {
+  color: var(--text002);
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.data__about p {
+  margin-right: auto;
+}
+
+.data__number {
+  margin-right: auto;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text001);
+}
+
+.other .new__data {
+  align-self: flex-end;
+}
+
+@media screen and (min-width: 500px) {
+  section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 2rem;
+  }
+}
+
+@media screen and (min-width: 880px) {
+  section {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    max-width: 1200px;
+  }
+
+  .group {
+    grid-column: 1 / 3;
+  }
+
+  .section__count {
+    margin-bottom: 2rem;
+  }
+
+  .toggle {
+    border-top: 0;
+    grid-column: 3 / 5;
+    justify-content: flex-end;
+  }
+
+  .toggle-switch__label {
+    margin: 0;
+    padding-right: 1rem;
+  }
+}

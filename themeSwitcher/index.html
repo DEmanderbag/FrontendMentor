@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="styles/dark.css" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="styles/light.css" media="(prefers-color-scheme: light)">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+    rel="stylesheet">
+  <title>Frontend Mentor | Social Media Dashboard With Theme Switcher</title>
+</head>
+
+<body>
+  <section>
+    <div class="group">
+      <h1 class="section__title">Social Media Dashboard</h1>
+      <h3 class="section__count">Total Followers: 23,004</h3>
+    </div>
+
+    <div class="toggle">
+      <label class="toggle-switch__label" for="toggle-switch">Dark Mode</label>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider slider--round"></span>
+      </label>
+    </div>
+
+    <div class="card card--facebook">
+      <div class="card__account">
+        <img src="images/icon-facebook.svg" alt="facebook icon">
+        <p class="account__name">@nathanf</p>
+      </div>
+      <div class="card__followers">
+        <p class="followers__count">1987</p>
+        <p class="followers__text">Followers</p>
+      </div>
+      <div class="card__new">
+        <img src="images/icon-up.svg" alt="arrow up">
+        <p class="new__data">12 Today</p>
+      </div>
+    </div>
+
+    <div class="card card--twitter">
+      <div class="card__account">
+        <img src="images/icon-twitter.svg" alt="twitter icon">
+        <p class="account__name">@nathanf</p>
+      </div>
+      <div class="card__followers">
+        <p class="followers__count">1044</p>
+        <p class="followers__text">Followers</p>
+      </div>
+      <div class="card__new">
+        <img src="images/icon-up.svg" alt="arrow up">
+        <p class="new__data">99 Today</p>
+      </div>
+    </div>
+
+    <div class="card card--instagram">
+      <div class="card__account">
+        <img src="images/icon-instagram.svg" alt="instagram icon">
+        <p class="account__name">@realnathanf</p>
+      </div>
+      <div class="card__followers">
+        <p class="followers__count">11k</p>
+        <p class="followers__text">Followers</p>
+      </div>
+      <div class="card__new">
+        <img src="images/icon-up.svg" alt="arrow up">
+        <p class="new__data">1099 Today</p>
+      </div>
+    </div>
+
+    <div class="card card--youtube">
+      <div class="card__account">
+        <img src="images/icon-youtube.svg" alt="youtube icon">
+        <p class="account__name">Nathan F.</p>
+      </div>
+      <div class="card__followers">
+        <p class="followers__count">8239</p>
+        <p class="followers__text">Subscribers</p>
+      </div>
+      <div class="card__new">
+        <img src="images/icon-down.svg" alt="arrow down">
+        <p class="new__data new__data--negative">144 Today</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="other">
+    <h1 class="section__title">Overview - Today</h1>
+    <div class="data">
+      <div class="data__about">
+        <p class="data__from">Page Views</p>
+        <img src="images/icon-facebook.svg" alt="facebook icon">
+      </div>
+      <div class="data__source">
+        <p class="data__number">87</p>
+        <p class="new__data">3%</p>
+      </div>
+    </div>
+
+    <div class="data">
+      <div class="data__about">
+        <p class="data__from">Likes</p>
+        <img src="images/icon-facebook.svg" alt="facebook icon">
+      </div>
+      <div class="data__source">
+        <p class="data__number">52</p>
+        <p class="new__data new__data--negative">2%</p>
+      </div>
+    </div>
+
+    <div class="data">
+      <div class="data__about">
+        <p class="data__from">Likes</p>
+        <img src="images/icon-instagram.svg" alt="instagram icon">
+      </div>
+      <div class="data__source">
+        <p class="data__number">5462</p>
+        <p class="new__data">2257%</p>
+      </div>
+    </div>
+
+    <div class="data">
+      <div class="data__about">
+        <p class="data__from">Profile Views</p>
+        <img src="images/icon-instagram.svg" alt="instagram icon">
+      </div>
+      <div class="data__source">
+        <p class="data__number">52k</p>
+        <p class="new__data">1375%</p>
+      </div>
+    </div>
+
+    <div class="data">
+      <div class="data__about">
+        <p class="data__from">Retweets</p>
+        <img src="images/icon-twitter.svg" alt="twitter icon">
+      </div>
+      <div class="data__source">
+        <p class="data__number">117</p>
+        <p class="new__data">303%</p>
+      </div>
+    </div>
+
+    <div class="data">
+      <div class="data__about">
+        <p class="data__from">Likes</p>
+        <img src="images/icon-twitter.svg" alt="twitter icon">
+      </div>
+      <div class="data__source">
+        <p class="data__number">507</p>
+        <p class="new__data">553%</p>
+      </div>
+    </div>
+
+    <div class="data">
+      <div class="data__about">
+        <p class="data__from">Likes</p>
+        <img src="images/icon-youtube.svg" alt="youtube icon">
+      </div>
+      <div class="data__source">
+        <p class="data__number">107</p>
+        <p class="new__data new__data--negative">19%</p>
+      </div>
+    </div>
+
+    <div class="data">
+      <div class="data__about">
+        <p class="data__from">Total Views</p>
+        <img src="images/icon-youtube.svg" alt="youtube icon">
+      </div>
+      <div class="data__source">
+        <p class="data__number">1407</p>
+        <p class="new__data new__data--negative">12%</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend
+      Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+  <script src="app.js" defer></script>
+</body>
+
+</html>
