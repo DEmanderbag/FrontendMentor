@@ -105,6 +105,7 @@ input:checked + .slider:before {
   border-radius: 5px;
   overflow: hidden;
   position: relative;
+  transition: backgroundColor, background-color 0.2s;
 }
 
 .card::before {
@@ -187,6 +188,7 @@ input:checked + .slider:before {
   padding: 1rem;
   flex-direction: column;
   border-radius: 5px;
+  transition: backgroundColor, background-color 0.2s;
 }
 
 .data__about {
@@ -214,8 +216,12 @@ input:checked + .slider:before {
   color: var(--text001);
 }
 
-.other .new__data {
-  align-self: flex-end;
+.growth,
+.decline {
+  display: flex;
+  align-items: center;
+  height: 1rem;
+  margin-top: auto;
 }
 
 @media screen and (min-width: 500px) {
@@ -241,6 +247,10 @@ input:checked + .slider:before {
     margin-bottom: 2rem;
   }
 
+  .switch {
+    cursor: pointer;
+  }
+
   .toggle {
     border-top: 0;
     grid-column: 3 / 5;
@@ -250,5 +260,13 @@ input:checked + .slider:before {
   .toggle-switch__label {
     margin: 0;
     padding-right: 1rem;
+  }
+}
+
+@media (hover: hover) {
+  .card:hover,
+  .data:hover {
+    cursor: pointer;
+    background-color: var(--bg-card-hover);
   }
 }

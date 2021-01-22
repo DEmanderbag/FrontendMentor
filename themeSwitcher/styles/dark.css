@@ -1,6 +1,7 @@
 :root {
   --bg-color: hsl(230, 17%, 14%);
   --bg-card: hsl(228, 28%, 20%);
+  --bg-card-hover: hsl(228, 28%, 35%);
   --text001: hsl(0, 0%, 100%);
   --text002: hsl(228, 34%, 66%);
   --toggle001: hsl(210, 78%, 56%);
