@@ -160,5 +160,23 @@
     "code": "https://github.com/DEmanderbag/FrontendMentor/tree/master/projectTracking",
     "demo": "https://stoic-meninsky-7d6f57.netlify.app/projectTracking/",
     "id": 18
+  },
+  {
+    "title": "Insure landing page",
+    "description": "Test your layout skills with this HTML & CSS only landing page. This challenge is perfect if you're starting to get confident in laying out web pages.",
+    "date": "2021-01-10",
+    "photo": "insureLandingPage/design/desktop-preview.jpg",
+    "code": "https://github.com/DEmanderbag/FrontendMentor/tree/master/insureLandingPage",
+    "demo": "https://stoic-meninsky-7d6f57.netlify.app/insurelandingpage/",
+    "id": 19
+  },
+  {
+    "title": "Social media dashboard with theme switcher",
+    "description": "This challenge will be a perfect chance to practice your Grid skills. The color theme switcher also adds a nice additional test.",
+    "date": "2021-01-22",
+    "photo": "themeSwitcher/design/desktop-preview.jpg",
+    "code": "https://github.com/DEmanderbag/FrontendMentor/tree/master/themeSwitcher",
+    "demo": "https://stoic-meninsky-7d6f57.netlify.app/themeswitcher/",
+    "id": 20
   }
 ]
