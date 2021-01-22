@@ -68,6 +68,7 @@ a {
   align-items: center;
   border: 2px solid var(--dark001);
   padding: var(--x-small);
+  cursor: pointer;
 }
 
 .menu__line {
@@ -616,17 +617,22 @@ a,
 
 @media (hover: hover) {
   a:hover {
-    color: var(--dark001);
+    color: var(--gray002);
   }
 
   .list__link--cta:hover {
-    background-color: var(--dark001);
-    color: var(--light002);
+    color: var(--gray002);
+  }
+
+  .list__item:last-child:hover {
+    border-color: var(--gray002);
+    cursor: pointer;
   }
 
   .btn__cta:hover {
     color: var(--dark001);
     background-color: var(--light002);
+    cursor: pointer;
   }
   .footer__list a:hover {
     text-decoration: underline;
