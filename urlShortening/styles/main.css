@@ -6,6 +6,7 @@
 
 :root {
   --primary001: hsl(180, 66%, 49%);
+  --primary-hover: hsl(180, 66%, 60%);
   --primary002: hsl(257, 27%, 26%);
   --secondary: hsl(0, 87%, 67%);
   --light001: hsl(0, 0%, 100%);
@@ -83,7 +84,7 @@ nav {
 }
 
 .menu__line--open {
-  background-color: var(--light002);
+  background-color: var(--light001);
 }
 
 .menu__line--open::before {
@@ -341,6 +342,7 @@ input[type="text"]::placeholder {
 footer {
   text-align: center;
   background-color: var(--dark001);
+  padding-bottom: 3rem;
 }
 
 .footer__group {
@@ -385,6 +387,7 @@ footer ul {
 .social {
   padding-bottom: 1rem;
 }
+
 .social svg {
   fill: var(--light001);
   margin-right: 1rem;
@@ -607,6 +610,44 @@ footer ul {
 
   .footer__list ul:nth-child(4) {
     margin-right: auto;
+  }
+}
+
+/* Hover states */
+
+@media (hover: hover) {
+  .logo:hover,
+  .footer__logo {
+    cursor: pointer;
+  }
+
+  .list__link:hover {
+    color: var(--dark001);
+  }
+
+  .list__link--cta:hover {
+    cursor: pointer;
+    color: var(--light001);
+    background-color: var(--primary-hover);
+    border-radius: 20px;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .short__btn--active:hover {
+    background-color: var(--primary002);
+    opacity: 80%;
+  }
+  button:hover {
+    cursor: pointer;
+    background-color: var(--primary-hover);
+  }
+  .footer__link:hover {
+    color: var(--primary001);
+  }
+
+  .social svg:hover {
+    cursor: pointer;
+    fill: var(--primary001);
   }
 }
 
