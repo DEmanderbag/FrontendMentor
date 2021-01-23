@@ -226,7 +226,7 @@ header {
 
 form {
   padding: 1.5rem 1rem;
-  background-image: url(/images/bg-shorten-mobile.svg);
+  background-image: url(../images/bg-shorten-mobile.svg);
   background-repeat: no-repeat;
   background-color: var(--primary002);
   background-position: top right;
@@ -279,6 +279,7 @@ input[type="text"]::placeholder {
 
 .link__original a {
   color: var(--dark002);
+  word-wrap: break-word;
 }
 
 .link__short {
@@ -352,7 +353,7 @@ footer {
   align-items: center;
   background-color: var(--primary002);
   height: 17rem;
-  background-image: url(/images/bg-boost-mobile.svg);
+  background-image: url(../images/bg-boost-mobile.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -495,7 +496,7 @@ footer ul {
     margin: 0 auto;
     flex-direction: row;
     padding: 3rem;
-    background-image: url(/images/bg-shorten-desktop.svg);
+    background-image: url(../images/bg-shorten-desktop.svg);
     background-size: cover;
   }
 
@@ -578,7 +579,7 @@ footer ul {
   }
 
   .footer__group {
-    background-image: url(/images/bg-boost-desktop.svg);
+    background-image: url(../images/bg-boost-desktop.svg);
   }
   .footer__group h2 {
     font-size: 2rem;
