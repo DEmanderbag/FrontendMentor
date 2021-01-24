@@ -248,10 +248,20 @@ form {
   margin-bottom: 2rem;
 }
 
+.loading {
+  cursor: progress;
+  background-color: var(--gray002);
+}
+
+.loading:hover {
+  cursor: progress;
+  background-color: var(--gray002);
+}
+
 .form__input {
+  font-size: 1rem;
   width: 100%;
   padding: 1rem 0.5rem;
-  /* margin-bottom: 0.25rem; */
   border-radius: 7px;
   border: none;
   position: relative;
@@ -530,17 +540,6 @@ footer ul {
     width: 98%;
     margin-bottom: 0;
     margin-right: auto;
-    font-size: 1rem;
-  }
-
-  .loading {
-    cursor: progress;
-    background-color: var(--gray002);
-  }
-
-  .loading:hover {
-    cursor: progress;
-    background-color: var(--gray002);
   }
 
   .link__short {
