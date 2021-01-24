@@ -31,17 +31,19 @@ formBtn.addEventListener("click", (e) => {
   e.preventDefault();
   let currentValue = formInput.value;
 
-  if (currentValue == "") {
-    formGroup.classList.add("group--error");
-    formInput.classList.add("error");
-    formLabel.style.display = "block";
-  } else {
+  if (!currentValue == "" && testIfValidURL(currentValue) == true) {
     formGroup.classList.remove("group--error");
     formInput.classList.remove("error");
     formLabel.style.display = "none";
     formBtn.classList.add("loading");
     formBtn.textContent = "Generating ...";
     getLink(currentValue, currentValue);
+  } else {
+    formGroup.classList.add("group--error");
+    formInput.classList.add("error");
+    formLabel.style.display = "block";
+    formInput.value = "";
+    formInput.focus();
   }
 });
 
@@ -75,4 +77,18 @@ function getButtons(smallLink) {
       e.textContent = "Copied!";
     });
   });
+}
+
+function testIfValidURL(str) {
+  const pattern = new RegExp(
+    "^https?:\\/\\/" + // protocol
+      "((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|" + // domain name
+      "((\\d{1,3}\\.){3}\\d{1,3}))" + // OR ip (v4) address
+      "(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*" + // port and path
+      "(\\?[;&a-z\\d%_.~+=-]*)?" + // query string
+      "(\\#[-a-z\\d_]*)?$",
+    "i"
+  ); // fragment locator
+
+  return !!pattern.test(str);
 }
