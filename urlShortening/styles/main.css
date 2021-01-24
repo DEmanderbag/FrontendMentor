@@ -239,14 +239,32 @@ form {
   margin: 0 auto;
 }
 
-input[type="text"] {
-  padding: 0.75rem 0.5rem;
+.group {
+  width: 100%;
   margin-bottom: 1rem;
-  border-radius: 7px;
-  border: none;
 }
 
-input[type="text"]::placeholder {
+.group--error {
+  margin-bottom: 2rem;
+}
+
+.form__input {
+  width: 100%;
+  padding: 1rem 0.5rem;
+  /* margin-bottom: 0.25rem; */
+  border-radius: 7px;
+  border: none;
+  position: relative;
+}
+
+.form__label {
+  position: absolute;
+  display: none;
+  font-size: 0.875rem;
+  color: var(--secondary);
+}
+
+.form__input::placeholder {
   font-weight: 700;
   color: var(--gray001);
   font-size: 1rem;
@@ -337,7 +355,6 @@ input[type="text"]::placeholder {
 .card__text {
   width: 80%;
   padding-bottom: 1rem;
-  /* margin-bottom: 2rem; */
 }
 
 footer {
@@ -495,18 +512,42 @@ footer ul {
     max-width: 1200px;
     margin: 0 auto;
     flex-direction: row;
+    align-items: center;
     padding: 3rem;
     background-image: url(../images/bg-shorten-desktop.svg);
     background-size: cover;
   }
 
-  input[type="text"] {
-    margin-bottom: 0;
+  .group {
     width: 79%;
+    margin-bottom: 0;
+  }
+
+  .group--error {
+    margin-bottom: 0;
+  }
+  .form__input {
+    width: 98%;
+    margin-bottom: 0;
+    margin-right: auto;
+    font-size: 1rem;
+  }
+
+  .loading {
+    cursor: progress;
+    background-color: var(--gray002);
+  }
+
+  .loading:hover {
+    cursor: progress;
+    background-color: var(--gray002);
+  }
+
+  .link__short {
+    margin-left: auto;
   }
 
   .short__btn {
-    margin-left: auto;
     width: 20%;
     padding: 0.75rem 1.25rem;
   }
@@ -522,6 +563,12 @@ footer ul {
     border-bottom: none;
     padding-bottom: 0;
     margin-bottom: 0;
+    word-wrap: break-word;
+    width: 60%;
+  }
+
+  .link__original a {
+    width: 90%;
   }
 
   .link__short {
@@ -615,7 +662,6 @@ footer ul {
 }
 
 /* Hover states */
-
 @media (hover: hover) {
   .logo:hover,
   .footer__logo {
@@ -650,6 +696,11 @@ footer ul {
     cursor: pointer;
     fill: var(--primary001);
   }
+}
+
+/* Error */
+.error {
+  border: 2px solid var(--secondary);
 }
 
 /* Animation */
