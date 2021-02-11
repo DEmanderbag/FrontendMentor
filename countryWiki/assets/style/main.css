@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --text-color: hsl(200, 15%, 8%);
+  --background-color: #ffffff;
+  --section-bg: #fafafa;
+  --input: hsl(0, 0%, 52%);
+
+  /* sizing */
+  --x-small: 0.5rem;
+  --small: 1rem;
+  --medium: 1.5rem;
+  --large: 2rem;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  display: block;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text-color);
+  padding: var(--small);
+  background-color: var(--background-color);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 25%);
+}
+
+header h1 {
+  font-size: 1rem;
+}
+
+button {
+  border: none;
+  color: var(--text-color);
+  font-weight: 600;
+  text-transform: capitalize;
+  padding: var(--small);
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+}
+
+button span {
+  transform: rotate(-30deg);
+  margin-right: var(--x-small);
+}
+
+section {
+  padding: var(--medium) var(--small);
+  flex: 1;
+  background-color: var(--section-bg);
+}
+
+input[type="text"] {
+  width: 100%;
+}
+
+.form {
+  font-size: 1rem;
+  padding: var(--small);
+  color: var(--text-color);
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 5.32%);
+}
+
+input[type="text"]::placeholder {
+  color: var(--text-color);
+}
+
+#region {
+  margin: var(--large) 0;
+  width: 50%;
+}
+
+.countries {
+  display: grid;
+  gap: var(--medium);
+}
+
+.country {
+  background-color: var(--background-color);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 2.94%);
+}
+
+.country__flag {
+  overflow: hidden;
+  height: 13rem;
+}
+
+.country__flag img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.country__about {
+  padding: var(--medium);
+}
+
+.country__name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: var(--small);
+}
+
+.country__population span,
+.country__region span,
+.country__capital span {
+  font-weight: 600;
+  color: var(--text-color);
+}

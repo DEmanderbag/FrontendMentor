@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/style/main.css">
+  <title>Frontend Mentor | REST Countries API with color theme switcher</title>
+</head>
+
+<body>
+  <header>
+    <h1>Where in the World?</h1>
+    <button>
+      <span><img src="assets/icons/moon.svg" alt="moon icon"></span>
+      Dark mode</button>
+  </header>
+  <section>
+    <div class="form__group">
+      <form>
+        <input type="text" placeholder="Search for a country" class="form">
+      </form>
+      <select name="cars" id="region" class="form">
+        <option value="filter">Filter by Region</option>
+        <option value="africa">Africa</option>
+        <option value="america">America</option>
+        <option value="asia">Asia</option>
+        <option value="europe">Europe</option>
+        <option value="oceania">Oceania</option>
+      </select>
+    </div>
+    <div class="countries">
+      <!-- Load countries from JavaScript -->
+    </div>
+  </section>
+
+  <script src="app.js" defer></script>
+</body>
+
+</html>
