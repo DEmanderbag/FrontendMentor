@@ -1,0 +1,14 @@
+:root {
+  --text-color: hsl(200, 15%, 8%);
+  --background-color: #ffffff;
+  --section-bg: #fafafa;
+
+  /* Loading colors */
+  --loading-accent: #f9f9f9;
+  --loading: #f2f2f2;
+  --icon-filter: invert(0%);
+}
+
+header img[src*=".svg"] {
+  filter: var(--icon-filter);
+}

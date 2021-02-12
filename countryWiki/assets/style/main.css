@@ -8,7 +8,6 @@
   --text-color: hsl(200, 15%, 8%);
   --background-color: #ffffff;
   --section-bg: #fafafa;
-  --input: hsl(0, 0%, 52%);
 
   /* Loading colors */
   --loading-accent: #f9f9f9;
@@ -62,6 +61,7 @@ button {
   background-color: transparent;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 button span {
@@ -83,6 +83,7 @@ input[type="text"] {
   font-size: 1rem;
   padding: var(--small);
   color: var(--text-color);
+  background-color: var(--background-color);
   border: none;
   border-radius: 4px;
   box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 5.32%);
@@ -95,6 +96,7 @@ input[type="text"]::placeholder {
 #region {
   margin: var(--large) 0;
   width: 60%;
+  cursor: pointer;
 }
 
 .countries {
@@ -125,6 +127,7 @@ input[type="text"]::placeholder {
 }
 
 .country__about {
+  color: var(--text-color);
   padding: var(--medium);
 }
 
