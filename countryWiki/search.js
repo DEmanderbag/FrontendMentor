@@ -16,9 +16,11 @@ const select = document.querySelector("select");
 
 select.addEventListener("change", (e) => {
   const filterData = e.target.value;
-  console.log(filterData);
   const filteredCountry = data.filter((country) => {
     return country.region.toLowerCase().includes(filterData);
   });
   displayCountry(filteredCountry);
+  if (filterData === "filter") {
+    displayCountry(data);
+  }
 });
