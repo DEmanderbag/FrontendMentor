@@ -4,14 +4,18 @@ const countries = document.querySelector(".countries");
 const api = `https://restcountries.eu/rest/v2/all?fields=name;capital;region;population;flag`;
 
 async function requestData() {
-  const request = await fetch(api);
-  const data = await request.json();
-
-  data.forEach((dataPoint) => {
-    const { flag, name, population, region, capital } = dataPoint;
-
-    populateData(flag, name, population, region, capital);
-  });
+  try {
+    const request = await fetch(apis);
+    const data = await request.json();
+    console.log(data);
+    data.forEach((dataPoint) => {
+      const { flag, name, population, region, capital } = dataPoint;
+      // console.log(dataPoint);
+      populateData(flag, name, population, region, capital);
+    });
+  } catch (e) {
+    console.error(e);
+  }
 }
 
 function populateData(flag, name, population, region, capital) {
