@@ -10,6 +10,10 @@
   --section-bg: #fafafa;
   --input: hsl(0, 0%, 52%);
 
+  /* Loading colors */
+  --loading-accent: #f9f9f9;
+  --loading: #f2f2f2;
+
   /* sizing */
   --x-small: 0.5rem;
   --small: 1rem;
@@ -83,7 +87,7 @@ input[type="text"]::placeholder {
 
 #region {
   margin: var(--large) 0;
-  width: 50%;
+  width: 60%;
 }
 
 .countries {
@@ -124,4 +128,64 @@ input[type="text"]::placeholder {
 .country__capital span {
   font-weight: 600;
   color: var(--text-color);
+}
+
+/* Loading class */
+.country.is-loading {
+  width: 100%;
+}
+
+.country.is-loading .country__flag,
+.country.is-loading .country__name,
+.country.is-loading .country__population,
+.country.is-loading .country__region,
+.country.is-loading .country__capital {
+  background-color: var(--loading);
+  background: linear-gradient(
+    110deg,
+    var(--loading) 8%,
+    var(--loading-accent) 18%,
+    var(--loading) 33%
+  );
+  background-size: 200% 100%;
+  animation: 1.5s shine linear infinite;
+  color: var(--loading);
+}
+
+.country.is-loading .country__flag {
+  border-left: none;
+  height: 13rem;
+}
+
+.country.is-loading .country__name {
+  height: 2.5rem;
+}
+
+.country.is-loading .country__population,
+.country.is-loading .country__region,
+.country.is-loading .country__capital {
+  height: 1.5rem;
+  margin-bottom: var(--x-small);
+  padding-left: var(--x-small);
+}
+
+@keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+}
+
+/* Disable every animation on the page if users has reduce motion enabled */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
 }
