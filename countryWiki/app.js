@@ -1,35 +1,38 @@
-const countries = document.querySelector(".countries");
+const countriesSection = document.querySelector(".countries");
 const loading = document.querySelectorAll(".is-loading");
 
 // API to request data;
 const api = `https://restcountries.eu/rest/v2/all?fields=name;capital;region;population;flag`;
 
+let data = [];
 async function requestData() {
   try {
     const request = await fetch(api);
-    const data = await request.json();
-    data.forEach((dataPoint) => {
-      const { flag, name, population, region, capital } = dataPoint;
-      populateData(flag, name, population, region, capital);
-    });
+    data = await request.json();
+    displayCountry(data);
   } catch (e) {
     console.error(e);
   }
 }
 
-function populateData(flag, name, population, region, capital) {
-  countries.innerHTML += `<article class="country">
+const displayCountry = (countries) => {
+  const htmlString = countries
+    .map((country) => {
+      return `<article class="country">
         <div class="country__flag">
-          <img src="${flag}" alt="Flag of ${name}" loading="lazy">
+          <img src="${country.flag}" alt="Flag of ${country.name}" loading="lazy">
         </div>
         <div class="country__about">
-          <h2 class="country__name">${name}</h2>
-          <p class="country__population"><span>Population: </span>${population}</p>
-          <p class="country__region"><span>Region: </span>${region}</p>
-          <p class="country__capital"><span>Capital: </span>${capital}</p>
+          <h2 class="country__name">${country.name}</h2>
+          <p class="country__population"><span>Population: </span>${country.population.toLocaleString()}</p>
+          <p class="country__region"><span>Region: </span>${country.region}</p>
+          <p class="country__capital"><span>Capital: </span>${country.capital}</p>
         </div>
       </article>`;
-}
+    })
+    .join("");
+  countriesSection.innerHTML = htmlString;
+};
 
 requestData();
 
@@ -39,6 +42,7 @@ function removeLoader() {
   }
 }
 
+// For the dark mode
 const head = document.querySelector("head");
 const cta = document.querySelector(".cta");
 
@@ -49,19 +53,10 @@ cta.addEventListener("click", () => {
   } else {
     loadCSSFile("assets/style/dark.css");
   }
-  // e ? loadCSSFile("assets/style/light.css") : ;
 });
-// cta.addEventListener("click", () => {
-//   if (toggle.checked === true) {
-//     loadCSSFile("style/light.css");
-//   } else {
-//     loadCSSFile("style/dark.css");
-//   }
-// });
 
 function loadCSSFile(filename) {
   let link = document.createElement("link");
-  // link.type = "text/css";
   link.rel = "stylesheet";
   link.href = filename;
   head.appendChild(link);
