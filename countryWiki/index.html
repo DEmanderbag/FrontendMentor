@@ -27,9 +27,14 @@
   </header>
   <section>
     <div class="form__group">
-      <input type="text" placeholder="Search for a country" class="form">
+      <div class="form__input">
+        <div class="form__icon">
+          <img src="assets/icons/search.svg" alt="search icon">
+        </div>
+        <input type="text" placeholder="Search for a country" class="form">
+      </div>
       <select name="cars" id="region" class="form">
-        <option value="filter">Filter by Region</option>
+        <option value="filter" disabled selected>Filter by Region</option>
         <option value="africa">Africa</option>
         <option value="america">America</option>
         <option value="asia">Asia</option>
