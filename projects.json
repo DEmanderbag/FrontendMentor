@@ -187,5 +187,14 @@
     "code": "https://github.com/DEmanderbag/FrontendMentor/tree/master/urlShortening",
     "demo": "https://stoic-meninsky-7d6f57.netlify.app/urlshortening/",
     "id": 21
+  },
+  {
+    "title": "REST Countries API with color theme switcher",
+    "description": "If you're wanting to test your JavaScript skills this is the challenge for you. Use whichever JS framework you prefer and pull data from the REST Countries API.",
+    "date": "2021-02-15",
+    "photo": "countryWiki/assets/design/desktop-preview.jpg",
+    "code": "https://github.com/DEmanderbag/FrontendMentor/tree/master/countryWiki",
+    "demo": "https://stoic-meninsky-7d6f57.netlify.app/countrywiki/",
+    "id": 22
   }
 ]
