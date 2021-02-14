@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/style/main.css">
+  <link rel="stylesheet" href="assets/style/dark.css" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="assets/style/light.css" media="(prefers-color-scheme: light)">
+
+  <title>Frontend Mentor | REST Countries API with color theme switcher</title>
+</head>
+
+<body>
+  <header>
+    <div class="header__group">
+      <h1>Where in the World?</h1>
+      <button>
+        <span><img src="assets/icons/moon.svg" alt="moon icon"></span>
+        Dark mode</button>
+    </div>
+  </header>
+  <section class="about">
+    <button class="btn--back"><span><img src="assets/icons/back-arrow.svg"
+          alt="left pointing arrow"></span>Back</button>
+
+    <div class="container">
+      <div class="container__left">
+        <img src="https://restcountries.eu/data/afg.svg" alt="">
+      </div>
+      <div class="container__right">
+        <h2 class="country__name">${country.name}</h2>
+        <div class="container__group">
+          <div class="country__more">
+            <p class="country__native"><span>Native Name: </span></p>
+            <p class="country__population"><span>Population:
+              </span>28502512</p>
+            <p class="country__region"><span>Region: </span>${country.region}</p>
+            <p class="country__sub-region"><span>Sub Region: </span>${country.region}</p>
+            <p class="country__capital"><span>Capital: </span>${country.capital}</p>
+          </div>
+          <div class="country__fact">
+            <p><span>Top Level Domain: </span></p>
+            <p><span>Currencies: </span></p>
+            <p><span>Languages: </span></p>
+          </div>
+        </div>
+        <div class="country__borders">
+          <h3>Border Countries:</h3>
+          <ul class="border__country">
+            <li class="list__item"><a href="#">France</a></li>
+            <li class="list__item"><a href="#">Germany</a></li>
+            <li class="list__item"><a href="#">Netherlands</a></li>
+            <li class="list__item"><a href="#">Netherlands</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <script src="app.js" defer></script>
+  <script src="search.js" defer></script> -->
+</body>
+
+</html>

@@ -9,6 +9,7 @@
   --icon-filter: invert(100%);
 }
 
-header img[src*=".svg"] {
+header img[src*=".svg"],
+.btn--back span {
   filter: var(--icon-filter);
 }
