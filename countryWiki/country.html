@@ -26,45 +26,18 @@
     </div>
   </header>
   <section class="about">
-    <button class="btn--back"><span><img src="assets/icons/back-arrow.svg"
-          alt="left pointing arrow"></span>Back</button>
+    <a href="index.html"><button class="btn--back"><span><img src="assets/icons/back-arrow.svg"
+            alt="left pointing arrow"></span>Back</button>
+    </a>
 
     <div class="container">
-      <div class="container__left">
-        <img src="https://restcountries.eu/data/afg.svg" alt="">
-      </div>
-      <div class="container__right">
-        <h2 class="country__name">${country.name}</h2>
-        <div class="container__group">
-          <div class="country__more">
-            <p class="country__native"><span>Native Name: </span></p>
-            <p class="country__population"><span>Population:
-              </span>28502512</p>
-            <p class="country__region"><span>Region: </span>${country.region}</p>
-            <p class="country__sub-region"><span>Sub Region: </span>${country.region}</p>
-            <p class="country__capital"><span>Capital: </span>${country.capital}</p>
-          </div>
-          <div class="country__fact">
-            <p><span>Top Level Domain: </span></p>
-            <p><span>Currencies: </span></p>
-            <p><span>Languages: </span></p>
-          </div>
-        </div>
-        <div class="country__borders">
-          <h3>Border Countries:</h3>
-          <ul class="border__country">
-            <li class="list__item"><a href="#">France</a></li>
-            <li class="list__item"><a href="#">Germany</a></li>
-            <li class="list__item"><a href="#">Netherlands</a></li>
-            <li class="list__item"><a href="#">Netherlands</a></li>
-          </ul>
-        </div>
-      </div>
+      <!-- Data is coming from country.js file -->
     </div>
   </section>
 
   <!-- <script src="app.js" defer></script>
   <script src="search.js" defer></script> -->
+  <script src="country.js"></script>
 </body>
 
 </html>

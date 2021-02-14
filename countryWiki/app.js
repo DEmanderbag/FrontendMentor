@@ -18,7 +18,8 @@ async function requestData() {
 const displayCountry = (countries) => {
   const htmlString = countries
     .map((country) => {
-      return `<article class="country">
+      return `<article class="country" data-name="${country.name}">
+      <a href="#l"
         <div class="country__flag">
           <img src="${country.flag}" alt="Flag of ${country.name}" loading="lazy">
         </div>
@@ -28,10 +29,20 @@ const displayCountry = (countries) => {
           <p class="country__region"><span>Region: </span>${country.region}</p>
           <p class="country__capital"><span>Capital: </span>${country.capital}</p>
         </div>
+        </a>
       </article>`;
     })
     .join("");
   countriesSection.innerHTML = htmlString;
+
+  const article = document.querySelectorAll("article");
+  article.forEach((e) => {
+    e.addEventListener("click", () => {
+      let country = e.dataset.name;
+      localStorage.setItem("countryName", country);
+      window.document.location = "/country.html";
+    });
+  });
 };
 
 requestData();

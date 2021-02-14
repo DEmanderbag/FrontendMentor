@@ -27,6 +27,10 @@ body {
   flex-direction: column;
 }
 
+a {
+  text-decoration: none;
+}
+
 img {
   display: block;
 }
