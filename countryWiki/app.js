@@ -38,7 +38,7 @@ const displayCountry = (countries) => {
     e.addEventListener("click", () => {
       let country = e.dataset.name;
       localStorage.setItem("countryName", country);
-      window.document.location = "/country.html";
+      window.document.location = "./country.html";
     });
   });
 };

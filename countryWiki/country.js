@@ -25,11 +25,11 @@ function displayData(country) {
   let finalLanguage = groupLanguage.substring(11);
 
   let groupBorder;
+  let finalBorder;
   for (let border of country.borders) {
     groupBorder += `<li class="list__item">${border}</li>`;
+    finalBorder = groupBorder.substring(9);
   }
-  let finalBorder = groupBorder.substring(9);
-
   const htmlString = `<div class="container__left">
         <img src="${country.flag}" alt="Flag of ${country.name}">
       </div>
