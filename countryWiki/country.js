@@ -1,5 +1,5 @@
 const container = document.querySelector(".container");
-
+console.log(container);
 async function getCountryData(countryName) {
   const API = `https://restcountries.eu/rest/v2/name/${countryName}?fields=flag;name;nativeName;population;region;subregion;capital;topLevelDomain;currencies;languages;borders;?fullText=true`;
 
@@ -30,6 +30,7 @@ function displayData(country) {
     groupBorder += `<li class="list__item">${border}</li>`;
     finalBorder = groupBorder.substring(9);
   }
+
   const htmlString = `<div class="container__left">
         <img src="${country.flag}" alt="Flag of ${country.name}">
       </div>
@@ -53,7 +54,7 @@ function displayData(country) {
         <div class="country__borders">
           <h3>Border Countries:</h3>
           <ul class="border__country">
-          ${finalBorder}
+          ${finalBorder == undefined ? "No borders with any country" : finalBorder}
           </ul>
         </div>
       </div>`;

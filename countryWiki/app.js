@@ -44,9 +44,3 @@ const displayCountry = (countries) => {
 };
 
 requestData();
-
-function removeLoader() {
-  for (const country of loading) {
-    country.classList.add("hidden");
-  }
-}

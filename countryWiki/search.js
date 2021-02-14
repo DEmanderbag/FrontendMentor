@@ -15,6 +15,7 @@ search.addEventListener("keyup", (e) => {
 const select = document.querySelector("select");
 
 select.addEventListener("change", (e) => {
+  search.value = "";
   const filterData = e.target.value;
   const filteredCountry = data.filter((country) => {
     return country.region.toLowerCase().includes(filterData);

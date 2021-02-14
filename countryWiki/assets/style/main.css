@@ -229,10 +229,6 @@ input[type="text"]::placeholder {
   padding-left: var(--x-small);
 }
 
-.hidden {
-  display: none;
-}
-
 @keyframes shine {
   to {
     background-position-x: -200%;

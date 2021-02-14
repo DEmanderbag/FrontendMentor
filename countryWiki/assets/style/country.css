@@ -1,6 +1,9 @@
-/* Styles for country page */
 .about {
   padding: var(--large) var(--small);
+}
+
+a {
+  text-decoration: none;
 }
 
 .btn--back {
@@ -83,6 +86,7 @@
   margin-bottom: var(--x-small);
   margin-right: var(--x-small);
 }
+
 .border__country a {
   text-decoration: none;
   font-size: 0.875rem;
@@ -91,13 +95,53 @@
   color: var(--text-color);
 }
 
-@media screen and (min-width: 650px) {
+/* Loading animations */
+.container.is-loading {
+  max-width: 100%;
+  width: 100%;
+}
+
+.container__left.is-loading,
+.container__right.is-loading .country__name,
+.container__right.is-loading .container__group,
+.container__right.is-loading .country__borders,
+.container__right.is-loading .border__country {
+  background-color: var(--loading);
+  background: linear-gradient(
+    110deg,
+    var(--loading) 8%,
+    var(--loading-accent) 18%,
+    var(--loading) 33%
+  );
+  background-size: 200% 100%;
+  animation: 1.5s shine linear infinite;
+  color: var(--loading);
+}
+
+.container__left.is-loading img {
+  border-left: none;
+  height: 25rem;
+}
+
+.container__right.is-loading .country__name,
+.container__right.is-loading .country__borders h3 {
+  width: 15rem;
+  height: 2.5rem;
+}
+
+.container__right.is-loading .container__group {
+  width: 100%;
+  height: 10rem;
+  margin-bottom: var(--x-small);
+}
+
+@media screen and (min-width: 720px) {
   .container {
     flex-direction: row;
     margin: 0;
-    /* align-items: center; */
     max-width: 100%;
   }
+
   .container__left,
   .container__right {
     width: 48%;
@@ -112,22 +156,30 @@
     max-width: 40rem;
     margin-right: calc(2 * var(--large));
   }
+  .container__left img {
+    object-fit: contain;
+  }
+
+  .country__name {
+    font-size: 1.75rem;
+  }
 }
 
-@media screen and (min-width: 970px) {
+@media screen and (min-width: 1080px) {
   .about {
     padding: var(--small) 5rem;
   }
 
-  .container {
-    align-items: center;
+  .btn--back {
+    margin-top: var(--large);
   }
+
   .container__left {
     height: 25rem;
   }
 
   .container__right {
-    max-width: 35rem;
+    max-width: 29rem;
     height: 25rem;
     display: flex;
     flex-wrap: wrap;
@@ -135,12 +187,14 @@
     align-items: center;
   }
 
-  .container__right .country__name {
+  .country__name {
     width: 100%;
   }
 
   .container__group {
+    width: 100%;
     display: flex;
+    justify-content: space-between;
     margin-bottom: var(--large);
   }
   .country__more {
@@ -153,11 +207,27 @@
 }
 
 @media screen and (min-width: 1400px) {
-  .container {
+  .container,
+  .back__group {
     max-width: 95rem;
     margin: 0 auto;
   }
-  .btn--back {
-    max-width: 95rem;
+
+  .container__left img {
+    object-fit: cover;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
   }
 }

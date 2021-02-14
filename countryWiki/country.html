@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="assets/style/main.css">
+  <link rel="stylesheet" href="assets/style/country.css">
   <link rel="stylesheet" href="assets/style/dark.css" media="(prefers-color-scheme: dark)">
   <link rel="stylesheet" href="assets/style/light.css" media="(prefers-color-scheme: light)">
 
@@ -26,12 +27,30 @@
     </div>
   </header>
   <section class="about">
-    <a href="index.html"><button class="btn--back"><span><img src="assets/icons/back-arrow.svg"
-            alt="left pointing arrow"></span>Back</button>
-    </a>
-
+    <div class="back__group">
+      <a href="index.html"><button class="btn--back"><span><img src="assets/icons/back-arrow.svg"
+              alt="left pointing arrow"></span>Back</button>
+      </a>
+    </div>
     <div class="container">
-      <!-- Data is coming from country.js file -->
+      <div class="container__left is-loading"></div>
+      <div class="container__right is-loading">
+        <h2 class="country__name"></h2>
+        <div class="container__group is-loading">
+          <div class="country__more">
+            <p class="country__native"><span></span></p>
+            <p class="country__population"><span></span></p>
+            <p class="country__region"><span></span></p>
+            <p class="country__sub-region"><span></span></p>
+            <p class="country__capital"><span></span></p>
+          </div>
+        </div>
+        <div class="country__borders is-loading">
+          <h3></h3>
+          <ul class="border__country is-loading">
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
