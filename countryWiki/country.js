@@ -6,7 +6,6 @@ async function getCountryData(countryName) {
   try {
     const request = await fetch(API);
     let data = await request.json();
-    console.log(data[0]);
     displayData(data[0]);
   } catch (e) {
     console.error(e);
@@ -18,8 +17,21 @@ let countryName = localStorage.getItem("countryName");
 getCountryData(countryName);
 
 function displayData(country) {
-  const htmlString = ` <div class="container__left">
-        <img src="${country.flag}" alt="">
+  // Get all languages
+  let groupLanguage;
+  for (let language of country.languages) {
+    groupLanguage += `, ${language.name}`;
+  }
+  let finalLanguage = groupLanguage.substring(11);
+
+  let groupBorder;
+  for (let border of country.borders) {
+    groupBorder += `<li class="list__item">${border}</li>`;
+  }
+  let finalBorder = groupBorder.substring(9);
+
+  const htmlString = `<div class="container__left">
+        <img src="${country.flag}" alt="Flag of ${country.name}">
       </div>
       <div class="container__right">
         <h2 class="country__name">${country.name}</h2>
@@ -35,16 +47,13 @@ function displayData(country) {
           <div class="country__fact">
             <p><span>Top Level Domain: </span>${country.topLevelDomain[0]}</p>
             <p><span>Currencies: </span>${country.currencies[0].name}</p>
-            <p><span>Languages: </span>${country.languages[0].name}</p>
+            <p><span>Languages: </span>${finalLanguage}</p>
           </div>
         </div>
         <div class="country__borders">
           <h3>Border Countries:</h3>
           <ul class="border__country">
-            <li class="list__item">Spain</li>
-            <li class="list__item">Germany</li>
-            <li class="list__item">Netherlands</li>
-            <li class="list__item">Netherlands</li>
+          ${finalBorder}
           </ul>
         </div>
       </div>`;

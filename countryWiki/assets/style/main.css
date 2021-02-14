@@ -27,10 +27,6 @@ body {
   flex-direction: column;
 }
 
-a {
-  text-decoration: none;
-}
-
 img {
   display: block;
 }
@@ -342,7 +338,7 @@ input[type="text"]::placeholder {
 
 .border__country {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
@@ -354,7 +350,8 @@ input[type="text"]::placeholder {
   width: 30%;
   text-align: center;
   border-radius: 4px;
-  margin-bottom: var(--small);
+  margin-bottom: var(--x-small);
+  margin-right: var(--x-small);
 }
 .border__country a {
   text-decoration: none;
