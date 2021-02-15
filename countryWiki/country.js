@@ -1,5 +1,5 @@
 const container = document.querySelector(".container");
-console.log(container);
+
 async function getCountryData(countryName) {
   const API = `https://restcountries.eu/rest/v2/name/${countryName}?fields=flag;name;nativeName;population;region;subregion;capital;topLevelDomain;currencies;languages;borders;?fullText=true`;
 
@@ -27,7 +27,7 @@ function displayData(country) {
   let groupBorder;
   let finalBorder;
   for (let border of country.borders) {
-    groupBorder += `<li class="list__item">${border}</li>`;
+    groupBorder += `<li class="list__item"><a href="#">${border}</a></li>`;
     finalBorder = groupBorder.substring(9);
   }
 
@@ -55,6 +55,54 @@ function displayData(country) {
           <h3>Border Countries:</h3>
           <ul class="border__country">
           ${finalBorder == undefined ? "No borders with any country" : finalBorder}
+          </ul>
+        </div>
+      </div>`;
+  container.innerHTML = htmlString;
+
+  borders();
+}
+
+function borders() {
+  const borderCountry = document.querySelectorAll(".list__item");
+
+  borderCountry.forEach((e) => {
+    e.addEventListener("click", () => {
+      let borderValue = e.textContent;
+      getBorderData(borderValue);
+    });
+  });
+}
+
+async function getBorderData(borderData) {
+  loadingData();
+  const borderAPI = `https://restcountries.eu/rest/v2/alpha/${borderData}?fields=flag;name;nativeName;population;region;subregion;capital;topLevelDomain;currencies;languages;borders`;
+
+  try {
+    const request = await fetch(borderAPI);
+    let data = await request.json();
+    displayData(data);
+  } catch (e) {
+    console.error(e);
+  }
+}
+
+function loadingData() {
+  const htmlString = `<div class="container__left is-loading"></div>
+      <div class="container__right is-loading">
+        <h2 class="country__name"></h2>
+        <div class="container__group is-loading">
+          <div class="country__more">
+            <p class="country__native"><span></span></p>
+            <p class="country__population"><span></span></p>
+            <p class="country__region"><span></span></p>
+            <p class="country__sub-region"><span></span></p>
+            <p class="country__capital"><span></span></p>
+          </div>
+        </div>
+        <div class="country__borders is-loading">
+          <h3></h3>
+          <ul class="border__country is-loading">
           </ul>
         </div>
       </div>`;
