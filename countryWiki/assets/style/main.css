@@ -52,6 +52,11 @@ header h1 {
   margin-right: auto;
 }
 
+header h1 a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
 button {
   font-size: 1rem;
   color: var(--text-color);

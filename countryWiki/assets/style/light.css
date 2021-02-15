@@ -14,3 +14,11 @@ header img[src*=".svg"],
 .btn--back span {
   filter: var(--icon-filter);
 }
+
+.cta::after {
+  content: "Dark mode";
+}
+
+.icon {
+  content: url("../icons/moon.svg");
+}

@@ -87,6 +87,10 @@ a {
   margin-right: var(--x-small);
 }
 
+.list__item a {
+  padding: var(--x-small) var(--large);
+}
+
 .border__country a {
   text-decoration: none;
   font-size: 0.875rem;

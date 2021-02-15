@@ -1,6 +1,17 @@
 const countriesSection = document.querySelector(".countries");
 const loading = document.querySelectorAll(".is-loading");
 
+// Get theme
+let theme = localStorage.getItem("theme");
+console.log(theme);
+if (theme === "true") {
+  loadCSSFile("assets/style/dark.css");
+} else {
+  loadCSSFile("assets/style/light.css");
+}
+
+theme = localStorage.setItem("theme", theme);
+
 // API to request data;
 const api = `https://restcountries.eu/rest/v2/all?fields=name;capital;region;population;flag`;
 
