@@ -3,8 +3,10 @@ const loading = document.querySelectorAll(".is-loading");
 
 // Get theme
 let theme = localStorage.getItem("theme");
-console.log(theme);
-if (theme === "true") {
+
+if (theme === "null") {
+  console.log(theme);
+} else if (theme === "true") {
   loadCSSFile("assets/style/dark.css");
 } else {
   loadCSSFile("assets/style/light.css");
@@ -31,7 +33,7 @@ const displayCountry = (countries) => {
     .map((country) => {
       return `<article class="country" data-name="${country.name}">
         <div class="country__flag">
-          <img src="${country.flag}" alt="Flag of ${country.name}" loading="lazy">
+          <img src="${country.flag}" loading="lazy" alt="Flag of ${country.name}">
         </div>
         <div class="country__about">
           <h2 class="country__name">${country.name}</h2>

@@ -2,12 +2,15 @@ const container = document.querySelector(".container");
 
 // Get theme
 let theme = localStorage.getItem("theme");
-console.log(theme);
-if (theme === "true") {
+if (theme === "null") {
+  console.log(theme);
+} else if (theme === "true") {
   loadCSSFile("assets/style/dark.css");
 } else {
   loadCSSFile("assets/style/light.css");
 }
+
+theme = localStorage.setItem("theme", theme);
 
 async function getCountryData(countryName) {
   const API = `https://restcountries.eu/rest/v2/name/${countryName}?fields=flag;name;nativeName;population;region;subregion;capital;topLevelDomain;currencies;languages;borders;?fullText=true`;
