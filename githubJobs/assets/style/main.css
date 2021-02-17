@@ -23,9 +23,16 @@ html {
 }
 
 body {
+  width: 100%;
   min-height: 100vh;
   font-family: "Kumbh Sans", sans-serif;
   background-color: var(--background);
+}
+
+.open {
+  height: 100vh;
+  overflow-y: hidden;
+  position: fixed;
 }
 
 img {
@@ -63,6 +70,7 @@ header {
 }
 
 form {
+  background-color: var(--job-bg);
   margin: 0 auto;
   max-width: 50rem;
   border-radius: 8px;
@@ -80,6 +88,7 @@ input[type="text"] {
   border-radius: 8px;
   font-size: 1.6rem;
   padding: 0 1.6rem;
+  color: var(--title);
 }
 
 input[type="text"]::placeholder {
@@ -90,15 +99,73 @@ input[type="text"]::placeholder {
 .search {
   top: 50%;
   transform: translateY(-50%);
+  cursor: pointer;
 }
 
 .filter,
 .search__icon {
   height: 2rem;
 }
+
 .filter {
   position: absolute;
   right: 20%;
+}
+
+.filter__container {
+  width: calc(100% - 3.3rem);
+  max-width: 50rem;
+  background-color: var(--job-bg);
+  z-index: 100;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-60%) translateX(-50%);
+  border-radius: 8px;
+  overflow: hidden;
+  flex-direction: column;
+  padding: 1.6rem;
+  display: none;
+  box-shadow: 10px 10px 5px 600px rgba(0, 0, 0, 0.75);
+}
+
+.filter__container.is-open {
+  display: flex;
+}
+
+.filter__container .location {
+  border-bottom: 1px solid gray;
+  height: 6rem;
+  border-radius: 0;
+  padding-left: 3rem;
+}
+
+.location__icon {
+  position: absolute;
+  top: 3.3rem;
+  left: 1.6rem;
+}
+
+.checkbox__group {
+  margin: 1.6rem 0;
+  display: flex;
+  align-items: center;
+}
+
+#checkbox,
+#checkbox--mobile {
+  border: none;
+  height: 2rem;
+  width: 2rem;
+}
+
+.checkbox,
+.checkbox--mobile {
+  display: inline-flex;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--title);
+  margin-left: 1.2rem;
 }
 
 .search {
@@ -169,6 +236,10 @@ input[type="text"]::placeholder {
   font-weight: 700;
 }
 
+.cta--search {
+  width: 100%;
+}
+
 /* tablet styles */
 @media screen and (min-width: 720px) {
   /* header styles */
@@ -181,6 +252,50 @@ input[type="text"]::placeholder {
   .container,
   form {
     max-width: 90rem;
+  }
+
+  .filter,
+  .search {
+    display: none;
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+    padding: 1.6rem;
+  }
+
+  form .input--title {
+    width: 33.33%;
+    border-radius: 0;
+    margin-left: 1.5rem;
+  }
+
+  .search--icon {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  form .input--location {
+    width: 33.33%;
+    border-radius: 0;
+    margin-left: 2rem;
+  }
+
+  .location--pin {
+    position: absolute;
+    left: 37%;
+  }
+
+  .checkbox__group {
+    margin-left: 1rem;
+  }
+
+  .cta--search {
+    margin-left: auto;
+    width: 8rem;
+    height: 4.8rem;
   }
 
   .container {
@@ -212,6 +327,12 @@ input[type="text"]::placeholder {
   .container,
   form {
     max-width: 125rem;
+  }
+
+  form .input--location {
+    width: 33.33%;
+    border-radius: 0;
+    margin-left: 3.5rem;
   }
 
   /* jobs styles */
