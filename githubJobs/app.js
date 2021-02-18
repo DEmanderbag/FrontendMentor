@@ -10,8 +10,7 @@ filter.addEventListener("click", () => {
 
 let data = [];
 
-// fetch("https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json");
-fetch("https://jobs.github.com/positions.json")
+fetch("https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json")
   .then((res) => res.json())
   .then((data) => {
     console.log(data);
