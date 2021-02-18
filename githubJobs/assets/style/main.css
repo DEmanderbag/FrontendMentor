@@ -27,6 +27,8 @@ body {
   min-height: 100vh;
   font-family: "Kumbh Sans", sans-serif;
   background-color: var(--background);
+  display: flex;
+  flex-direction: column;
 }
 
 .open {
@@ -110,6 +112,8 @@ input[type="text"]::placeholder {
 .filter {
   position: absolute;
   right: 20%;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .filter__container {
@@ -190,16 +194,26 @@ input[type="text"]::placeholder {
   border-radius: 8px;
   padding: 0 1.6rem 1.6rem 1.6rem;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+  width: 100%;
   max-width: 40rem;
+  height: 30rem;
 }
 
 .job__logo {
   order: -5;
-  width: 5rem;
-  height: 5rem;
+  width: 8rem;
+  height: 8rem;
   border-radius: 15px;
-  background-color: var(--light-violet);
+  background-color: #fff;
   transform: translateY(-2.5rem);
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.job__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .job__date,
@@ -224,7 +238,7 @@ input[type="text"]::placeholder {
 .job__location {
   color: var(--primary);
   font-weight: 700;
-  margin-top: 2.5rem;
+  margin-top: auto;
 }
 
 .cta {
@@ -308,11 +322,11 @@ input[type="text"]::placeholder {
     margin: 0 auto;
     grid-template-columns: repeat(2, 1fr);
     gap: 5rem 2rem;
-    padding: 10rem 3.2rem 2rem 3.2rem;
+    padding: 10rem 3.2rem 0 3.2rem;
   }
 
-  .test {
-    grid-column: 1 / -1;
+  .load-more {
+    margin: 3rem auto;
   }
 }
 
