@@ -10,10 +10,9 @@ filter.addEventListener("click", () => {
 
 let data = [];
 
-fetch("https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json")
+fetch("https://morning-refuge-16267.herokuapp.com/https://jobs.github.com/positions.json")
   .then((res) => res.json())
   .then((data) => {
-    console.log(data);
     displayJob(data);
   });
 
@@ -27,7 +26,9 @@ function displayJob(jobs) {
       <p class="job__date">${calculateTime(job.created_at)} . <span class="job__position">${
         job.type
       }</span></p>
-      <div class="job__logo"><img src="${checkImage(job.company_logo)}" alt="company logo"></div>
+      <div class="job__logo"><img src="${checkImage(
+        job.company_logo
+      )}" loading="lazy" alt="company logo"></div>
     </article>`;
     })
     .join("");

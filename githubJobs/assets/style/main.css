@@ -181,10 +181,8 @@ input[type="text"]::placeholder {
 
 /* jobs section */
 .jobs {
+  width: 100%;
   padding: 10rem 1.6rem 2rem 1.6rem;
-  display: grid;
-  gap: 5rem;
-  place-items: center;
 }
 
 .job {
@@ -197,6 +195,15 @@ input[type="text"]::placeholder {
   width: 100%;
   max-width: 40rem;
   height: 30rem;
+  cursor: pointer;
+  transition: 0.2s ease-in transform;
+  word-wrap: break-word;
+  margin: 0 auto 5rem auto;
+}
+
+.job:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.05);
 }
 
 .job__logo {
@@ -248,10 +255,54 @@ input[type="text"]::placeholder {
   height: 4.8rem;
   font-size: 1.6rem;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .cta--search {
   width: 100%;
+}
+
+.load-more {
+  margin: 3rem auto;
+}
+
+/* Loading class */
+.job.is-loading {
+  width: 100%;
+  height: 30rem;
+}
+
+.job.is-loading .job__title,
+.job.is-loading .job__company,
+.job.is-loading .job__location,
+.job.is-loading .job__date,
+.job.is-loading .job__logo {
+  background-color: var(--loading);
+  background: linear-gradient(
+    110deg,
+    var(--loading) 8%,
+    var(--loading-accent) 18%,
+    var(--loading) 33%
+  );
+  background-size: 200% 100%;
+  animation: 2s shine linear infinite;
+  color: var(--loading);
+}
+
+.job.is-loading .job__title {
+  height: 3rem;
+}
+
+.job.is-loading .job__company,
+.job.is-loading .job__location,
+.job.is-loading .job__date {
+  height: 2rem;
+}
+
+@keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
 }
 
 /* tablet styles */
@@ -318,15 +369,19 @@ input[type="text"]::placeholder {
 
   /* jobs section */
   .jobs {
+    display: grid;
+    place-items: center;
     max-width: 82rem;
     margin: 0 auto;
     grid-template-columns: repeat(2, 1fr);
     gap: 5rem 2rem;
     padding: 10rem 3.2rem 0 3.2rem;
   }
-
-  .load-more {
-    margin: 3rem auto;
+  .job {
+    width: 100%;
+  }
+  .job__title {
+    width: 23ch;
   }
 }
 
@@ -353,5 +408,19 @@ input[type="text"]::placeholder {
   .jobs {
     grid-template-columns: repeat(3, 1fr);
     max-width: 120rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
   }
 }

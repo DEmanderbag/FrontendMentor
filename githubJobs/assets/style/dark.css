@@ -2,4 +2,8 @@
   --background: #121721;
   --job-bg: #19202d;
   --title: #ffffff;
+
+  /* loading colors */
+  --loading-accent: #202c36;
+  --loading: #1b2630;
 }
