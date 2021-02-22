@@ -10,6 +10,7 @@ html {
 
 :root {
   --primary: #5964e0;
+  --primary-low: #5964e025;
   --light-violet: #939bf4;
   --very-dark-blue: #19202d;
   --midnight: #121721;
@@ -266,6 +267,114 @@ input[type="text"]::placeholder {
   margin: 3rem auto;
 }
 
+/* Job description page */
+.about {
+  min-height: 100vh;
+  padding: 0 1.6rem;
+}
+
+.about__card {
+  transform: translateY(-2rem);
+  background-color: var(--job-bg);
+  width: 100%;
+  height: 23rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.about__company {
+  color: var(--title);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.about__site {
+  font-size: 1.6rem;
+  color: var(--dark-gray);
+  margin-bottom: 3rem;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--primary);
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.link--cta {
+  background-color: var(--primary-low);
+  padding: 1.6rem;
+  border-radius: 4px;
+}
+
+.job__description {
+  background-color: var(--job-bg);
+  padding: 1.6rem;
+  border-radius: 8px;
+  color: var(--gray);
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
+}
+
+.job__group {
+  display: flex;
+  flex-direction: column;
+}
+
+.full--width {
+  margin: 2rem 0 4rem 0;
+  width: 100%;
+}
+
+strong {
+  color: var(--title);
+  font-size: 2rem;
+  display: inline-block;
+  margin: 2rem 0;
+}
+
+ul {
+  padding: 0 3rem;
+}
+ul li::marker {
+  color: var(--primary);
+}
+
+.job__description a {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.apply {
+  background-image: url(../desktop/bg-pattern-detail-footer.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--title);
+  border-radius: 8px;
+  padding: 1.6rem;
+  margin-bottom: 3rem;
+}
+
+.apply h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.apply p {
+  font-size: 1.6rem;
+}
+
+.apply a {
+  font-weight: 700;
+  color: var(--title);
+}
+
+.apply__now {
+  padding: 0 1.6rem;
+  background-color: var(--job-bg);
+}
 /* Loading class */
 .job.is-loading {
   width: 100%;
@@ -290,6 +399,7 @@ input[type="text"]::placeholder {
 }
 
 .job.is-loading .job__title {
+  width: 100%;
   height: 3rem;
 }
 

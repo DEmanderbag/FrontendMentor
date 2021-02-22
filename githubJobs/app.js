@@ -46,7 +46,7 @@ requestData(1);
 function displayJob(jobs) {
   for (let job of jobs) {
     let htmlData = `
-    <article class="job">
+    <article class="job" data-id="${job.id}">
       <h1 class="job__title">${job.title}</h1>
       <p class="job__company">${job.company}</p>
       <p class="job__location">${job.location}</p>
@@ -61,6 +61,14 @@ function displayJob(jobs) {
     jobsSection.insertAdjacentHTML("beforeend", htmlData);
   }
   loadingJobs.forEach((e) => e.remove());
+  const article = document.querySelectorAll(".job");
+  article.forEach((e) => {
+    e.addEventListener("click", () => {
+      let jobID = e.dataset.id;
+      localStorage.setItem("jobID", jobID);
+      window.document.location = "./job.html";
+    });
+  });
 }
 
 // Load more jobs
