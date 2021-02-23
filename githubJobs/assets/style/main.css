@@ -6,6 +6,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -271,13 +272,14 @@ input[type="text"]::placeholder {
 .about {
   min-height: 100vh;
   padding: 0 1.6rem;
+  line-height: 1.3;
 }
 
 .about__card {
   transform: translateY(-2rem);
   background-color: var(--job-bg);
   width: 100%;
-  height: 23rem;
+  height: 24.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -318,6 +320,15 @@ input[type="text"]::placeholder {
   margin-bottom: 3rem;
 }
 
+.job__description ul {
+  margin: 1rem 0 2rem 0;
+  padding: 0 3rem;
+}
+
+.job__description ul li::marker {
+  color: var(--primary);
+}
+
 .job__group {
   display: flex;
   flex-direction: column;
@@ -335,13 +346,6 @@ strong {
   margin: 2rem 0;
 }
 
-ul {
-  padding: 0 3rem;
-}
-ul li::marker {
-  color: var(--primary);
-}
-
 .job__description a {
   color: var(--primary);
   font-weight: 700;
@@ -355,6 +359,8 @@ ul li::marker {
   border-radius: 8px;
   padding: 1.6rem;
   margin-bottom: 3rem;
+  overflow: hidden;
+  word-wrap: break-word;
 }
 
 .apply h2 {
@@ -374,6 +380,10 @@ ul li::marker {
 .apply__now {
   padding: 0 1.6rem;
   background-color: var(--job-bg);
+}
+
+.company__apply {
+  display: none;
 }
 /* Loading class */
 .job.is-loading {
@@ -487,11 +497,110 @@ ul li::marker {
     gap: 5rem 2rem;
     padding: 10rem 3.2rem 0 3.2rem;
   }
+
   .job {
     width: 100%;
   }
+
   .job__title {
     width: 23ch;
+  }
+
+  /* job page */
+
+  .about {
+    padding: 0 3.6rem;
+  }
+  .about__card {
+    flex-direction: row;
+    padding-right: 3.6rem;
+  }
+
+  .about__card {
+    height: 15rem;
+  }
+
+  .about__card .link--cta {
+    width: 15rem;
+    text-align: center;
+  }
+
+  .company__info {
+    margin-right: auto;
+  }
+
+  .about__card .job__logo {
+    width: 15rem;
+    border-radius: 8px 0 0 8px;
+    height: 100%;
+    transform: translate(0);
+    margin-right: 3.6rem;
+  }
+
+  .about__site {
+    margin-bottom: 0;
+  }
+
+  .job__description,
+  .apply {
+    padding: 3.6rem;
+  }
+
+  .job__group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .job__more {
+    width: 70%;
+    margin-right: auto;
+  }
+
+  .full--width {
+    width: 15rem;
+    margin: 0;
+  }
+
+  .apply__now {
+    display: flex;
+    align-items: center;
+    padding: 3.6rem;
+  }
+
+  .company__apply {
+    display: block;
+    margin-right: auto;
+  }
+
+  .company__apply .job__title {
+    font-weight: 700;
+    font-size: 2rem;
+  }
+  .company__apply .about__company {
+    font-weight: 400;
+    color: var(--dark-gray);
+    font-size: 1.6rem;
+  }
+
+  .apply__container {
+    background-color: var(--job-bg);
+    display: flex;
+    align-items: center;
+  }
+
+  .about__card,
+  .job__description,
+  .apply,
+  .apply__now {
+    max-width: 72rem;
+    margin: 0 auto 3rem auto;
+  }
+
+  .apply__now {
+    padding: 3.6rem 0;
+    width: 72rem;
+    margin-bottom: 0;
   }
 }
 
