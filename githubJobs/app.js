@@ -47,7 +47,7 @@ function displayJob(jobs) {
   for (let job of jobs) {
     let htmlData = `
     <article class="job" data-id="${job.id}">
-      <h1 class="job__title">${job.title}</h1>
+      <h1 class="job__title job__title--hv">${job.title}</h1>
       <p class="job__company">${job.company}</p>
       <p class="job__location">${job.location}</p>
       <p class="job__date">${calculateTime(job.created_at)} . <span class="job__position">${

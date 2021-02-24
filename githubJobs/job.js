@@ -3,7 +3,6 @@ const jobAbout = document.querySelector(".job__about");
 const jobGroup = document.querySelector(".job__group");
 const apply = document.querySelector(".apply p");
 const applyNow = document.querySelector(".apply__now");
-console.log(applyNow);
 let jobID = localStorage.getItem("jobID");
 
 const PROXY = "https://morning-refuge-16267.herokuapp.com/";
@@ -25,8 +24,6 @@ function displayData(data) {
       }</p>
     </div>
       <a href="${data.company_url}" class="link link--cta">Company Site</a>`;
-  console.log(data.description);
-  console.log(data);
 
   aboutCard.innerHTML = companyCard;
 
