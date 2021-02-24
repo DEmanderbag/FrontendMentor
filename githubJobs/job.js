@@ -16,11 +16,13 @@ async function loadJob(jobData) {
 
 function displayData(data) {
   let companyCard = `<div class="job__logo">
-  <img src="${data.company_logo}" alt="company logo">
+  <img src="${checkImage(data.company_logo)}" alt="company logo">
   </div>
     <div class="company__info">
       <h1 class="about__company">${data.company}</h1>
-      <p class="about__site">${data.company_url.substr(12)}</p>
+      <p class="about__site">${
+        data.company_url ? data.company_url : "Company Website not provided"
+      }</p>
     </div>
       <a href="${data.company_url}" class="link link--cta">Company Site</a>`;
   console.log(data.description);
@@ -51,15 +53,3 @@ function displayData(data) {
 }
 
 loadJob(jobID);
-
-function calculateTime(jobDate) {
-  let postDate = new Date(jobDate);
-  let currentDate = new Date();
-  let differentTime = Math.abs(currentDate - postDate);
-
-  const diffDays = Math.ceil(differentTime / (1000 * 60 * 60 * 24));
-  const diffHours = Math.round(Math.ceil(currentDate - postDate) / 36e5);
-  if (diffHours < 1) return `1h ago`;
-  if (diffHours < 23) return `${diffHours}h ago`;
-  if (diffHours >= 23) return `${diffDays}d ago`;
-}
