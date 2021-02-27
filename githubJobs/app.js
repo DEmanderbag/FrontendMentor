@@ -22,26 +22,12 @@ async function requestData(page) {
 
 requestData(1);
 
-// function displayJob(jobs) {
-//   const htmlString = jobs
-//     .map((job) => {
-//       return `<article class="job">
-//       <h1 class="job__title">${job.title}</h1>
-//       <p class="job__company">${job.company}</p>
-//       <p class="job__location">${job.location}</p>
-//       <p class="job__date">${calculateTime(job.created_at)} . <span class="job__position">${
-//         job.type
-//       }</span></p>
-//       <div class="job__logo"><img src="${checkImage(
-//         job.company_logo
-//       )}" loading="lazy" alt="company logo"></div>
-//     </article>`;
-//     })
-//     .join("");
-
-//   console.log(data);
-//   jobsSection.innerHTML = htmlString;
-// }
+// IntersectionObserver
+let observer = new IntersectionObserver((entires) => {
+  entires.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+  });
+});
 
 function displayJob(jobs) {
   for (let job of jobs) {
@@ -63,6 +49,7 @@ function displayJob(jobs) {
   loadingJobs.forEach((e) => e.remove());
   const article = document.querySelectorAll(".job");
   article.forEach((e) => {
+    observer.observe(e);
     e.addEventListener("click", () => {
       let jobID = e.dataset.id;
       localStorage.setItem("jobID", jobID);

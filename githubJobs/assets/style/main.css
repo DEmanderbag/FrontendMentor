@@ -93,6 +93,7 @@ input[type="text"] {
   color: var(--title);
   outline: none;
   cursor: pointer;
+  caret-color: var(--primary);
 }
 
 input[type="text"]::placeholder {
@@ -219,6 +220,11 @@ input[type="text"]::placeholder {
   transform: translateY(-2.5rem);
   overflow: hidden;
   padding: 1rem;
+}
+
+.job__about h1,
+.job__about h2 {
+  margin: 2rem 0;
 }
 
 .job__logo img {
@@ -445,7 +451,7 @@ strong {
 @media screen and (min-width: 720px) {
   /* header styles */
   header {
-    background-image: url(../tablet/bg-pattern-header.svg);
+    background-image: url(../desktop/bg-pattern-header.svg);
     height: 16rem;
     padding: 3.2rem;
   }
@@ -625,7 +631,6 @@ strong {
 @media screen and (min-width: 1080px) {
   /* header styles */
   header {
-    background-image: url(../desktop/bg-pattern-header.svg);
     padding: 3.2rem;
   }
 

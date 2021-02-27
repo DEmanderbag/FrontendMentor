@@ -32,6 +32,7 @@
       </div>
     </div>
     <form action="">
+      <!-- Bigger screen view -->
       <input type="text" placeholder="Filter by title..." class="input--title">
       <img src="assets/icons/icon-search-primary.svg" alt="search icon" class="search--icon">
       <input type="text" placeholder="Filter by location..." class="input--location">
@@ -43,8 +44,9 @@
       <img src="assets/icons/icon-filter.svg" alt="filter icon" class="filter">
       <button class="search"><img src="assets/icons/icon-search.svg" alt="search icon"
           class="search__icon"></button>
-      <button class="cta cta--search">Search</button>
+      <button class="cta cta--search search--desktop">Search</button>
     </form>
+    <!-- Small screen -->
     <div class="filter__container">
       <input type="text" placeholder="Filter by location..." class="location">
       <img src="assets/icons/icon-location.svg" alt="location pin icon" class="location__icon">
@@ -52,7 +54,7 @@
         <input type="checkbox" name="checkbox" id="checkbox--mobile" placeholder="Full Time Only">
         <label for="checkbox--mobile" class="checkbox--mobile">Full time Only</label>
       </div>
-      <button class="cta cta--search">Search</button>
+      <button class="cta cta--search search--mobile">Search</button>
     </div>
   </header>
   <section class="jobs">
@@ -101,32 +103,12 @@
       <p class="job__date"><span class="job__position"></span></p>
       <div class="job__logo"></div>
     </article>
-    <article class="job is-loading">
-      <h1 class="job__title"></h1>
-      <p class="job__company"></p>
-      <p class="job__location"></p>
-      <p class="job__date"><span class="job__position"></span></p>
-      <div class="job__logo"></div>
-    </article>
-    <article class="job is-loading">
-      <h1 class="job__title"></h1>
-      <p class="job__company"></p>
-      <p class="job__location"></p>
-      <p class="job__date"><span class="job__position"></span></p>
-      <div class="job__logo"></div>
-    </article>
-    <article class="job is-loading">
-      <h1 class="job__title"></h1>
-      <p class="job__company"></p>
-      <p class="job__location"></p>
-      <p class="job__date"><span class="job__position"></span></p>
-      <div class="job__logo"></div>
-    </article>
   </section>
   <button class="cta load-more">Load more</button>
 
   <script src="check.js" defer></script>
   <script src="app.js" defer></script>
+  <script src="filter.js" defer></script>
 </body>
 
 </html>
