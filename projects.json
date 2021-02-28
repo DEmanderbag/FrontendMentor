@@ -196,5 +196,14 @@
     "code": "https://github.com/DEmanderbag/FrontendMentor/tree/master/countryWiki",
     "demo": "https://stoic-meninsky-7d6f57.netlify.app/countrywiki/",
     "id": 22
+  },
+  {
+    "title": "GitHub Jobs API",
+    "description": "Build a fully-functional jobs board using the GitHub Jobs API. This is a great opportunity to practice JS and get to grips with a framework/library of your choice!",
+    "date": "2021-02-28",
+    "photo": "githubJobs/assets/preview.jpg",
+    "code": "https://github.com/DEmanderbag/FrontendMentor/tree/master/githubJobs",
+    "demo": "https://stoic-meninsky-7d6f57.netlify.app/githubjobs/",
+    "id": 23
   }
 ]
