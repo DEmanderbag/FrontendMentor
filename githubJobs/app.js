@@ -64,3 +64,12 @@ loadBtn.addEventListener("click", () => {
   requestData(page);
   page++;
 });
+
+// Set dark mode if user has system set to dark mode
+if (themeMode === null) {
+  const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+  if (darkModeMediaQuery.matches === true) {
+    darkMode();
+  }
+}
