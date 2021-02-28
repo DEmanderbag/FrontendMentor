@@ -33,19 +33,18 @@ function displayJob(jobs) {
   for (let job of jobs) {
     let htmlData = `
     <article class="job" data-id="${job.id}">
-      <h1 class="job__title job__title--hv">${job.title}</h1>
+      <h2 class="job__title job__title--hv">${job.title}</h2>
       <p class="job__company">${job.company}</p>
       <p class="job__location">${job.location}</p>
       <p class="job__date">${calculateTime(job.created_at)} . <span class="job__position">${
       job.type
     }</span></p>
-      <div class="job__logo"><img src="${checkImage(
-        job.company_logo
-      )}" loading="lazy" alt="company logo"></div>
+      <div class="job__logo"><img src="${checkImage(job.company_logo)}" alt="company logo"></div>
     </article>
     `;
     jobsSection.insertAdjacentHTML("beforeend", htmlData);
   }
+
   loadingJobs.forEach((e) => e.remove());
   const article = document.querySelectorAll(".job");
   article.forEach((e) => {
