@@ -377,6 +377,10 @@ footer {
 }
 
 @media screen and (min-width: 860px) {
+  /* Override animation */
+  .is-open {
+    animation: none;
+  }
   header,
   .about__group,
   .about__title,
