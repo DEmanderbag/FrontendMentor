@@ -429,6 +429,12 @@ footer ul {
 }
 
 @media screen and (min-width: 820px) {
+  /* Override styles for mobile menu */
+  .is-open {
+    flex-direction: row;
+    /* justify-content: center; */
+    animation: none;
+  }
   nav {
     display: flex;
     padding: 2rem;
