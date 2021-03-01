@@ -1,20 +1,27 @@
-// For the dark mode
-const head = document.querySelector("head");
-const cta = document.querySelector(".cta");
+// Dark mode toggle
+let themeMode = localStorage.getItem("theme");
+const themeSwtich = document.querySelector(".cta");
 
-cta.addEventListener("click", () => {
-  localStorage.setItem("theme", cta.classList.contains("clicked"));
-  cta.classList.toggle("clicked");
-  if (cta.classList.contains("clicked")) {
-    loadCSSFile("assets/style/light.css");
+const darkMode = () => {
+  document.documentElement.setAttribute("data-theme", "dark");
+  // themeSwtich.textContent = "Light Mode";
+  localStorage.setItem("theme", "dark");
+};
+
+const lighMode = () => {
+  document.documentElement.setAttribute("data-theme", "light");
+  // themeSwtich.textContent = "Dark Mode";
+  localStorage.setItem("theme", "light");
+};
+
+if (themeMode === "dark") {
+  darkMode();
+}
+
+themeSwtich.addEventListener("click", () => {
+  if (document.documentElement.dataset.theme === "light") {
+    darkMode();
   } else {
-    loadCSSFile("assets/style/dark.css");
+    lighMode();
   }
 });
-
-function loadCSSFile(filename) {
-  let link = document.createElement("link");
-  link.rel = "stylesheet";
-  link.href = filename;
-  head.appendChild(link);
-}

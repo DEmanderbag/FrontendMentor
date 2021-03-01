@@ -1,18 +1,15 @@
 const countriesSection = document.querySelector(".countries");
 const loading = document.querySelectorAll(".is-loading");
 
-// Get theme
+// Set dark mode if user has system set to dark mode
 let theme = localStorage.getItem("theme");
+if (theme === null) {
+  const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
-if (theme === "null") {
-  console.log(theme);
-} else if (theme === "true") {
-  loadCSSFile("assets/style/dark.css");
-} else {
-  loadCSSFile("assets/style/light.css");
+  if (darkModeMediaQuery.matches === true) {
+    darkMode();
+  }
 }
-
-theme = localStorage.setItem("theme", theme);
 
 // API to request data;
 const api = `https://restcountries.eu/rest/v2/all?fields=name;capital;region;population;flag`;
