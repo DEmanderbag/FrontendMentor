@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Clock app</title>
+</head>
+
+<body>
+  <section class="screen">
+    <div class="overlay">
+      <div class="quote">
+        <div class="quote__container">
+          <p class="quote__text">“The science of operations, as derived from mathematics more
+            especially, is a science of
+            itself, and
+            has its own abstract truth and value.”</p>
+          <p class="quote__author">Ada Lovelace</p>
+        </div>
+        <button class="quote__refresh">
+          <img src="assets/desktop/icon-refresh.svg" alt="refresh icon">
+        </button>
+      </div>
+      <div class="time">
+        <div class="time__message">
+          <img src="assets/desktop/icon-sun.svg" alt="Sun icon">
+          <p>Good morning</p>
+        </div>
+        <h1 class="time__current">11:37<span class="time__zone">BST</span></h1>
+        <p class="time__location">In London, UK</p>
+        <button class="cta">More<span><img src="assets/desktop/icon-arrow-up.svg"
+              alt="arrow"></span></button>
+      </div>
+    </div>
+    <div class="more">
+      <p class="more__title">Current timezone<span class="more__info">Europe/London</span></p>
+      <p class="more__title">Day of the year<span class="more__info">295</span></p>
+      <p class="more__title">Day of the Week<span class="more__info">5</span></p>
+      <p class="more__title">Week Number<span class="more__info">42</span></p>
+    </div>
+  </section>
+
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>
