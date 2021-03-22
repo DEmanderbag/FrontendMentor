@@ -7,7 +7,12 @@
 :root {
   --dark001: #000000;
   --dark002: #303030;
+  --hover: #999999;
   --text-color: #ffffff;
+
+  --space: 3rem 2rem;
+  --more-text: 1.8rem;
+  --time: 10rem;
 }
 
 html {
@@ -18,46 +23,6 @@ html {
 body {
   position: relative;
 }
-
-/* h1 {
-  font-size: 20rem;
-  letter-spacing: -5;
-}
-
-h2 {
-  font-size: 5.6rem;
-  line-height: 6.8rem;
-}
-
-h3 {
-  font-size: 2.4rem;
-  letter-spacing: -4.8;
-  line-height: 2.8rem;
-}
-
-h4 {
-  font-size: 2rem;
-  letter-spacing: 4;
-  line-height: 2.8rem;
-}
-
-h5 {
-  font-size: 1.8rem;
-  line-height: 2.8rem;
-}
-
-h6 {
-  font-size: 1.5rem;
-  letter-spacing: 3;
-  line-height: 2.8rem;
-}
-
-p {
-  font-size: 1.8rem;
-  line-height: 2.8rem;
-}
-
-*/
 
 img {
   display: block;
@@ -76,7 +41,7 @@ button {
 }
 
 .overlay {
-  padding: 3rem 2rem;
+  padding: var(--space);
   position: absolute;
   width: 100%;
   height: 100vh;
@@ -87,9 +52,9 @@ button {
 }
 
 /* quote styles */
-
 .quote {
   color: var(--text-color);
+  max-width: 60ch;
   font-size: 1.4rem;
   display: flex;
 }
@@ -106,6 +71,7 @@ button {
 .quote__refresh {
   align-self: flex-start;
   padding-top: 0.5rem;
+  margin-left: 1rem;
 }
 
 /* time styles */
@@ -115,7 +81,6 @@ button {
 
 .time__message {
   display: flex;
-  align-items: center;
 }
 
 .time__message img {
@@ -130,8 +95,7 @@ button {
 }
 
 .time__current {
-  margin: 1.5rem 0;
-  font-size: 10rem;
+  font-size: var(--time);
 }
 
 .time__zone {
@@ -162,6 +126,7 @@ button {
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
+  transition: 200ms ease color;
 }
 
 .cta img {
@@ -170,26 +135,28 @@ button {
 }
 
 /* More section */
-
 .more {
+  width: 100%;
   display: none;
   min-height: 40vh;
-  padding: 5rem 2rem;
+  padding: 4rem 2rem;
   position: absolute;
   bottom: 0;
   background-color: rgba(255, 2555, 255, 90%);
 }
 
-.more__title {
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  width: 100%;
-  display: inline-flex;
-  align-items: center;
+.more__left,
+.more__right {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
-.more__title:not(:last-child) {
-  margin-bottom: 1rem;
+.more__title {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  width: 100%;
+  margin-bottom: 2rem;
+  letter-spacing: 1.5px;
 }
 
 .more__info {
@@ -197,7 +164,7 @@ button {
   margin-left: auto;
   font-weight: 700;
   color: var(--dark002);
-  font-size: 1.8rem;
+  font-size: var(--more-text);
 }
 
 /* aditional classes */
@@ -207,9 +174,97 @@ button {
 }
 
 .is-open {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hidden {
   display: none;
+}
+
+/* Tablet view */
+@media screen and (min-width: 768px) {
+  :root {
+    --space: 5rem 3rem;
+    --more-text: 3.8rem;
+    --time: 15rem;
+  }
+
+  .screen {
+    background-image: url(../assets/tablet/bg-image-daytime.jpg);
+  }
+
+  .time__message p::after {
+    content: ", It's currently";
+  }
+
+  /* more section */
+  .is-open {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: min-content;
+    place-items: center;
+    place-content: center;
+  }
+
+  .more__left,
+  .more__right {
+    grid-template-columns: 1fr;
+  }
+
+  .more__title {
+    margin-bottom: 0.5rem;
+  }
+
+  .more__info {
+    margin: 0;
+    margin-bottom: 5rem;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  :root {
+    --space: 5rem 10rem;
+    --more-text: 5.2rem;
+    --time: 20rem;
+  }
+
+  .screen {
+    background-image: url(../assets/desktop/bg-image-daytime.jpg);
+  }
+
+  .time__location {
+    margin-bottom: 3rem;
+  }
+
+  .time {
+    position: relative;
+  }
+
+  .cta {
+    right: 0;
+    bottom: 0;
+    position: absolute;
+  }
+
+  .open {
+    padding-top: 8rem;
+    max-height: 50vh;
+  }
+
+  .is-open {
+    height: 50vh;
+  }
+}
+
+@media (hover: hover) {
+  .quote__refresh:hover {
+    cursor: pointer;
+  }
+
+  .cta:hover {
+    cursor: pointer;
+    color: var(--hover);
+  }
 }
