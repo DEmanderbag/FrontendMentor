@@ -18,6 +18,15 @@ const dayYear = document.querySelector(".day-year");
 const dayWeek = document.querySelector(".day-week");
 const weekYear = document.querySelector(".week-year");
 
+// Night mode
+const darkMode = () => {
+  document.documentElement.setAttribute("data-theme", "dark");
+};
+
+const lighMode = () => {
+  document.documentElement.setAttribute("data-theme", "light");
+};
+
 more.addEventListener("click", () => {
   more.innerHTML = `More<span><img src="assets/desktop/icon-arrow-up.svg"
               alt="arrow"></span></button>`;
@@ -36,6 +45,8 @@ refresh.addEventListener("click", getQuote);
 getQuote();
 timeCurrent();
 moreData();
+customGreeting();
+customMode();
 
 // Fetch time from the IP
 fetch("http://worldtimeapi.org/api/ip", { method: "get" })
@@ -57,6 +68,8 @@ fetch("http://worldtimeapi.org/api/ip", { method: "get" })
     // In case API failes to load use the timeCurrent function to display correct time
     setInterval(timeCurrent, 1000);
     moreData();
+    customGreeting();
+    customMode();
   });
 
 function timeCurrent() {
@@ -115,14 +128,6 @@ function customGreeting() {
 
 customGreeting();
 
-const darkMode = () => {
-  document.documentElement.setAttribute("data-theme", "dark");
-};
-
-const lighMode = () => {
-  document.documentElement.setAttribute("data-theme", "light");
-};
-
 function customMode() {
   const screen = document.querySelector(".screen");
   let currentTime = new Date();
@@ -138,5 +143,3 @@ function customMode() {
 }
 
 customMode();
-// The sun icon and the daytime background image between 5am and 6pm
-// The moon icon and the nighttime background image between 6pm and 5am
