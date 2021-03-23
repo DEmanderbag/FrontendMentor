@@ -12,6 +12,7 @@
 
   --space: 3rem 2rem;
   --more-text: 1.8rem;
+  --time-zone: 1.4rem;
   --time: 10rem;
 }
 
@@ -62,6 +63,7 @@ button {
 .quote__text {
   margin-bottom: 1rem;
   line-height: 2.8rem;
+  max-width: 50ch;
 }
 
 .quote__author {
@@ -81,6 +83,7 @@ button {
 
 .time__message {
   display: flex;
+  align-items: center;
 }
 
 .time__message img {
@@ -99,7 +102,7 @@ button {
 }
 
 .time__zone {
-  font-size: 1.4rem;
+  font-size: var(--time-zone);
   font-weight: 300;
 }
 
@@ -170,24 +173,36 @@ button {
 /* aditional classes */
 .open {
   padding-top: 10rem;
-  max-height: 60vh;
 }
 
 .is-open {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  /* animation: more-open 0.6s cubic-bezier(0.465, 0.183, 0.153, 0.946) both; */
 }
 
 .hidden {
   display: none;
 }
 
+/* @keyframes more-open {
+  0% {
+    transform: scaleY(0);
+    transform-origin: 0% 100%;
+  }
+  100% {
+    transform: scaleY(1);
+    transform-origin: 0% 100%;
+  }
+} */
+
 /* Tablet view */
 @media screen and (min-width: 768px) {
   :root {
     --space: 5rem 3rem;
     --more-text: 3.8rem;
+    --time-zone: 2.2rem;
     --time: 15rem;
   }
 
@@ -227,6 +242,7 @@ button {
   :root {
     --space: 5rem 10rem;
     --more-text: 5.2rem;
+    --time-zone: 3rem;
     --time: 20rem;
   }
 
@@ -250,7 +266,6 @@ button {
 
   .open {
     padding-top: 8rem;
-    max-height: 50vh;
   }
 
   .is-open {
