@@ -3,6 +3,7 @@ const moreSection = document.querySelector(".more");
 const quoteSection = document.querySelector(".quote");
 const time = document.querySelector(".time__current");
 
+const timeMessage = document.querySelector(".time__message p");
 // Button
 const more = document.querySelector(".cta");
 const refresh = document.querySelector(".quote__refresh");
@@ -18,9 +19,16 @@ const dayWeek = document.querySelector(".day-week");
 const weekYear = document.querySelector(".week-year");
 
 more.addEventListener("click", () => {
+  more.innerHTML = `More<span><img src="assets/desktop/icon-arrow-up.svg"
+              alt="arrow"></span></button>`;
   screen.classList.toggle("open");
   quoteSection.classList.toggle("hidden");
   moreSection.classList.toggle("is-open");
+
+  if (moreSection.classList.contains("is-open")) {
+    more.innerHTML = `Less<span><img src="assets/desktop/icon-arrow-up.svg"
+              alt="arrow" class="rotate"></span></button>`;
+  }
 });
 
 refresh.addEventListener("click", getQuote);
@@ -90,3 +98,45 @@ async function getQuote() {
   quoteAuthor.textContent = author;
   quoteText.textContent = content;
 }
+
+// Custom message
+function customGreeting() {
+  let currentTime = new Date();
+  let hours = currentTime.getHours();
+
+  if (hours >= 5 && hours < 12) {
+    timeMessage.textContent = "Good Morning";
+  } else if (hours >= 12 && hours < 6) {
+    timeMessage.textContent = "Good Afternoon";
+  } else {
+    timeMessage.textContent = "Good Evening";
+  }
+}
+
+customGreeting();
+
+const darkMode = () => {
+  document.documentElement.setAttribute("data-theme", "dark");
+};
+
+const lighMode = () => {
+  document.documentElement.setAttribute("data-theme", "light");
+};
+
+function customMode() {
+  const screen = document.querySelector(".screen");
+  let currentTime = new Date();
+  let hours = currentTime.getHours();
+
+  if (hours >= 5 && hours < 18) {
+    lighMode();
+    screen.style.backgroundImage = "url('/assets/desktop/bg-image-daytime.jpg.jpg')";
+  } else {
+    darkMode();
+    screen.style.backgroundImage = "url('/assets/desktop/bg-image-nighttime.jpg')";
+  }
+}
+
+customMode();
+// The sun icon and the daytime background image between 5am and 6pm
+// The moon icon and the nighttime background image between 6pm and 5am

@@ -5,23 +5,30 @@
 }
 
 :root {
+  --space: 3rem 2rem;
+  --more-text: 1.8rem;
+  --time-zone: 1.4rem;
+  --time: 10rem;
+  font-size: 62.5%;
+}
+
+html {
   --dark001: #000000;
   --dark002: #303030;
   --hover: #999999;
   --text-color: #ffffff;
 
-  --space: 3rem 2rem;
-  --more-text: 1.8rem;
-  --time-zone: 1.4rem;
-  --time: 10rem;
+  --more-text-color: #303030;
+  --more-bg: rgba(255, 255, 255, 85%);
 }
 
-html {
-  font-size: 62.5%;
-  font-family: "Inter", sans-serif;
+html[data-theme="dark"] {
+  --more-text-color: #fff;
+  --more-bg: rgba(0, 0, 0, 85%);
 }
 
 body {
+  font-family: "Inter", sans-serif;
   position: relative;
 }
 
@@ -46,7 +53,7 @@ button {
   position: absolute;
   width: 100%;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  background: rgba(0, 0, 0, 0.6); /* Black see-through */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -118,7 +125,7 @@ button {
   margin-bottom: 3rem;
   display: flex;
   justify-content: space-between;
-  color: var(--dark002);
+  /* color: var(--dark002); */
   align-items: center;
   background-color: var(--text-color);
   width: 11.5rem;
@@ -130,6 +137,10 @@ button {
   letter-spacing: 2px;
   text-transform: uppercase;
   transition: 200ms ease color;
+}
+
+.rotate {
+  transform: rotate(180deg);
 }
 
 .cta img {
@@ -145,7 +156,7 @@ button {
   padding: 4rem 2rem;
   position: absolute;
   bottom: 0;
-  background-color: rgba(255, 2555, 255, 90%);
+  background-color: var(--more-bg);
 }
 
 .more__left,
@@ -160,13 +171,14 @@ button {
   width: 100%;
   margin-bottom: 2rem;
   letter-spacing: 1.5px;
+  color: var(--more-text-color);
 }
 
 .more__info {
   display: block;
   margin-left: auto;
   font-weight: 700;
-  color: var(--dark002);
+  color: var(--more-text-color);
   font-size: var(--more-text);
 }
 
