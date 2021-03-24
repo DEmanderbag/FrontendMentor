@@ -1,3 +1,4 @@
+let timeIcon = document.querySelector(".time__message img");
 const timeMessage = document.querySelector(".time__message p");
 const screen = document.querySelector(".overlay");
 
@@ -32,9 +33,11 @@ function customMode() {
 
   if (hours >= 5 && hours < 18) {
     lighMode();
-    screen.style.backgroundImage = "url('../assets/desktop/bg-image-daytime.jpg')";
+    timeIcon.src = `assets/desktop/icon-sun.svg`;
+    screen.style.backgroundImage = "url('assets/desktop/bg-image-daytime.jpg')";
   } else {
     darkMode();
-    screen.style.backgroundImage = "url('../assets/desktop/bg-image-nighttime.jpg')";
+    timeIcon.src = `assets/desktop/icon-moon.svg`;
+    screen.style.backgroundImage = "url('assets/desktop/bg-image-nighttime.jpg')";
   }
 }

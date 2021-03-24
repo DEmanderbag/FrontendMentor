@@ -30,7 +30,7 @@ html[data-theme="dark"] {
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", serif;
   position: relative;
 }
 
@@ -111,11 +111,6 @@ button {
   font-size: var(--time);
 }
 
-.time__zone {
-  font-size: var(--time-zone);
-  font-weight: 300;
-}
-
 .time__location {
   font-weight: 500;
   font-size: 2rem;
@@ -139,6 +134,10 @@ button {
   letter-spacing: 2px;
   text-transform: uppercase;
   transition: 200ms ease color;
+}
+
+.cta p {
+  color: var(--dark002);
 }
 
 .rotate {
