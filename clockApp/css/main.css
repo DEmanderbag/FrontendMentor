@@ -10,6 +10,8 @@
   --time-zone: 1.4rem;
   --time: 10rem;
   font-size: 62.5%;
+
+  --decoration: #979797;
 }
 
 html {
@@ -65,12 +67,13 @@ button {
   max-width: 60ch;
   font-size: 1.4rem;
   display: flex;
+  width: 100%;
 }
 
 .quote__text {
   margin-bottom: 1rem;
   line-height: 2.8rem;
-  max-width: 50ch;
+  max-width: 60ch;
 }
 
 .quote__author {
@@ -80,7 +83,7 @@ button {
 .quote__refresh {
   align-self: flex-start;
   padding-top: 0.5rem;
-  margin-left: 1rem;
+  margin-left: auto;
 }
 
 /* time styles */
@@ -125,7 +128,6 @@ button {
   margin-bottom: 3rem;
   display: flex;
   justify-content: space-between;
-  /* color: var(--dark002); */
   align-items: center;
   background-color: var(--text-color);
   width: 11.5rem;
@@ -222,6 +224,10 @@ button {
     background-image: url(../assets/tablet/bg-image-daytime.jpg);
   }
 
+  .quote__text {
+    max-width: 100%;
+  }
+
   .time__message p::after {
     content: ", It's currently";
   }
@@ -282,6 +288,19 @@ button {
 
   .is-open {
     height: 50vh;
+  }
+
+  .more__left {
+    position: relative;
+  }
+
+  .more::after {
+    content: "";
+    position: absolute;
+    height: 55%;
+    width: 1px;
+    left: 50%;
+    background-color: var(--decoration);
   }
 }
 
