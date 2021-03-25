@@ -1,5 +1,5 @@
-const staticCacheName = "site-static";
-const assets = [
+const filesToCache = [
+  "/",
   "index.html",
   "css/background.css",
   "assets/mobile/bg-image-daytime.jpg",
@@ -22,11 +22,13 @@ const assets = [
   "https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2",
 ];
 
+const staticCacheName = "site-static-v67";
+
 // install event
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(staticCacheName).then((cache) => {
-      cache.addAll(assets);
+      return cache.addAll(filesToCache);
     })
   );
 });
@@ -41,10 +43,10 @@ self.addEventListener("activate", (event) => {
   );
 });
 
-self.addEventListener("fetch", (evt) => {
-  evt.respondWith(
-    caches.match(evt.request).then((cacheRes) => {
-      return cacheRes || fetch(evt.request);
+self.addEventListener("fetch", function (event) {
+  event.respondWith(
+    caches.match(event.request).then(function (response) {
+      return response || fetch(event.request);
     })
   );
 });

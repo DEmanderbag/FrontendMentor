@@ -127,8 +127,8 @@ button {
 }
 
 .cta {
-  margin-top: 5rem;
-  margin-bottom: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -164,7 +164,7 @@ button {
 .more {
   width: 100%;
   display: none;
-  min-height: 40vh;
+  height: 40%;
   padding: 4rem 2rem;
   position: absolute;
   bottom: 0;
@@ -196,14 +196,14 @@ button {
 
 /* aditional classes */
 .open {
-  padding-top: 10rem;
+  padding-top: 8rem;
 }
 
 .is-open {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  animation: more-open 0.6s cubic-bezier(0.465, 0.183, 0.153, 0.946) both;
+  animation: more-open 0.4s cubic-bezier(0.465, 0.183, 0.153, 0.946) both;
 }
 
 .hidden {
