@@ -1,7 +1,8 @@
-const staticCacheName = "site-static-v3";
+const staticCacheName = "site-static-v5";
 const assets = [
   "/",
-  "/index.html",
+  "index.html",
+  "/css/background.css",
   "/assets/mobile/bg-image-daytime.jpg",
   "/assets/mobile/bg-image-nighttime.jpg",
   "/assets/tablet/bg-image-daytime.jpg",
@@ -25,16 +26,21 @@ const assets = [
 // install event
 self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open(staticCacheName).then((cache) => {
-      cache.addAll(assets);
-    })
+    caches
+      .open(staticCacheName)
+      .then((cache) => {
+        cache.addAll(assets);
+      })
+      .catch((error) => {
+        console.log(error);
+      })
   );
 });
 
 self.addEventListener("activate", (event) => {
   event.waitUntil(
     caches.keys().then((keys) => {
-      return Promise.add(
+      return Promise.all(
         keys.filter((key) => key !== staticCacheName).map((key) => caches.delete(key))
       );
     })
