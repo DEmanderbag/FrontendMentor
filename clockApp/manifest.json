@@ -1,7 +1,7 @@
 {
   "name": "Clock",
   "short_name": "Clock",
-  "start_url": "/index.html",
+  "start_url": "index.html",
   "display": "standalone",
   "background_color": "#303030",
   "theme_color": "#181818",

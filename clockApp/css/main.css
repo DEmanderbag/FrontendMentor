@@ -88,6 +88,8 @@ button {
 .quote__refresh img {
   transition: 200ms ease opacity;
   opacity: 0.6;
+  width: 2rem;
+  height: 2rem;
 }
 
 /* time styles */
@@ -101,6 +103,8 @@ button {
 }
 
 .time__message img {
+  width: 2rem;
+  height: 2rem;
   margin-right: 1rem;
 }
 
@@ -304,6 +308,9 @@ button {
     width: 1px;
     left: 50%;
     background-color: var(--decoration);
+  }
+  .screen {
+    background-size: cover;
   }
 }
 
