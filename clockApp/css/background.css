@@ -1,26 +1,26 @@
 @media screen and (max-width: 767px) {
   .screen-bg-1d {
-    background-image: url(/assets/mobile/bg-image-daytime.jpg);
+    background-image: url(../assets/mobile/bg-image-daytime.jpg);
   }
   .screen-bg-1n {
-    background-image: url(/assets/mobile/bg-image-nighttime.jpg);
+    background-image: url(../assets/mobile/bg-image-nighttime.jpg);
   }
 }
 
 @media screen and (min-width: 768px) {
   .screen-bg-1d {
-    background-image: url(/assets/tablet/bg-image-daytime.jpg);
+    background-image: url(../assets/tablet/bg-image-daytime.jpg);
   }
   .screen-bg-1n {
-    background-image: url(/assets/tablet/bg-image-nighttime.jpg);
+    background-image: url(../assets/tablet/bg-image-nighttime.jpg);
   }
 }
 
 @media screen and (min-width: 1080px) {
   .screen-bg-1d {
-    background-image: url(/assets/desktop/bg-image-daytime.jpg);
+    background-image: url(../assets/desktop/bg-image-daytime.jpg);
   }
   .screen-bg-1n {
-    background-image: url(/assets/desktop/bg-image-nighttime.jpg);
+    background-image: url(../assets/desktop/bg-image-nighttime.jpg);
   }
 }
