@@ -45,7 +45,6 @@ button {
 
 .screen {
   min-height: 100vh;
-  background-image: url(../assets/mobile/bg-image-daytime.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -65,7 +64,7 @@ button {
 .quote {
   color: var(--text-color);
   max-width: 60ch;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   display: flex;
   width: 100%;
 }
@@ -86,6 +85,11 @@ button {
   margin-left: auto;
 }
 
+.quote__refresh img {
+  transition: 200ms ease opacity;
+  opacity: 0.6;
+}
+
 /* time styles */
 .time {
   color: var(--text-color);
@@ -102,7 +106,7 @@ button {
 
 .time__message p {
   font-weight: 300;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -133,11 +137,12 @@ button {
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  transition: 200ms ease color;
+  cursor: pointer;
 }
 
 .cta p {
   color: var(--dark002);
+  transition: 200ms ease color;
 }
 
 .rotate {
@@ -145,6 +150,7 @@ button {
 }
 
 .cta img {
+  transition: 200ms ease opacity;
   height: 3.2rem;
   width: 3.2rem;
 }
@@ -192,14 +198,14 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* animation: more-open 0.6s cubic-bezier(0.465, 0.183, 0.153, 0.946) both; */
+  animation: more-open 0.6s cubic-bezier(0.465, 0.183, 0.153, 0.946) both;
 }
 
 .hidden {
   display: none;
 }
 
-/* @keyframes more-open {
+@keyframes more-open {
   0% {
     transform: scaleY(0);
     transform-origin: 0% 100%;
@@ -208,7 +214,7 @@ button {
     transform: scaleY(1);
     transform-origin: 0% 100%;
   }
-} */
+}
 
 /* Tablet view */
 @media screen and (min-width: 768px) {
@@ -219,12 +225,13 @@ button {
     --time: 15rem;
   }
 
-  .screen {
-    background-image: url(../assets/tablet/bg-image-daytime.jpg);
+  .quote__text {
+    font-size: 1.8rem;
+    max-width: 51ch;
   }
 
-  .quote__text {
-    max-width: 100%;
+  .time__message {
+    font-size: 1.8rem;
   }
 
   .time__message p::after {
@@ -261,10 +268,6 @@ button {
     --more-text: 5.2rem;
     --time-zone: 3rem;
     --time: 20rem;
-  }
-
-  .screen {
-    background-image: url(../assets/desktop/bg-image-daytime.jpg);
   }
 
   .time__location {
@@ -307,9 +310,14 @@ button {
   .quote__refresh:hover {
     cursor: pointer;
   }
+  .quote__refresh:hover img {
+    opacity: 1;
+  }
 
-  .cta:hover {
-    cursor: pointer;
+  .cta:hover p {
     color: var(--hover);
+  }
+  .cta:hover img {
+    opacity: 70%;
   }
 }

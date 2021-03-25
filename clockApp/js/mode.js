@@ -34,10 +34,12 @@ function customMode() {
   if (hours >= 5 && hours < 18) {
     lighMode();
     timeIcon.src = `assets/desktop/icon-sun.svg`;
-    screen.style.backgroundImage = "url('assets/desktop/bg-image-daytime.jpg')";
+    screen.classList.remove("screen-bg-1n");
+    screen.classList.add("screen-bg-1d");
   } else {
     darkMode();
     timeIcon.src = `assets/desktop/icon-moon.svg`;
-    screen.style.backgroundImage = "url('assets/desktop/bg-image-nighttime.jpg')";
+    screen.classList.remove("screen-bg-1d");
+    screen.classList.add("screen-bg-1n");
   }
 }

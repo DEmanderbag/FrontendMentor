@@ -28,6 +28,7 @@ setInterval(timeCurrent, 1000);
 moreData();
 customGreeting();
 customMode();
+setInterval(customMode, 60000);
 
 function openSection() {
   moreText.innerText = "More";

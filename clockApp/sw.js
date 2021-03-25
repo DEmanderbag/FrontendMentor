@@ -1,7 +1,11 @@
-const staticCacheName = "site-static";
+const staticCacheName = "site-static-v2";
 const assets = [
   "/",
   "/index.html",
+  "/assets/mobile/bg-image-daytime.jpg",
+  "/assets/mobile/bg-image-nighttime.jpg",
+  "/assets/tablet/bg-image-daytime.jpg",
+  "/assets/tablet/bg-image-nighttime.jpg",
   "/assets/desktop/bg-image-daytime.jpg",
   "/assets/desktop/bg-image-nighttime.jpg",
   "/assets/desktop/icon-arrow-up.svg",
@@ -22,7 +26,6 @@ const assets = [
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(staticCacheName).then((cache) => {
-      console.log("caching shell assets");
       cache.addAll(assets);
     })
   );
