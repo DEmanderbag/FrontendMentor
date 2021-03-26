@@ -205,5 +205,14 @@
     "code": "https://github.com/DEmanderbag/FrontendMentor/tree/master/githubJobs",
     "demo": "https://stoic-meninsky-7d6f57.netlify.app/githubjobs/",
     "id": 23
+  },
+  {
+    "title": "Clock app",
+    "description": "This challenge will have you working with external APIs to set data based on a visitor's location. You'll also be using logic to set content depending on the time of day.",
+    "date": "2021-03-26",
+    "photo": "clockapp/assets/preview.jpg",
+    "code": "https://github.com/DEmanderbag/FrontendMentor/tree/master/clockApp",
+    "demo": "https://stoic-meninsky-7d6f57.netlify.app/clockapp/index.html",
+    "id": 24
   }
 ]
