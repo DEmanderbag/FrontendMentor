@@ -12,6 +12,7 @@ filter.addEventListener("click", () => {
 
 const API = "https://jobs.github.com/positions.json";
 // const PROXY = "https://thingproxy.freeboard.io/fetch/";
+const PROXY = "https://serene-basin-16003.herokuapp.com/";
 
 let data = [];
 
