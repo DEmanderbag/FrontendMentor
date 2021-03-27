@@ -5,7 +5,8 @@ const apply = document.querySelector(".apply p");
 const applyNow = document.querySelector(".apply__now");
 let jobID = localStorage.getItem("jobID");
 
-const PROXY = "https://morning-refuge-16267.herokuapp.com/";
+// const PROXY = "https://thingproxy.freeboard.io/fetch/";
+const PROXY = "https://serene-basin-16003.herokuapp.com/";
 
 async function loadJob(jobData) {
   let request = await fetch(`${PROXY}https://jobs.github.com/positions/${jobData}.json`);

@@ -11,11 +11,12 @@ filter.addEventListener("click", () => {
 });
 
 const API = "https://jobs.github.com/positions.json";
-const PROXY = "https://morning-refuge-16267.herokuapp.com/";
+// const PROXY = "https://thingproxy.freeboard.io/fetch/";
+
 let data = [];
 
 async function requestData(page) {
-  const request = await fetch(`${PROXY}${API}?page=${page}`);
+  const request = await fetch(`${PROXY}${API}?page=${page}`, { method: "GET" });
   data = await request.json();
   displayJob(data);
 }
