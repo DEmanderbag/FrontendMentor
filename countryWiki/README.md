@@ -1,6 +1,6 @@
 # Frontend Mentor - REST Countries API with color theme switcher
 
-Live version can be found [here](https://stoic-meninsky-7d6f57.netlify.app/countrywiki/)
+Live version can be found [here](https://www.heydusan.com/countrywiki/)
 
 ![Design preview for the REST Countries API with color theme switcher coding challenge](./assets/design/desktop-preview.jpg)
 

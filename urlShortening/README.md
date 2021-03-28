@@ -1,6 +1,6 @@
 # Frontend Mentor - Shortly URL shortening API Challenge
 
-Live version can be found [here](https://stoic-meninsky-7d6f57.netlify.app/urlshortening/)
+Live version can be found [here](https://www.heydusan.com/urlshortening/)
 
 ![Design preview for the Shortly URL shortening API coding challenge](./design/desktop-preview.jpg)
 

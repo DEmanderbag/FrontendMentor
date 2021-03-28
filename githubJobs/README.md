@@ -1,6 +1,6 @@
 # Frontend Mentor - GitHub Jobs API
 
-Live version can be found [here](https://stoic-meninsky-7d6f57.netlify.app/githubjobs/)
+Live version can be found [here](https://www.heydusan.com/githubjobs)
 
 ![Design preview for the GitHub Jobs API coding challenge](assets/preview.jpg)
 
