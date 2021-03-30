@@ -1,0 +1,48 @@
+.app__options {
+  margin: 3.2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: darken($text, 10%);
+  text-transform: lowercase;
+
+  ul {
+    height: 6.3rem;
+    border-radius: 31.5px;
+    display: flex;
+    text-align: center;
+    background-color: $app;
+    padding: $small;
+    border-radius: 1rem;
+    margin: 0;
+
+    li {
+      width: 10.6rem;
+      border-radius: 26.5px;
+      align-self: center;
+    }
+
+    a {
+      pointer-events: none;
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      transition: all 200ms ease;
+      padding: $x-large 0;
+      margin: $small;
+      border-radius: 26.5px;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    input[type="radio"]:checked + a {
+      background-color: $primary;
+      color: #eee;
+      align-self: center;
+    }
+  }
+}

@@ -1,0 +1,115 @@
+.settings__menu {
+  position: absolute;
+  top: 8%;
+  width: 90%;
+  height: 80%;
+  background-color: $settings;
+  border-radius: 15px;
+
+  h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 2rem;
+  }
+}
+
+.menu__group {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid $settingsLine;
+
+  h2 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  img {
+    margin-left: auto;
+  }
+}
+
+.menu__time,
+.menu__font,
+.menu__color {
+  margin: 2rem;
+  padding-bottom: 2rem;
+}
+
+.menu__time,
+.menu__font {
+  border-bottom: 1px solid $settingsLine;
+}
+
+.menu__time {
+  .input__group {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .input__name {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: $textDark;
+  }
+
+  input {
+    grid-column-start: 2 / 3;
+    padding: 1rem;
+    background-color: $input;
+    border: none;
+    border-radius: 10px;
+    max-width: 60%;
+    margin-left: auto;
+    font-weight: bold;
+  }
+}
+
+.color__group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.color {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-right: 2rem;
+  }
+
+  &--one {
+    background-color: $primary;
+  }
+  &--two {
+    background-color: $themeTwo;
+  }
+  &--three {
+    background-color: $themeThree;
+  }
+}
+
+.cta {
+  position: absolute;
+  bottom: -2.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14rem;
+  height: 5.3rem;
+  border-radius: 26.5px;
+  border: none;
+  background-color: $primary;
+  color: #fff;
+  font-weight: 600;
+}
