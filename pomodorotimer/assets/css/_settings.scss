@@ -2,7 +2,8 @@
   position: absolute;
   top: 8%;
   width: 90%;
-  height: 80%;
+  max-width: 40rem;
+  height: 85%;
   background-color: $settings;
   border-radius: 15px;
 
@@ -46,27 +47,32 @@
 
 .menu__time {
   .input__group {
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    display: flex;
+    flex-direction: column;
   }
 
   .input__name {
     font-weight: 700;
     font-size: 1.2rem;
-    color: $textDark;
+    color: $textDark40;
+    align-self: center;
   }
 
-  input {
-    grid-column-start: 2 / 3;
-    padding: 1rem;
-    background-color: $input;
-    border: none;
-    border-radius: 10px;
-    max-width: 60%;
-    margin-left: auto;
-    font-weight: bold;
+  .pomodoro,
+  .short__break,
+  .long__break {
+    display: flex;
+    margin-bottom: $large;
+
+    input {
+      padding: 1.5rem;
+      background-color: $input;
+      border: none;
+      border-radius: 10px;
+      max-width: 60%;
+      margin-left: auto;
+      font-weight: bold;
+    }
   }
 }
 
@@ -80,10 +86,12 @@
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
-  background-color: grey;
+  background-color: $input;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.5rem;
+  color: $textDark40;
 
   &:not(:last-child) {
     margin-right: 2rem;
@@ -110,6 +118,65 @@
   border-radius: 26.5px;
   border: none;
   background-color: $primary;
-  color: #fff;
+  color: $settings;
   font-weight: 600;
+}
+
+@media screen and (min-width: 650px) {
+  .settings__menu {
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 54rem;
+    height: 49rem;
+  }
+
+  .menu__group {
+    padding: 3rem;
+  }
+
+  .menu__time {
+    .input__group {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .input__name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: $textDark40;
+      align-self: flex-start;
+      margin-bottom: $medium;
+    }
+
+    .pomodoro,
+    .short__break,
+    .long__break {
+      flex-direction: column;
+      width: 14rem;
+      margin-bottom: $large;
+
+      input {
+        max-width: 100%;
+        margin-left: 0;
+      }
+    }
+  }
+  .menu__time,
+  .menu__font,
+  .menu__color {
+    margin: 3rem;
+  }
+
+  .menu__font,
+  .menu__color {
+    display: flex;
+    align-items: center;
+    h3 {
+      margin-bottom: 0;
+    }
+
+    .color__group {
+      margin-left: auto;
+    }
+  }
 }

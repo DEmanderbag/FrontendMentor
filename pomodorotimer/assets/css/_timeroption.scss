@@ -5,17 +5,15 @@
   align-items: center;
   font-size: 1.2rem;
   font-weight: bold;
-  color: darken($text, 10%);
   text-transform: lowercase;
 
   ul {
-    height: 6.3rem;
-    border-radius: 31.5px;
+    height: 5.5rem;
     display: flex;
     text-align: center;
     background-color: $app;
     padding: $small;
-    border-radius: 1rem;
+    border-radius: 31.5px;
     margin: 0;
 
     li {
@@ -27,10 +25,10 @@
     a {
       pointer-events: none;
       display: block;
-      color: #fff;
+      color: $text40;
       text-decoration: none;
-      transition: all 200ms ease;
-      padding: $x-large 0;
+      transition: color 100ms ease, background-color 100ms ease;
+      padding: $large 0;
       margin: $small;
       border-radius: 26.5px;
     }
@@ -41,8 +39,22 @@
 
     input[type="radio"]:checked + a {
       background-color: $primary;
-      color: #eee;
+      color: $textDark;
       align-self: center;
+    }
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .app__options {
+    width: 40rem;
+
+    ul {
+      width: 100%;
+    }
+
+    li {
+      flex: 1;
     }
   }
 }

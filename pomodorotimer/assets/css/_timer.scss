@@ -1,0 +1,62 @@
+.app__screen {
+  @include flexCenter();
+  margin: auto 0;
+  background: linear-gradient(-60deg, #2e325a, #0e112a);
+  border-radius: 50%;
+  width: 31rem;
+  height: 31rem;
+  background-color: $app;
+}
+
+.app__container {
+  border: 1rem solid $app;
+  border-radius: 50%;
+}
+
+.app__timer {
+  @include flexCenter();
+  flex-direction: column;
+  border: 1rem solid $primary;
+  border-radius: 50%;
+  width: 24rem;
+  height: 24rem;
+  color: $text;
+  background-color: $app;
+  margin: 0 auto;
+
+  h1 {
+    font-size: 7.5rem;
+    margin: $medium 0;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .app__screen {
+    width: 41rem;
+    height: 41rem;
+  }
+
+  .app__container {
+    border: 1.5rem solid $app;
+  }
+
+  .app__timer {
+    width: 33rem;
+    height: 33rem;
+
+    h1 {
+      font-size: 10rem;
+    }
+
+    p {
+      font-size: 2rem;
+    }
+  }
+}

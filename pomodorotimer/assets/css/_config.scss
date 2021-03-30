@@ -3,7 +3,9 @@ $primary: #f87070;
 $themeTwo: #70f3f8;
 $themeThree: #d881f8;
 $text: #d7e0ff;
+$text40: rgba(215, 224, 255, 0.4);
 $textDark: #1e213f;
+$textDark40: rgba(30, 33, 63, 0.55);
 $input: #eff1fa;
 $app: #161932;
 $settings: #ffffff;
@@ -16,6 +18,11 @@ $x-large: 2rem;
 
 html {
   font-size: 62.5%;
+}
+
+body {
+  background-color: $textDark;
+  font-family: "Kumbh Sans", sans-serif;
 }
 
 img {

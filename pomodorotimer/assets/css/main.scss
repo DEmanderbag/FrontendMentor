@@ -2,10 +2,6 @@
 @import "config";
 @import "mixins";
 
-body {
-  background-color: $textDark;
-}
-
 .app {
   width: 100%;
   min-height: 100vh;
@@ -16,44 +12,6 @@ body {
 
   &__logo {
     margin-top: 3.2rem;
-  }
-
-  &__screen {
-    @include flexCenter();
-    margin-top: 5rem;
-    background: linear-gradient(-60deg, #2e325a, #0e112a);
-    border-radius: 50%;
-    width: 31rem;
-    height: 31rem;
-    background-color: $app;
-  }
-
-  &__container {
-    border: 1rem solid $app;
-    border-radius: 50%;
-  }
-
-  &__timer {
-    @include flexCenter();
-    flex-direction: column;
-    border: 1rem solid $primary;
-    border-radius: 50%;
-    width: 24rem;
-    height: 24rem;
-    color: $text;
-    background-color: $app;
-    margin: 0 auto;
-
-    h1 {
-      font-size: 9rem;
-      font-weight: bold;
-    }
-
-    p {
-      font-size: 2.5rem;
-      text-transform: uppercase;
-      letter-spacing: 1.6rem;
-    }
   }
 
   &__settings {
@@ -68,4 +26,5 @@ body {
 }
 
 @import "timeroption";
+@import "timer";
 @import "settings";
