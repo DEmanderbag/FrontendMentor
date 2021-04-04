@@ -174,10 +174,14 @@ li {
   margin-top: auto;
   margin-bottom: 7rem;
   cursor: pointer;
+  -webkit-transition: 0.15s ease-in transform, 0.15s ease-in opacity;
+  transition: 0.15s ease-in transform, 0.15s ease-in opacity;
 }
 
-.app__settings :hover {
+.app__settings:hover {
   opacity: 80%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .app__options {
@@ -332,14 +336,30 @@ li {
   }
 }
 
+.settings {
+  position: fixed;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
 .settings__menu {
-  position: absolute;
-  top: 8%;
+  display: block;
   width: 90%;
   max-width: 40rem;
   height: 85%;
   background-color: #ffffff;
   border-radius: 15px;
+  -webkit-animation: more-open 0.5s cubic-bezier(0.465, 0.183, 0.153, 0.946) both;
+          animation: more-open 0.5s cubic-bezier(0.465, 0.183, 0.153, 0.946) both;
 }
 
 .settings__menu h3 {
@@ -349,6 +369,12 @@ li {
   text-transform: uppercase;
   letter-spacing: 1.5px;
   margin-bottom: 2rem;
+}
+
+.is-open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .menu__group {
@@ -367,8 +393,27 @@ li {
   font-weight: bold;
 }
 
-.menu__group img {
+.menu__close {
   margin-left: auto;
+  -webkit-transition: 0.15s ease-in transform;
+  transition: 0.15s ease-in transform;
+}
+
+.menu__close img {
+  cursor: pointer;
+  padding: 1rem;
+  width: 2rem;
+  height: 2rem;
+  opacity: 0.5;
+  -webkit-transition: 0.15s ease-in opacity;
+  transition: 0.15s ease-in opacity;
+}
+
+.menu__close:hover,
+.menu__close:hover img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  opacity: 1;
 }
 
 .menu__time,
@@ -486,9 +531,6 @@ li {
 
 @media screen and (min-width: 650px) {
   .settings__menu {
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
     max-width: 54rem;
     height: 49rem;
   }
@@ -549,6 +591,28 @@ li {
   .menu__font .color__group,
   .menu__color .color__group {
     margin-left: auto;
+  }
+}
+
+@-webkit-keyframes more-open {
+  0% {
+    -webkit-transform: scaleX(0) translateY(10%);
+            transform: scaleX(0) translateY(10%);
+  }
+  100% {
+    -webkit-transform: scaleX(1) translateY(0);
+            transform: scaleX(1) translateY(0);
+  }
+}
+
+@keyframes more-open {
+  0% {
+    -webkit-transform: scaleX(0) translateY(10%);
+            transform: scaleX(0) translateY(10%);
+  }
+  100% {
+    -webkit-transform: scaleX(1) translateY(0);
+            transform: scaleX(1) translateY(0);
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -18,9 +18,11 @@
     margin-top: auto;
     margin-bottom: 7rem;
     cursor: pointer;
+    transition: 0.15s ease-in transform, 0.15s ease-in opacity;
 
-    :hover {
+    &:hover {
       opacity: 80%;
+      transform: rotate(45deg);
     }
   }
 }
