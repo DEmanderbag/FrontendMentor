@@ -1,8 +1,6 @@
 .settings {
   position: fixed;
   display: none;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   height: 100%;
   background-color: #000;
@@ -30,6 +28,8 @@
 
 .is-open {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu__group {
@@ -214,11 +214,8 @@
 @keyframes more-open {
   0% {
     transform: scaleX(0) translateY(10%);
-    // transform-origin: 100% 0%;
   }
   100% {
     transform: scaleX(1) translateY(0);
-    // top: 10%;
-    // transform-origin: 100% 0%;
   }
 }
