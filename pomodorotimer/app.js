@@ -19,7 +19,7 @@ let timerName;
 let pomodoro = 25;
 let shortBreak = 5;
 let longBreak = 15;
-let inverval;
+let inverval = 0;
 let time;
 let isRunning = false;
 
@@ -28,12 +28,16 @@ let timer = document.querySelector(".app__timer h1");
 let timerState = document.querySelector(".app__timer p");
 const timerScreen = document.querySelector(".app__container");
 
-timerScreen.addEventListener("click", () => {
-  if (isRunning) return;
+// Set pomodoro timer in the beginning
+time = pomodoro * 60;
+updateTimer();
 
-  isRunning = true;
-  timerState.innerHTML = "pause";
-  inverval = setInterval(updateTimer, 1000);
+timerScreen.addEventListener("click", () => {
+  if (isRunning == true) {
+    pauseTimer();
+  } else {
+    startTimer();
+  }
 });
 
 timerOptions.forEach((element) => {
@@ -42,12 +46,15 @@ timerOptions.forEach((element) => {
     if (timerName == "pomodoro") {
       time = pomodoro * 60;
       updateTimer();
+      pauseTimer();
     } else if (timerName == "short break") {
       time = shortBreak * 60;
       updateTimer();
+      pauseTimer();
     } else {
       time = longBreak * 60;
       updateTimer();
+      pauseTimer();
     }
   });
 });
@@ -62,9 +69,24 @@ function updateTimer() {
   time--;
   if (time < 0) {
     clearInterval(inverval);
+    timerState.innerHTML = "start";
   }
 }
 
 function pad(number) {
   return number < 10 ? "0" + number : number;
+}
+
+// Start / Stop timer
+function startTimer() {
+  timerState.innerHTML = "pause";
+  inverval = setInterval(updateTimer, 1000);
+  isRunning = true;
+}
+
+function pauseTimer() {
+  clearInterval(inverval);
+  isRunning = false;
+  timerState.innerHTML = "start";
+  inverval = 0;
 }
