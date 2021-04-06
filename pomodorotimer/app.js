@@ -44,17 +44,17 @@ timerOptions.forEach((element) => {
   element.addEventListener("change", (e) => {
     timerName = e.path[1].innerText;
     if (timerName == "pomodoro") {
-      pauseTimer();
       time = pomodoro * 60;
       updateTimer();
-    } else if (timerName == "short break") {
       pauseTimer();
+    } else if (timerName == "short break") {
       time = shortBreak * 60;
       updateTimer();
-    } else {
       pauseTimer();
+    } else {
       time = longBreak * 60;
       updateTimer();
+      pauseTimer();
     }
   });
 });
