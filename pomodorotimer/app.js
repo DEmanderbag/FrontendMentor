@@ -41,20 +41,20 @@ timerScreen.addEventListener("click", () => {
 });
 
 timerOptions.forEach((element) => {
-  element.addEventListener("click", (e) => {
+  element.addEventListener("change", (e) => {
     timerName = e.path[1].innerText;
     if (timerName == "pomodoro") {
+      pauseTimer();
       time = pomodoro * 60;
       updateTimer();
-      pauseTimer();
     } else if (timerName == "short break") {
+      pauseTimer();
       time = shortBreak * 60;
       updateTimer();
-      pauseTimer();
     } else {
+      pauseTimer();
       time = longBreak * 60;
       updateTimer();
-      pauseTimer();
     }
   });
 });
