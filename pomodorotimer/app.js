@@ -32,31 +32,29 @@ const timerScreen = document.querySelector(".app__container");
 time = pomodoro * 60;
 updateTimer();
 
+timerOptions.forEach((element) => {
+  element.addEventListener("click", (e) => {
+    pauseTimer();
+    timerName = e.path[1].innerText;
+    if (timerName == "pomodoro") {
+      time = pomodoro * 60;
+      updateTimer();
+    } else if (timerName == "short break") {
+      time = shortBreak * 60;
+      updateTimer();
+    } else {
+      time = longBreak * 60;
+      updateTimer();
+    }
+  });
+});
+
 timerScreen.addEventListener("click", () => {
   if (isRunning == true) {
     pauseTimer();
   } else {
     startTimer();
   }
-});
-
-timerOptions.forEach((element) => {
-  element.addEventListener("change", (e) => {
-    timerName = e.path[1].innerText;
-    if (timerName == "pomodoro") {
-      time = pomodoro * 60;
-      updateTimer();
-      pauseTimer();
-    } else if (timerName == "short break") {
-      time = shortBreak * 60;
-      updateTimer();
-      pauseTimer();
-    } else {
-      time = longBreak * 60;
-      updateTimer();
-      pauseTimer();
-    }
-  });
 });
 
 function updateTimer() {
