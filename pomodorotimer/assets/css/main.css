@@ -139,7 +139,6 @@ html {
 
 body {
   background-color: #1e213f;
-  font-family: "Kumbh Sans", sans-serif;
 }
 
 img {
@@ -164,6 +163,7 @@ li {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  font-family: "Kumbh Sans", sans-serif;
 }
 
 .app__logo {

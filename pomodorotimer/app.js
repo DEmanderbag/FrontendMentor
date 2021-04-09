@@ -130,6 +130,7 @@ ctaBtn.addEventListener("click", () => {
   app.setAttribute("data-color", currentColor);
   console.log(currentColor);
   setTheme(currentColor);
+  setFont(currentFont);
   settings.classList.remove("is-open");
 });
 
@@ -145,11 +146,30 @@ if (style == null) {
 function setTheme(theme) {
   if (theme == "#f87070") {
     themeLink.href = "assets/css/theme/themeOne.css";
-    console.log(themeLink);
   } else if (theme == "#70f3f8") {
     themeLink.href = "assets/css/theme/themeTwo.css";
   } else if (theme == "#d881f8") {
     themeLink.href = "assets/css/theme/themeThree.css";
   }
   localStorage.setItem("style", theme);
+}
+
+let font = localStorage.getItem("font");
+
+if (font == null) {
+  setFont("Kumbh");
+} else {
+  setFont(font);
+}
+
+function setFont(font) {
+  if (font == "Kumbh") {
+    app.style.fontFamily = "'Kumbh Sans', sans-serif";
+    console.log(themeLink);
+  } else if (font == "Roboto") {
+    app.style.fontFamily = "'Roboto Slab', serif";
+  } else if (font == "Space") {
+    app.style.fontFamily = "'Space Mono', monospace";
+  }
+  localStorage.setItem("font", font);
 }
