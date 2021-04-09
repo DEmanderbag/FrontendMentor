@@ -16,7 +16,6 @@
 .app__timer {
   @include flexCenter();
   flex-direction: column;
-  border: 1rem solid $primary;
   border-radius: 50%;
   width: 24rem;
   height: 24rem;

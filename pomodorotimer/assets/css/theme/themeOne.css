@@ -1,0 +1,12 @@
+input[type="radio"]:checked + a {
+  background-color: #f87070;
+}
+
+.app__timer {
+  border: 1rem solid #f87070;
+}
+
+.cta {
+  background-color: #f87070;
+}
+/*# sourceMappingURL=themeOne.css.map */

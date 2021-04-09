@@ -237,7 +237,6 @@ li {
 }
 
 .app__options ul input[type="radio"]:checked + a {
-  background-color: #f87070;
   color: #1e213f;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -295,7 +294,6 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border: 1rem solid #f87070;
   border-radius: 50%;
   width: 24rem;
   height: 24rem;
@@ -468,7 +466,7 @@ li {
   font-weight: bold;
 }
 
-.color__group {
+.settings__group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -480,26 +478,23 @@ li {
           align-items: center;
 }
 
-.color {
+.btn {
+  border: none;
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
-  background-color: #eff1fa;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 1.5rem;
-  color: rgba(30, 33, 63, 0.55);
+  cursor: pointer;
+  font-weight: bold;
+  color: #1e213f;
 }
 
-.color:not(:last-child) {
+.btn:not(:last-child) {
   margin-right: 2rem;
+}
+
+.btn--active {
+  background-color: #161932;
+  color: #ffffff;
 }
 
 .color--one {
@@ -514,6 +509,10 @@ li {
   background-color: #d881f8;
 }
 
+.color--active {
+  border: 3px solid red;
+}
+
 .cta {
   position: absolute;
   bottom: -2.8rem;
@@ -524,9 +523,9 @@ li {
   height: 5.3rem;
   border-radius: 26.5px;
   border: none;
-  background-color: #f87070;
   color: #ffffff;
   font-weight: 600;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 650px) {
@@ -588,8 +587,8 @@ li {
   .menu__color h3 {
     margin-bottom: 0;
   }
-  .menu__font .color__group,
-  .menu__color .color__group {
+  .menu__font .settings__group,
+  .menu__color .settings__group {
     margin-left: auto;
   }
 }

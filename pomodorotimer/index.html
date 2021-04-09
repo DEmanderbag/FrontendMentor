@@ -9,11 +9,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" class="test" href="">
   <title>Pomodoro timer</title>
 </head>
 
 <body>
-  <section class="app">
+  <section class="app" data-font data-color>
     <div class="app__logo">
       <img src="assets/icons/logo.svg" alt="Pomodoro app icon with a text of pomodoro">
     </div>
@@ -75,18 +76,18 @@
         </div>
         <div class="menu__font">
           <h3>Font</h3>
-          <div class="color__group">
-            <div class="color">Aa</div>
-            <div class="color">Aa</div>
-            <div class="color">Aa</div>
+          <div class="settings__group">
+            <button class="btn btn--active" data-font="Arial">Aa</button>
+            <button class="btn" data-font="Helvetica">Aa</button>
+            <button class="btn" data-font="green">Aa</button>
           </div>
         </div>
         <div class="menu__color">
           <h3>Color</h3>
-          <div class="color__group">
-            <div class="color color--one"></div>
-            <div class="color color--two"></div>
-            <div class="color color--three"></div>
+          <div class="settings__group">
+            <button class="btn color--one color--active" data-color="#f87070"></button>
+            <button class="btn color--two" data-color="#70f3f8"></button>
+            <button class="btn color--three" data-color="#d881f8"></button>
           </div>
         </div>
         <button class="cta">Apply</button>

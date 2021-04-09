@@ -1,0 +1,13 @@
+$primary: #d881f8;
+
+input[type="radio"]:checked + a {
+  background-color: $primary;
+}
+
+.app__timer {
+  border: 1rem solid $primary;
+}
+
+.cta {
+  background-color: $primary;
+}

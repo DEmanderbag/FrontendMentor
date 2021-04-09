@@ -1,4 +1,5 @@
 // Settings menu and controls
+const app = document.querySelector(".app");
 const settings = document.querySelector(".settings");
 const appSettings = document.querySelector(".app__settings");
 const closeSettings = document.querySelector(".menu__group img");
@@ -87,4 +88,68 @@ function pauseTimer() {
   isRunning = false;
   timerState.innerHTML = "start";
   inverval = 0;
+}
+
+// Settings section
+let themeLink = document.querySelector(".test");
+console.log(themeLink);
+// Font
+let fontSettings = document.querySelectorAll(".menu__font .btn");
+let currentFont;
+
+fontSettings.forEach((e) => {
+  e.addEventListener("click", () => {
+    removeClass(fontSettings, "btn--active");
+    e.classList.add("btn--active");
+    currentFont = e.dataset.font;
+  });
+});
+
+// Color
+let colorSettings = document.querySelectorAll(".menu__color .btn");
+let currentColor;
+
+colorSettings.forEach((e) => {
+  e.addEventListener("click", () => {
+    removeClass(colorSettings, "color--active");
+    e.classList.add("color--active");
+    currentColor = e.dataset.color;
+  });
+});
+
+function removeClass(settings, className) {
+  settings.forEach((item) => {
+    item.classList.remove(className);
+  });
+}
+
+const ctaBtn = document.querySelector(".cta");
+
+ctaBtn.addEventListener("click", () => {
+  app.setAttribute("data-font", currentFont);
+  app.setAttribute("data-color", currentColor);
+  console.log(currentColor);
+  setTheme(currentColor);
+  settings.classList.remove("is-open");
+});
+
+// Set color
+let style = localStorage.getItem("style");
+
+if (style == null) {
+  setTheme("#f87070");
+} else {
+  setTheme(style);
+}
+
+function setTheme(theme) {
+  if (theme == "#f87070") {
+    themeLink.href = "assets/css/theme/themeOne.css";
+    console.log(themeLink);
+  } else if (theme == "#70f3f8") {
+    themeLink.href = "assets/css/theme/themeTwo.css";
+  } else if (theme == "#d881f8") {
+    themeLink.href = "assets/css/theme/themeThree.css";
+  }
+  localStorage.setItem("style", theme);
 }

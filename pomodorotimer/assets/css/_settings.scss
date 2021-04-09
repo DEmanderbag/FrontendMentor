@@ -107,27 +107,30 @@
   }
 }
 
-.color__group {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.settings__group {
+  @include flexCenter();
 }
 
-.color {
+.btn {
+  border: none;
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
-  background-color: $input;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  color: $textDark40;
+  cursor: pointer;
+  font-weight: bold;
+  color: $textDark;
 
   &:not(:last-child) {
     margin-right: 2rem;
   }
 
+  &--active {
+    background-color: $app;
+    color: $settings;
+  }
+}
+
+.color {
   &--one {
     background-color: $primary;
   }
@@ -136,6 +139,10 @@
   }
   &--three {
     background-color: $themeThree;
+  }
+
+  &--active {
+    border: 3px solid red;
   }
 }
 
@@ -148,9 +155,9 @@
   height: 5.3rem;
   border-radius: 26.5px;
   border: none;
-  background-color: $primary;
   color: $settings;
   font-weight: 600;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 650px) {
@@ -204,7 +211,7 @@
       margin-bottom: 0;
     }
 
-    .color__group {
+    .settings__group {
       margin-left: auto;
     }
   }

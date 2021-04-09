@@ -38,7 +38,6 @@
     }
 
     input[type="radio"]:checked + a {
-      background-color: $primary;
       color: $textDark;
       align-self: center;
     }
