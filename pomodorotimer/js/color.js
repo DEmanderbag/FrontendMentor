@@ -4,7 +4,7 @@ let themeLink = document.querySelector(".theme");
 let style = localStorage.getItem("style");
 
 // if empty set default
-if (style == null) {
+if (style == null || style == "undefined") {
   setTheme("#f87070");
 } else {
   setTheme(style);

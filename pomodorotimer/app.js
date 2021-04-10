@@ -26,5 +26,22 @@ ctaBtn.addEventListener("click", () => {
   setTheme(currentColor);
   setFont(currentFont);
   updateDuration();
+  refreshAll();
   settings.classList.remove("is-open");
 });
+
+function refreshAll() {
+  shortTimer = localStorage.getItem("shortTimer");
+  shortBreak = shortTimer * 60;
+  updateTimer(shortBreak);
+
+  longTimer = localStorage.getItem("longTimer");
+  longBreak = longTimer * 60;
+  updateTimer(longBreak);
+
+  pomodoroTimer = localStorage.getItem("pomodoroTimer");
+  pomodoro = pomodoroTimer * 60;
+  updateTimer(pomodoro);
+}
+
+refreshAll();

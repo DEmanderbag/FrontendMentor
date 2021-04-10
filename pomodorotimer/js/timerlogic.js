@@ -2,36 +2,52 @@
 const timerOptions = document.querySelectorAll(".app__options input");
 let timerName;
 
-// Timer names and time in minutes
-let pomodoro = 25;
-let shortBreak = 5;
-let longBreak = 15;
-let inverval = 0;
-let time;
-let isRunning = false;
-
 // Timer time
 let timer = document.querySelector(".app__timer h1");
 let timerState = document.querySelector(".app__timer p");
 const timerScreen = document.querySelector(".app__container");
 
-// Set pomodoro timer in the beginning
-time = pomodoro * 60;
-updateTimer();
-// updateDuration
+// Timer names and time in minutes
+let pomodoro, shortBreak, longBreak;
+let time;
+let inverval = 0;
+let isRunning = false;
+
+let pomodoroTimer = localStorage.getItem("pomodoroTimer");
+let shortTimer = localStorage.getItem("shortTimer");
+let longTimer = localStorage.getItem("longTimer");
+
+if (pomodoroTimer == null) {
+  localStorage.setItem("pomodoroTimer", 25);
+  pomodoro = 25 * 60;
+  updateTimer(pomodoro);
+}
+
+if (shortTimer == null) {
+  localStorage.setItem("shortTimer", 5);
+  shortBreak = 5 * 60;
+  updateTimer(shortBreak);
+}
+
+if (longTimer == null) {
+  localStorage.setItem("longTimer", 15);
+  longBreak = 15 * 60;
+  updateTimer(longBreak);
+}
+
 timerOptions.forEach((element) => {
   element.addEventListener("click", (e) => {
     pauseTimer();
     timerName = e.path[1].innerText;
     if (timerName == "pomodoro") {
-      time = pomodoro * 60;
-      updateTimer();
+      pomodoro = pomodoroTimer * 60;
+      updateTimer(pomodoro);
     } else if (timerName == "short break") {
-      time = shortBreak * 60;
-      updateTimer();
+      shortBreak = shortTimer * 60;
+      updateTimer(shortBreak);
     } else {
-      time = longBreak * 60;
-      updateTimer();
+      longBreak = longTimer * 60;
+      updateTimer(longBreak);
     }
   });
 });
@@ -44,7 +60,7 @@ timerScreen.addEventListener("click", () => {
   }
 });
 
-function updateTimer() {
+function updateTimer(time) {
   let minutes = Math.floor(time / 60);
   let seconds = time % 60;
   minutes = pad(minutes);

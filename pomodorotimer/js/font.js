@@ -4,7 +4,7 @@ const app = document.querySelector(".app");
 let font = localStorage.getItem("font");
 
 // if empty set default
-if (font == null) {
+if (font == null || font == "undefined") {
   setFont("Kumbh");
 } else {
   setFont(font);
