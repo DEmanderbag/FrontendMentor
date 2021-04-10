@@ -12,7 +12,7 @@
     href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Space+Mono:wght@400;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="assets/css/main.css">
-  <link rel="stylesheet" class="test" href="">
+  <link rel="stylesheet" class="theme" href="">
   <title>Pomodoro timer</title>
 </head>
 
@@ -65,15 +65,16 @@
           <div class="input__group">
             <div class="pomodoro">
               <p class="input__name">pomodoro</p>
-              <input type="number" name="" id="" value="25">
+              <input type="number" name="" id="" value="25" inputmode="numeric"
+                data-timer="pomodoro">
             </div>
             <div class="short__break">
               <p class="input__name">short break</p>
-              <input type="number" name="" id="" value="5">
+              <input type="number" name="" id="" value="5" inputmode="numeric" data-timer="short">
             </div>
             <div class="long__break">
               <p class="input__name">long break</p>
-              <input type="number" name="" id="" value="15">
+              <input type="number" name="" id="" value="15" inputmode="numeric" data-timer="long">
             </div>
           </div>
         </div>
@@ -98,6 +99,10 @@
     </div>
   </section>
 
+  <script src="js/timerlogic.js"></script>
+  <script src="js/color.js"></script>
+  <script src="js/font.js"></script>
+  <script src="js/duration.js"></script>
   <script src="app.js" defer></script>
 </body>
 
