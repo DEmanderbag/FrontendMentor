@@ -1,0 +1,15 @@
+section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+@media screen and (min-width: 650px) {
+  section {
+    flex-direction: row;
+  }
+}

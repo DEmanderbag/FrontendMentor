@@ -1,0 +1,28 @@
+.card {
+  border-radius: 8px;
+  padding: 2rem 2rem 0 2rem;
+  margin-bottom: 2rem;
+  max-width: 25rem;
+
+  & * {
+    margin-bottom: 2rem;
+  }
+
+  &--one {
+    background-color: $card01;
+  }
+
+  &--two {
+    background-color: $card02;
+  }
+
+  &--three {
+    background-color: $card03;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .card {
+    height: 30rem;
+  }
+}
