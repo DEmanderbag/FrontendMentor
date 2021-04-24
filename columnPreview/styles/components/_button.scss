@@ -1,0 +1,27 @@
+.btn {
+  border-radius: 25px;
+  padding: 1rem 2rem;
+  text-transform: capitalize;
+  background-color: $light01;
+  margin-top: auto;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.2s ease-in color, 0.2s ease-in background-color;
+
+  &:hover {
+    background-color: transparent;
+    border: 2px solid $light;
+    color: $light;
+  }
+
+  &--one {
+    color: $card01;
+  }
+  &--two {
+    color: $card02;
+  }
+  &--three {
+    color: $card03;
+  }
+}

@@ -2,9 +2,15 @@
   border-radius: 8px;
   padding: 2rem 2rem 0 2rem;
   margin-bottom: 2rem;
-  max-width: 25rem;
+  max-width: 20rem;
+  height: 441px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 
-  & * {
+  &__icon,
+  &__title,
+  &__text {
     margin-bottom: 2rem;
   }
 
@@ -24,5 +30,13 @@
 @media screen and (min-width: 650px) {
   .card {
     height: 30rem;
+
+    border-radius: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .card {
+    margin-bottom: 0;
   }
 }

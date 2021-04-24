@@ -1,3 +1,12 @@
+h1 {
+  font-family: "Big Shoulders Display", cursive;
+}
+
+p,
+button {
+  font-family: "Lexend Deca", sans-serif;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -49,10 +58,22 @@ section {
 }
 
 .btn {
-  border: none;
   border-radius: 25px;
   padding: 1rem 2rem;
   text-transform: capitalize;
+  background-color: #f2f2f2;
+  margin-top: auto;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+  -webkit-transition: 0.2s ease-in color, 0.2s ease-in background-color;
+  transition: 0.2s ease-in color, 0.2s ease-in background-color;
+}
+
+.btn:hover {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
 }
 
 .btn--one {
@@ -71,10 +92,21 @@ section {
   border-radius: 8px;
   padding: 2rem 2rem 0 2rem;
   margin-bottom: 2rem;
-  max-width: 25rem;
+  max-width: 20rem;
+  height: 441px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
-.card * {
+.card__icon, .card__title, .card__text {
   margin-bottom: 2rem;
 }
 
@@ -93,6 +125,13 @@ section {
 @media screen and (min-width: 650px) {
   .card {
     height: 30rem;
+    border-radius: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .card {
+    margin-bottom: 0;
   }
 }
 /*# sourceMappingURL=main.css.map */

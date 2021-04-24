@@ -20,19 +20,19 @@ let longTimer = localStorage.getItem("longTimer");
 if (pomodoroTimer == null) {
   localStorage.setItem("pomodoroTimer", 25);
   pomodoro = 25 * 60;
-  updateTimer(pomodoro);
+  updateTimer();
 }
 
 if (shortTimer == null) {
   localStorage.setItem("shortTimer", 5);
   shortBreak = 5 * 60;
-  updateTimer(shortBreak);
+  updateTimer();
 }
 
 if (longTimer == null) {
   localStorage.setItem("longTimer", 15);
   longBreak = 15 * 60;
-  updateTimer(longBreak);
+  updateTimer();
 }
 
 timerOptions.forEach((element) => {
@@ -41,6 +41,7 @@ timerOptions.forEach((element) => {
     timerName = e.path[1].innerText;
     if (timerName == "pomodoro") {
       pomodoro = pomodoroTimer * 60;
+      console.log(pomodoro);
       updateTimer(pomodoro);
     } else if (timerName == "short break") {
       shortBreak = shortTimer * 60;
@@ -60,15 +61,16 @@ timerScreen.addEventListener("click", () => {
   }
 });
 
-function updateTimer(time) {
-  let minutes = Math.floor(time / 60);
-  let seconds = time % 60;
+// !Fix this function
+function updateTimer(value) {
+  let minutes = Math.floor(value / 60);
+  let seconds = value % 60;
   minutes = pad(minutes);
   seconds = pad(seconds);
 
   timer.innerHTML = `${minutes}:${seconds}`;
-  time--;
-  if (time < 0) {
+  value--;
+  if (value < 0) {
     clearInterval(inverval);
     timerState.innerHTML = "start";
   }

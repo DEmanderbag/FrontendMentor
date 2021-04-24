@@ -32,7 +32,7 @@ ctaBtn.addEventListener("click", () => {
 
 function refreshAll() {
   shortTimer = localStorage.getItem("shortTimer");
-  shortBreak = shortTimer * 60;
+  shortBreak = parseInt(shortTimer * 60);
   updateTimer(shortBreak);
 
   longTimer = localStorage.getItem("longTimer");
