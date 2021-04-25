@@ -57,7 +57,7 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-image: url(../../assets/images/mobile/image-hero.jpg);
+  background-image: url(../assets/images/mobile/image-hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
