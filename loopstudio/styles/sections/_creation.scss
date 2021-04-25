@@ -1,0 +1,14 @@
+.creations {
+  padding: 0 $m;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    margin-bottom: $lg;
+  }
+}
+
+@import "../component/card";
+@import "../component/button";

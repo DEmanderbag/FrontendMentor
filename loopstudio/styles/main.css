@@ -1,0 +1,242 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+}
+
+body,
+button {
+  font-family: "Alata", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+header {
+  padding: 2rem 1rem;
+  min-height: 100vh;
+  margin-bottom: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-image: url(../../assets/images/mobile/image-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header h1 {
+  margin: auto 0;
+  font-size: 2.8rem;
+  border: 3px solid white;
+  overflow: hidden;
+  padding: 1rem;
+  max-width: 22rem;
+  color: white;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu {
+  cursor: pointer;
+}
+
+.menu__list {
+  display: none;
+}
+
+.menu__list a {
+  color: white;
+}
+
+.is-open a {
+  text-transform: uppercase;
+}
+
+.about {
+  padding: 0 1rem;
+  margin-bottom: 3rem;
+}
+
+.about__image {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.about__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.about__text {
+  text-align: center;
+}
+
+.about__text-title {
+  margin-bottom: 1rem;
+}
+
+.about__text p {
+  width: 90%;
+  margin: 0 auto;
+  opacity: 49.94%;
+}
+
+.creations {
+  padding: 0 1rem;
+  margin-bottom: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.creations__title {
+  margin-bottom: 2rem;
+}
+
+.card {
+  position: relative;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  max-width: 25rem;
+  margin-bottom: 2rem;
+}
+
+.card__title {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  color: white;
+  width: 50%;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.btn {
+  border: 1px solid black;
+  background-color: transparent;
+  text-transform: uppercase;
+  padding: 0.5rem 0;
+}
+
+.btn a {
+  padding: 0.5rem 2rem;
+  color: black;
+  letter-spacing: 3px;
+}
+
+.footer {
+  padding: 0 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: black;
+}
+
+.footer .logo {
+  margin: 2rem 0;
+}
+
+.footer__menu {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.footer__menu li {
+  margin-bottom: 1rem;
+}
+
+.footer__menu a {
+  color: white;
+}
+
+.footer .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+}
+
+.footer .social img:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.copyright {
+  color: white;
+  opacity: 50%;
+  margin-bottom: 2rem;
+}
+/*# sourceMappingURL=main.css.map */

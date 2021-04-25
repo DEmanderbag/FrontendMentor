@@ -1,0 +1,12 @@
+.btn {
+  border: 1px solid $dark;
+  background-color: transparent;
+  text-transform: uppercase;
+  padding: $sm 0;
+
+  a {
+    padding: $sm $lg;
+    color: $dark;
+    letter-spacing: 3px;
+  }
+}

@@ -1,0 +1,43 @@
+header {
+  padding: $lg $m;
+  min-height: 100vh;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  background-image: url(../../assets/images/mobile/image-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  h1 {
+    margin: auto 0;
+    font-size: 2.8rem;
+    border: 3px solid $light;
+    overflow: hidden;
+    padding: $m;
+    max-width: 22rem;
+    color: $light;
+  }
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu {
+  cursor: pointer;
+
+  &__list {
+    display: none;
+    a {
+      color: $light;
+    }
+  }
+}
+
+.is-open {
+  a {
+    text-transform: uppercase;
+  }
+}
