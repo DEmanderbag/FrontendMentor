@@ -28,12 +28,23 @@
       width: 100%;
       height: 100%;
       background-color: $primary;
-      opacity: 0.7;
+      opacity: 0.8;
     }
   }
 
   &--two {
     grid-column: 2 / -1;
     border-radius: $radius;
+  }
+}
+
+@media screen and (min-width: $tablet){
+  .gallery {
+    padding: 0 $large;
+
+    &__image {
+      height: 20rem;
+      border-radius: $radius;
+    }
   }
 }

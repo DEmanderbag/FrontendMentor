@@ -36,3 +36,40 @@ nav,
     }
   }
 }
+
+@media screen and (min-width: $tablet){
+  nav{
+    padding: $large;
+  }
+  .hero__text,
+  .hero__action {
+    padding: 0;
+    padding-left: $large;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr) 2rem;
+    justify-content: center;
+
+    &__group {
+      grid-column: 1 / 2;
+      grid-row: 1 / -1;
+      align-self: center;
+    }
+
+    &__text {
+      margin-bottom: $large;
+    }
+
+    &__action {
+      margin-bottom: 0;
+    }
+
+    &__image {
+      height: 26.5625rem;
+      grid-row: 1 / -1;
+    }
+  }
+}

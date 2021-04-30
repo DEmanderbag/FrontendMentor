@@ -3,16 +3,47 @@
 .specs {
   padding: $medium $medium-large;
 
-  h2 {
+  &__about-title {
     margin-bottom: $medium;
   }
 
-  p {
+  &__about-text {
     margin-bottom: $large;
   }
 
-  h2,
-  p {
+  &__about-title,
+  &__about-text {
     text-align: center;
+  }
+}
+
+@media screen and (min-width: $tablet){
+  .specs {
+    padding: $large;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $large;
+
+    &__about {
+      grid-column: 1 / -1;
+      display: flex;
+      align-items: center;
+      margin-bottom: $large;
+      
+      &-title,
+      &-text{
+        margin-bottom: 0;
+        text-align: left;
+      }
+
+      &-title {
+        max-width: 15rem;
+      }
+
+      &-text {
+        margin-left: $large;
+        max-width: 30rem;
+      }
+    }
   }
 }

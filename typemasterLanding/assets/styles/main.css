@@ -131,6 +131,47 @@ nav,
      object-fit: cover;
 }
 
+@media screen and (min-width: 40.625rem) {
+  nav {
+    padding: 2rem;
+  }
+  .hero__text,
+  .hero__action {
+    padding: 0;
+    padding-left: 2rem;
+  }
+  .hero {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (1fr)[2] 2rem;
+        grid-template-rows: repeat(2, 1fr) 2rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .hero__group {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .hero__text {
+    margin-bottom: 2rem;
+  }
+  .hero__action {
+    margin-bottom: 0;
+  }
+  .hero__image {
+    height: 26.5625rem;
+    grid-row: 1 / -1;
+  }
+}
+
 .gallery {
   display: -ms-grid;
   display: grid;
@@ -168,12 +209,22 @@ nav,
   width: 100%;
   height: 100%;
   background-color: #f16718;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .gallery__image--two {
   grid-column: 2 / -1;
   border-radius: 1.25rem;
+}
+
+@media screen and (min-width: 40.625rem) {
+  .gallery {
+    padding: 0 2rem;
+  }
+  .gallery__image {
+    height: 20rem;
+    border-radius: 1.25rem;
+  }
 }
 
 .card {
@@ -205,21 +256,65 @@ nav,
   margin-bottom: 1rem;
 }
 
+@media screen and (min-width: 40.625rem) {
+  .card {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-bottom: 2rem;
+  }
+  .card__icon, .card__title, .card__text {
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+}
+
 .specs {
   padding: 1rem 1.5rem;
 }
 
-.specs h2 {
+.specs__about-title {
   margin-bottom: 1rem;
 }
 
-.specs p {
+.specs__about-text {
   margin-bottom: 2rem;
 }
 
-.specs h2,
-.specs p {
+.specs__about-title, .specs__about-text {
   text-align: center;
+}
+
+@media screen and (min-width: 40.625rem) {
+  .specs {
+    padding: 2rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .specs__about {
+    grid-column: 1 / -1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 2rem;
+  }
+  .specs__about-title, .specs__about-text {
+    margin-bottom: 0;
+    text-align: left;
+  }
+  .specs__about-title {
+    max-width: 15rem;
+  }
+  .specs__about-text {
+    margin-left: 2rem;
+    max-width: 30rem;
+  }
 }
 
 footer {

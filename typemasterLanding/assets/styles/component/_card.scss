@@ -19,3 +19,17 @@
     margin-bottom: $medium;
   }
 }
+
+@media screen and (min-width: $tablet){
+  .card {
+    align-items: flex-start;
+    margin-bottom: $large;
+
+    &__icon,
+    &__title,
+    &__text {
+      text-align: left;
+      margin-bottom: $medium;
+    }
+  }
+}
