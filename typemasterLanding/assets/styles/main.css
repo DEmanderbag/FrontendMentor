@@ -1,0 +1,40 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+}
+
+html {
+  font-family: 'Barlow', sans-serif;
+}
+
+h1,
+h2 {
+  color: #162542;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+p {
+  color: #7b8bad;
+  font-weight: 500;
+}
+
+button {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,20 @@
+html {
+  font-family: 'Barlow', sans-serif;
+}
+
+h1,
+h2 {
+  color: $secondary;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+p {
+  color: $secondary-hover;
+  font-weight: 500;
+}
+
+button {
+  text-transform: uppercase;
+  font-weight: 600;
+}
