@@ -33,15 +33,57 @@ nav {
 
   &__list {
     display: none;
+    position: relative;
+    animation: menuOpen 0.5s cubic-bezier(0.465, 0.183, 0.153, 0.946) normal;
+    justify-content: center;
     a {
       color: $light;
     }
+
+    li:not(:last-child){
+      margin-bottom: $m;
+    }
+  }
+
+  &--close{
+    display: none;
   }
 }
 
 .is-open {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $dark;
+
   a {
     text-transform: uppercase;
+    font-size: 1.5rem;
+    padding-left: $m;
+  }
+}
+
+.menu-open{
+  display: block;
+  position: absolute;
+  content: "";
+  top: $lg;
+  right: $m;
+}
+
+
+@keyframes menuOpen {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 

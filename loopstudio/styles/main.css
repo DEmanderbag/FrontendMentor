@@ -93,14 +93,78 @@ nav {
 
 .menu__list {
   display: none;
+  position: relative;
+  -webkit-animation: menuOpen 0.5s cubic-bezier(0.465, 0.183, 0.153, 0.946) normal;
+          animation: menuOpen 0.5s cubic-bezier(0.465, 0.183, 0.153, 0.946) normal;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .menu__list a {
   color: white;
 }
 
+.menu__list li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.menu--close {
+  display: none;
+}
+
+.is-open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-items: center;
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
 .is-open a {
   text-transform: uppercase;
+  font-size: 1.5rem;
+  padding-left: 1rem;
+}
+
+.menu-open {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 2rem;
+  right: 1rem;
+}
+
+@-webkit-keyframes menuOpen {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes menuOpen {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 
 @media screen and (min-width: 40.625rem) {
