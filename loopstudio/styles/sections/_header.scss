@@ -46,9 +46,6 @@ nav {
 }
 
 @media screen and (min-width: $small) {
-  .header__group {
-    
-  }
   header{
     height: 34.375rem;
     background-image: url(../assets/images/desktop/image-hero.jpg);
@@ -59,8 +56,23 @@ nav {
       &__list {
         display: flex;
 
+        & li {
+          position: relative;
+        }
+
         :not(:last-child){
           margin-right: $lg;
+        }
+
+        & a:hover::after {
+          position: absolute;
+          content: "";
+          bottom: -0.5rem;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 2rem;
+          height: 2px;
+          background-color: $light;
         }
       }
     }

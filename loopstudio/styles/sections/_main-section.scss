@@ -28,4 +28,10 @@ footer {
     max-width: $section-size;
     margin: 0 auto;
   }
+
+    header,
+  .about,
+  .creations {
+    margin-bottom: 5rem;
+  }
 }

@@ -19,21 +19,34 @@ footer {
 
     li {
       margin-bottom: $m;
+      position: relative;
     }
 
     a {
       color: $light;
     }
-  }
 
-  .social {
-    display: flex;
-    align-items: center;
-    margin-bottom: $m;
-
-    img:not(:last-child) {
-      margin-right: $m;
+    a:hover::after {
+      position: absolute;
+      content: "";
+      bottom: -0.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2rem;
+      height: 2px;
+      background-color: $light;
     }
+  }
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  margin-bottom: $m;
+  cursor: pointer;
+
+  img:not(:last-child) {
+    margin-right: $m;
   }
 }
 
@@ -63,6 +76,7 @@ footer {
     .footer__menu {
       grid-area: menu;
       display: flex;
+      margin-bottom: 0;
 
       li {
         margin-bottom: 0;

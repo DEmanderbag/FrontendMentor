@@ -4,10 +4,20 @@
   text-transform: uppercase;
   padding: $sm 0;
   max-width: 15rem;
+  overflow: hidden;
 
   a {
     padding: $lg;
     color: $dark;
     letter-spacing: 3px;
+      will-change: color, background-color;
+    transition: 0.1s ease-in color, 0.1s ease-in background-color;
+  }
+}
+
+.btn:hover {
+  a {
+    background-color: $dark;
+    color: $light;
   }
 }
