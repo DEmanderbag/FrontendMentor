@@ -1,0 +1,18 @@
+@import "../component/card";
+
+.specs {
+  padding: $medium $medium-large;
+
+  h2 {
+    margin-bottom: $medium;
+  }
+
+  p {
+    margin-bottom: $large;
+  }
+
+  h2,
+  p {
+    text-align: center;
+  }
+}

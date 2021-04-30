@@ -1,0 +1,21 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: $large;
+
+  &__icon {
+    padding: $medium-large;
+    background-color: $primary;
+    border-radius: $border-radius;
+    margin-bottom: $large;
+  }
+
+  &__icon,
+  &__title,
+  &__text {
+    text-align: center;
+    margin-bottom: $medium;
+  }
+}

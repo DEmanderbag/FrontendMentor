@@ -3,14 +3,29 @@ html {
 }
 
 h1,
-h2 {
-  color: $secondary;
+h2,
+h3 {
+  color: $secondary-hover;
   text-transform: uppercase;
   font-weight: 900;
 }
 
+h1 {
+  font-size: $x-large;
+  margin-bottom: $medium;
+}
+
+h2 {
+  font-size: $large;
+}
+
+h3 {
+  font-size: $medium-large;
+}
+
 p {
-  color: $secondary-hover;
+  color: $neutral;
+  line-height: 1.5;
   font-weight: 500;
 }
 

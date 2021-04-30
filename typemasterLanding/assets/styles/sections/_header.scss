@@ -1,0 +1,38 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav,
+.hero__text,
+.hero__action {
+  padding: $medium $medium-large;
+}
+
+.hero{
+  &__action {
+    display: flex;
+    align-items: center;
+    margin-bottom: $large;
+
+    p {
+      margin-left: $medium;
+      font-weight: 600;
+    }
+  }
+
+  &__image {
+    margin-left: $medium-large;
+    overflow: hidden;
+    border-top-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+    margin-bottom: $medium-large;
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

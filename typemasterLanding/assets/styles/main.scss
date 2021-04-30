@@ -1,3 +1,13 @@
 @import "reset";
+@import "variables";
 @import "colors";
-@import "typography"
+@import "typography";
+
+// components
+@import "component/button";
+
+//sections
+@import "sections/header";
+@import "sections/gallery";
+@import "sections/specs";
+@import "sections/footer";
