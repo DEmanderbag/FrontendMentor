@@ -1,7 +1,8 @@
 # Frontend Mentor - Loopstudios landing page
 
-![Design preview for the Loopstudios landing page coding challenge](./design/desktop-preview.jpg)
+Live version can found [here](https://stoic-meninsky-7d6f57.netlify.app/loopstudio/)
 
+![Design preview for the Loopstudios landing page coding challenge](assets/design/desktop-preview.jpg)
 ## Welcome! 👋
 
 Thanks for checking out this front-end coding challenge.
