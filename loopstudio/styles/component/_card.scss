@@ -1,7 +1,7 @@
 .card {
   position: relative;
   height: max-content;
-  max-width: 25rem;
+  max-width: $content-size;
   margin-bottom: $lg;
 
   &__title {

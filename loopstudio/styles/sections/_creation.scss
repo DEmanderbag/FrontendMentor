@@ -1,5 +1,7 @@
+@import "../component/card";
+@import "../component/button";
+
 .creations {
-  padding: 0 $m;
   margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
@@ -8,7 +10,24 @@
   &__title {
     margin-bottom: $lg;
   }
-}
 
-@import "../component/card";
-@import "../component/button";
+  @media screen and (min-width: $small) {
+    & {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    &__title,
+    .btn {
+      grid-column: 1 / -1;
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (min-width: $large) {
+    & {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

@@ -3,9 +3,10 @@
   background-color: transparent;
   text-transform: uppercase;
   padding: $sm 0;
+  max-width: 15rem;
 
   a {
-    padding: $sm $lg;
+    padding: $lg;
     color: $dark;
     letter-spacing: 3px;
   }

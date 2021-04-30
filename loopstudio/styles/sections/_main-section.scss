@@ -1,0 +1,22 @@
+@import "header";
+@import "about";
+@import "creation";
+@import "footer";
+
+header,
+.about,
+.creations, 
+footer {
+  padding: $lg $m;
+}
+
+
+@media screen and (min-width: $large){
+  header,
+  .about,
+  .creations, 
+  footer {
+    max-width: $section-size;
+    margin: 0 auto;
+  }
+}

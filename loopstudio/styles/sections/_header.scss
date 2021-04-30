@@ -1,6 +1,5 @@
 header {
-  padding: $lg $m;
-  min-height: 100vh;
+  height: 100vh;
   margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
@@ -39,5 +38,29 @@ nav {
 .is-open {
   a {
     text-transform: uppercase;
+  }
+}
+
+@media screen and (min-width: $small) {
+  header{
+    height: 34.375rem;
+
+    .menu {
+      display: none;
+
+      &__list {
+        display: flex;
+
+        :not(:last-child){
+          margin-right: $lg;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $medium) {
+  header{
+    height: 40.625rem;
   }
 }

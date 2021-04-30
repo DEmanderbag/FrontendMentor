@@ -1,9 +1,11 @@
+footer {
+  background-color: $dark;
+}
+
 .footer {
-  padding: 0 $m;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: $dark;
 
   .logo {
     margin: $lg 0;
@@ -37,4 +39,57 @@
   color: $light;
   opacity: 50%;
   margin-bottom: $lg;
+}
+
+
+@media screen and (min-width: $medium) {
+  .footer {
+    display: grid;
+    gap: 2rem;
+    align-items: end;
+    padding: $lg;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "logo social"
+    "menu copy";
+
+    .logo{
+      grid-area: logo;
+    }
+
+    &__menu {
+      grid-area: menu;
+      display: flex;
+
+      li {
+        margin-bottom: 0;
+      }
+      
+      li:not(:last-child) {
+        margin-right: $m;      
+      }
+    }
+
+    .social{
+      grid-area: social;
+      display: flex;
+    }
+
+    .copyright {
+      grid-area: copy;
+    }
+
+    .social,
+    .copyright {
+      justify-self: end;
+    }
+
+    .logo,
+    &__menu,
+    .social,
+    .copyright {
+      margin: 0;
+    }
+  }
 }
