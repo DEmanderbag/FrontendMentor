@@ -1,8 +1,12 @@
+.header__group{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 header {
   height: 100vh;
   margin-bottom: 3rem;
-  display: flex;
-  flex-direction: column;
   background-image: url(../assets/images/mobile/image-hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -42,8 +46,12 @@ nav {
 }
 
 @media screen and (min-width: $small) {
+  .header__group {
+    
+  }
   header{
     height: 34.375rem;
+    background-image: url(../assets/images/desktop/image-hero.jpg);
 
     .menu {
       display: none;
@@ -55,6 +63,11 @@ nav {
           margin-right: $lg;
         }
       }
+    }
+
+    h1 {
+      font-size: 4rem;
+      max-width: 35rem;
     }
   }
 }

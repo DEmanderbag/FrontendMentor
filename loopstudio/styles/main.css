@@ -46,9 +46,8 @@ h3 {
   font-size: 1.8rem;
 }
 
-header {
-  height: 100vh;
-  margin-bottom: 3rem;
+.header__group {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -56,6 +55,11 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+header {
+  height: 100vh;
+  margin-bottom: 3rem;
   background-image: url(../assets/images/mobile/image-hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -102,6 +106,7 @@ nav {
 @media screen and (min-width: 40.625rem) {
   header {
     height: 34.375rem;
+    background-image: url(../assets/images/desktop/image-hero.jpg);
   }
   header .menu {
     display: none;
@@ -113,6 +118,10 @@ nav {
   }
   header .menu__list :not(:last-child) {
     margin-right: 2rem;
+  }
+  header h1 {
+    font-size: 4rem;
+    max-width: 35rem;
   }
 }
 
@@ -168,7 +177,7 @@ nav {
   }
   .about__image {
     max-width: 100%;
-    max-height: 100%;
+    margin-bottom: 0;
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
     grid-column: 1 / 4;
@@ -192,6 +201,7 @@ nav {
   height: max-content;
   max-width: 35rem;
   margin-bottom: 2rem;
+  overflow: hidden;
 }
 
 .card__title {
@@ -207,6 +217,21 @@ nav {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media screen and (min-width: 50rem) {
+  .card {
+    height: 35rem;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 67.5rem) {
+  .card {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
 }
 
 .btn {
@@ -267,7 +292,7 @@ footer {
   background-color: black;
 }
 
-.footer {
+.footer__group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -318,7 +343,7 @@ footer {
 }
 
 @media screen and (min-width: 50rem) {
-  .footer {
+  .footer__group {
     display: -ms-grid;
     display: grid;
     gap: 2rem;
@@ -332,12 +357,12 @@ footer {
         grid-template-rows: repeat(2, 1fr);
         grid-template-areas: "logo social" "menu copy";
   }
-  .footer .logo {
+  .footer__group .logo {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: logo;
   }
-  .footer__menu {
+  .footer__group .footer__menu {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
     grid-area: menu;
@@ -345,13 +370,13 @@ footer {
     display: -ms-flexbox;
     display: flex;
   }
-  .footer__menu li {
+  .footer__group .footer__menu li {
     margin-bottom: 0;
   }
-  .footer__menu li:not(:last-child) {
+  .footer__group .footer__menu li:not(:last-child) {
     margin-right: 1rem;
   }
-  .footer .social {
+  .footer__group .social {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
     grid-area: social;
@@ -359,19 +384,19 @@ footer {
     display: -ms-flexbox;
     display: flex;
   }
-  .footer .copyright {
+  .footer__group .copyright {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
     grid-area: copy;
   }
-  .footer .social,
-  .footer .copyright {
+  .footer__group .social,
+  .footer__group .copyright {
     -ms-grid-column-align: end;
         justify-self: end;
   }
-  .footer .logo, .footer__menu,
-  .footer .social,
-  .footer .copyright {
+  .footer__group .logo, .footer__group__menu,
+  .footer__group .social,
+  .footer__group .copyright {
     margin: 0;
   }
 }
@@ -383,11 +408,20 @@ footer {
   padding: 2rem 1rem;
 }
 
-@media screen and (min-width: 67.5rem) {
-  header,
+@media screen and (min-width: 50rem) {
+  .header__group,
   .about,
   .creations,
   footer {
+    padding: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 67.5rem) {
+  .header__group,
+  .about,
+  .creations,
+  .footer__group {
     max-width: 75rem;
     margin: 0 auto;
   }

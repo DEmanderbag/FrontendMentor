@@ -11,11 +11,20 @@ footer {
 }
 
 
-@media screen and (min-width: $large){
-  header,
+@media screen and (min-width: $medium) {
+  .header__group,
   .about,
-  .creations, 
+  .creations,
   footer {
+    padding: $xl;
+  }
+}
+
+@media screen and (min-width: $large){
+  .header__group,
+  .about,
+  .creations,
+  .footer__group{
     max-width: $section-size;
     margin: 0 auto;
   }

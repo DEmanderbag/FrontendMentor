@@ -2,11 +2,13 @@ footer {
   background-color: $dark;
 }
 
-.footer {
+.footer__group{
   display: flex;
   flex-direction: column;
   align-items: center;
+}
 
+.footer {
   .logo {
     margin: $lg 0;
   }
@@ -43,7 +45,7 @@ footer {
 
 
 @media screen and (min-width: $medium) {
-  .footer {
+  .footer__group {
     display: grid;
     gap: 2rem;
     align-items: end;
@@ -58,7 +60,7 @@ footer {
       grid-area: logo;
     }
 
-    &__menu {
+    .footer__menu {
       grid-area: menu;
       display: flex;
 
