@@ -14,3 +14,10 @@ $radius: 1.25rem;
 
 // breakpoints
 $tablet: 40.625rem;
+$desktop: 67.5rem;
+$desktop-max: 75rem;
+
+@mixin max-size{
+  max-width: $desktop-max;
+  margin: 0 auto;
+}

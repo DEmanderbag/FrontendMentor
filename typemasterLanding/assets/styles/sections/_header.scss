@@ -35,6 +35,10 @@ nav,
       object-fit: cover;
     }
   }
+
+  &__decoration {
+    display: none
+  };
 }
 
 @media screen and (min-width: $tablet){
@@ -71,5 +75,39 @@ nav,
       height: 26.5625rem;
       grid-row: 1 / -1;
     }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .hero{ 
+    grid-template-columns: repeat(2, 1fr) 8rem;
+    gap: $medium-large;
+
+    &__image {
+      border-radius: $radius;
+    }
+    &__decoration {
+      border-top-left-radius: $radius;
+      border-bottom-left-radius: $radius;
+      display: block;
+      grid-column: 3 / 4;
+      grid-row: 1;
+      background-color: $secondary;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-max) {
+  header {
+    @include max-size;
+  }
+
+  nav {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .hero__decoration {
+    border-radius: $radius;
   }
 }

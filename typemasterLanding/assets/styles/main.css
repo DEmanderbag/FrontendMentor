@@ -131,6 +131,10 @@ nav,
      object-fit: cover;
 }
 
+.hero__decoration {
+  display: none;
+}
+
 @media screen and (min-width: 40.625rem) {
   nav {
     padding: 2rem;
@@ -169,6 +173,42 @@ nav,
   .hero__image {
     height: 26.5625rem;
     grid-row: 1 / -1;
+  }
+}
+
+@media screen and (min-width: 67.5rem) {
+  .hero {
+    -ms-grid-columns: (1fr)[2] 8rem;
+        grid-template-columns: repeat(2, 1fr) 8rem;
+    gap: 1.5rem;
+  }
+  .hero__image {
+    border-radius: 1.25rem;
+  }
+  .hero__decoration {
+    border-top-left-radius: 1.25rem;
+    border-bottom-left-radius: 1.25rem;
+    display: block;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3 / 4;
+    -ms-grid-row: 1;
+    grid-row: 1;
+    background-color: #e8eff2;
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  header {
+    max-width: 75rem;
+    margin: 0 auto;
+  }
+  nav {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .hero__decoration {
+    border-radius: 1.25rem;
   }
 }
 
@@ -223,6 +263,55 @@ nav,
   }
   .gallery__image {
     height: 20rem;
+    border-radius: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 67.5rem) {
+  .gallery {
+    padding: 0;
+    -ms-grid-columns: 8rem 1fr 2fr;
+        grid-template-columns: 8rem 1fr 2fr;
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+  }
+  .gallery__image {
+    height: 20rem;
+    border-radius: 1.25rem;
+  }
+  .gallery__image--one {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
+  }
+  .gallery__image--two {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-column: 3 / 5;
+    grid-row: 1 / -1;
+  }
+  .gallery .decoration {
+    display: block;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+    background-color: #e8eff2;
+    border-bottom-right-radius: 1.25rem;
+    border-top-right-radius: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  .gallery {
+    max-width: 75rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+  .gallery .decoration {
     border-radius: 1.25rem;
   }
 }
@@ -314,6 +403,13 @@ nav,
   .specs__about-text {
     margin-left: 2rem;
     max-width: 30rem;
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  .specs {
+    max-width: 75rem;
+    margin: 0 auto;
   }
 }
 

@@ -47,3 +47,9 @@
     }
   }
 }
+
+@media screen and (min-width: $desktop-max){
+  .specs {
+    @include max-size;
+  }
+}
