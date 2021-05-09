@@ -43,7 +43,7 @@ if (longTimer == null) {
 
 // updateDuration
 timerOptions.forEach((element) => {
-  element.addEventListener("click", (e) => {
+  element.addEventListener("pointerdown", (e) => {
     pauseTimer();
     timerName = e.path[0].innerText;
     element.classList.remove("btn--active")

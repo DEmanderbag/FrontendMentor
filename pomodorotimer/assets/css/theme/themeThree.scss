@@ -1,7 +1,9 @@
 $primary: #d881f8;
 
-input[type="radio"]:checked + a {
-  background-color: $primary;
+.group__options {
+  .btn--active {
+    background-color: $primary;
+  }
 }
 
 .app__timer {

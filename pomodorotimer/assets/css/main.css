@@ -237,7 +237,6 @@ li {
 
 .app__options .group__options .btn--active {
   color: #1e213f;
-  background-color: #f87070;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;

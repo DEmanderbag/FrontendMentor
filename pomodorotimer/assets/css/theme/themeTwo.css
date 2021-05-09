@@ -1,4 +1,4 @@
-input[type="radio"]:checked + a {
+.group__options .btn--active {
   background-color: #70f3f8;
 }
 
