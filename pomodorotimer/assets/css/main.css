@@ -133,6 +133,11 @@ table {
   border-spacing: 0;
 }
 
+button {
+  border: none;
+  background-color: transparent;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -198,10 +203,10 @@ li {
   font-size: 1.2rem;
   font-weight: bold;
   text-transform: lowercase;
+  padding: 0.5rem;
 }
 
-.app__options ul {
-  height: 5.5rem;
+.app__options .group__options {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -212,16 +217,13 @@ li {
   margin: 0;
 }
 
-.app__options ul li {
+.app__options .group__options button {
+  cursor: pointer;
   width: 10.6rem;
   border-radius: 26.5px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-}
-
-.app__options ul a {
-  pointer-events: none;
   display: block;
   color: rgba(215, 224, 255, 0.4);
   text-decoration: none;
@@ -230,14 +232,12 @@ li {
   padding: 1.5rem 0;
   margin: 0.5rem;
   border-radius: 26.5px;
+  font-weight: bold;
 }
 
-.app__options ul input[type="radio"] {
-  display: none;
-}
-
-.app__options ul input[type="radio"]:checked + a {
+.app__options .group__options .btn--active {
   color: #1e213f;
+  background-color: #f87070;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -246,14 +246,6 @@ li {
 @media screen and (min-width: 650px) {
   .app__options {
     width: 40rem;
-  }
-  .app__options ul {
-    width: 100%;
-  }
-  .app__options li {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
   }
 }
 
@@ -294,6 +286,7 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  cursor: pointer;
   border-radius: 50%;
   width: 24rem;
   height: 24rem;
@@ -457,6 +450,7 @@ li {
 .menu__time .pomodoro input,
 .menu__time .short__break input,
 .menu__time .long__break input {
+  font-size: 1.6rem;
   padding: 1.5rem;
   background-color: #eff1fa;
   border: none;
@@ -476,6 +470,18 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.settings__group .font--one {
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+.settings__group .font--two {
+  font-family: 'Roboto Slab', serif;
+}
+
+.settings__group .font--three {
+  font-family: 'Space Mono', monospace;
 }
 
 .btn {

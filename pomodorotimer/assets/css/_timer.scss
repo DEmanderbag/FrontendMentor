@@ -16,6 +16,7 @@
 .app__timer {
   @include flexCenter();
   flex-direction: column;
+  cursor: pointer;
   border-radius: 50%;
   width: 24rem;
   height: 24rem;

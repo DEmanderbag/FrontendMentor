@@ -22,23 +22,11 @@
       <img src="assets/icons/logo.svg" alt="Pomodoro app icon with a text of pomodoro">
     </div>
     <nav class="app__options">
-      <ul>
-        <li>
-          <label>
-            <input type="radio" name="menu" checked><a href="#">pomodoro</a>
-          </label>
-        </li>
-        <li>
-          <label>
-            <input type="radio" name="menu"><a href="#">short break</a>
-          </label>
-        </li>
-        <li>
-          <label>
-            <input type="radio" name="menu"><a href="#">long break</a>
-          </label>
-        </li>
-      </ul>
+      <div class="group__options">
+        <button class="btn--active">pomodoro</button>
+        <button>short break</button>
+        <button>long break</button>
+      </div>
     </nav>
     <div class="app__screen">
       <div class="app__container">
@@ -80,9 +68,9 @@
         <div class="menu__font">
           <h3>Font</h3>
           <div class="settings__group">
-            <button class="btn btn--active" data-font="Kumbh">Aa</button>
-            <button class="btn" data-font="Roboto">Aa</button>
-            <button class="btn" data-font="Space">Aa</button>
+            <button class="btn btn--active font--one" data-font="Kumbh">Aa</button>
+            <button class="btn font--two" data-font="Roboto">Aa</button>
+            <button class="btn font--three" data-font="Space">Aa</button>
           </div>
         </div>
         <div class="menu__color">

@@ -96,6 +96,7 @@
     margin-bottom: $large;
 
     input {
+      font-size: 1.6rem;
       padding: 1.5rem;
       background-color: $input;
       border: none;
@@ -109,6 +110,20 @@
 
 .settings__group {
   @include flexCenter();
+
+  .font--one{
+    font-family: 'Kumbh Sans', sans-serif;
+  }
+
+  .font--two{
+    font-family: 'Roboto Slab', serif;
+  }
+
+  .font--three{
+    font-family: 'Space Mono', monospace;
+  }
+
+  
 }
 
 .btn {

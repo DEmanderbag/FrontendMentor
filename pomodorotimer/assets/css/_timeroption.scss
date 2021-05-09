@@ -6,9 +6,9 @@
   font-size: 1.2rem;
   font-weight: bold;
   text-transform: lowercase;
+  padding: $small;
 
-  ul {
-    height: 5.5rem;
+  .group__options {
     display: flex;
     text-align: center;
     background-color: $app;
@@ -16,14 +16,11 @@
     border-radius: 31.5px;
     margin: 0;
 
-    li {
+    button{
+      cursor: pointer;
       width: 10.6rem;
       border-radius: 26.5px;
       align-self: center;
-    }
-
-    a {
-      pointer-events: none;
       display: block;
       color: $text40;
       text-decoration: none;
@@ -31,14 +28,12 @@
       padding: $large 0;
       margin: $small;
       border-radius: 26.5px;
+      font-weight: bold;
     }
 
-    input[type="radio"] {
-      display: none;
-    }
-
-    input[type="radio"]:checked + a {
+    .btn--active {
       color: $textDark;
+      background-color: $primary;
       align-self: center;
     }
   }
@@ -47,13 +42,5 @@
 @media screen and (min-width: 650px) {
   .app__options {
     width: 40rem;
-
-    ul {
-      width: 100%;
-    }
-
-    li {
-      flex: 1;
-    }
   }
 }

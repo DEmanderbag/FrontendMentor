@@ -1,5 +1,6 @@
 // Timer options
-const timerOptions = document.querySelectorAll(".app__options input");
+const timerOptions = document.querySelectorAll(".app__options button");
+let groupOptions = document.querySelector(".group__options").childNodes;
 let timerName;
 
 // Timer time
@@ -19,12 +20,6 @@ let isRunning = false;
 let pomodoroTimer = localStorage.getItem("pomodoroTimer");
 let shortTimer = localStorage.getItem("shortTimer");
 let longTimer = localStorage.getItem("longTimer");
-
-// Set pomodoro timer when the app loads
-// if(pomodoroTimer !== null){
-//   time = pomodoro * 60;
-//   updateTimer();
-// }
 
 if (pomodoroTimer == null) {
   localStorage.setItem("pomodoroTimer", 25);
@@ -50,16 +45,23 @@ if (longTimer == null) {
 timerOptions.forEach((element) => {
   element.addEventListener("click", (e) => {
     pauseTimer();
-    timerName = e.path[1].innerText;
+    timerName = e.path[0].innerText;
+    element.classList.remove("btn--active")
     if (timerName == "pomodoro") {
       time = pomodoro;
+      removeBtnClass (3, 5)
+      element.classList.add("btn--active");
       updateTimer();
     } else if (timerName == "short break") {
       time = shortBreak;
+      removeBtnClass (1, 5)
+      element.classList.add("btn--active");
       updateTimer();
     } else {
       time = longBreak;
       updateTimer();
+      removeBtnClass (1, 3)
+      element.classList.add("btn--active");
     }
   });
 });
@@ -103,4 +105,9 @@ function pauseTimer() {
   isRunning = false;
   timerState.innerHTML = "start";
   inverval = 0;
+}
+
+function removeBtnClass (n1, n2) {
+  groupOptions[n1].classList.remove("btn--active");
+  groupOptions[n2].classList.remove("btn--active");
 }
