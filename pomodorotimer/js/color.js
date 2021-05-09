@@ -23,12 +23,33 @@ function setTheme(theme) {
 
 // Color
 let colorSettings = document.querySelectorAll(".menu__color .btn");
+let currentButtonValue;
 let currentColor;
 
 colorSettings.forEach((e) => {
-  e.addEventListener("click", () => {
+  e.addEventListener("click", (element) => {
+    currentButtonValue = element.target.classList[1];
     removeClass(colorSettings, "color--active");
+    localStorage.setItem("currentButton", currentButtonValue)
     e.classList.add("color--active");
     currentColor = e.dataset.color;
   });
 });
+
+
+let currentButton = localStorage.getItem("currentButton");
+if(currentButton == null) {
+  localStorage.setItem("currentButton", "color--one");
+}
+
+function lookForButton() {
+  colorSettings.forEach(element => {
+    if(element.classList.contains(currentButton)){
+      element.classList.add("color--active");
+    } else {
+      element.classList.remove("color--active");
+    }
+  });
+}
+
+lookForButton();

@@ -491,6 +491,7 @@ li {
   cursor: pointer;
   font-weight: bold;
   color: #1e213f;
+  font-size: 1.6rem;
 }
 
 .btn:not(:last-child) {
