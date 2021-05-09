@@ -45,7 +45,8 @@ if (longTimer == null) {
 timerOptions.forEach((element) => {
   element.addEventListener("pointerdown", (e) => {
     pauseTimer();
-    timerName = e.path[0].innerText;
+    e.preventDefault();
+    timerName = e.target.innerText;
     element.classList.remove("btn--active")
     if (timerName == "pomodoro") {
       time = pomodoro;
