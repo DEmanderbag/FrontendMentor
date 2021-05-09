@@ -30,18 +30,16 @@ ctaBtn.addEventListener("click", () => {
   settings.classList.remove("is-open");
 });
 
+// Add to local storage
 function refreshAll() {
   shortTimer = localStorage.getItem("shortTimer");
-  shortBreak = parseInt(shortTimer * 60);
-  updateTimer(shortBreak);
+  shortBreak = shortTimer * 60;
 
   longTimer = localStorage.getItem("longTimer");
   longBreak = longTimer * 60;
-  updateTimer(longBreak);
 
   pomodoroTimer = localStorage.getItem("pomodoroTimer");
   pomodoro = pomodoroTimer * 60;
-  updateTimer(pomodoro);
 }
 
 refreshAll();

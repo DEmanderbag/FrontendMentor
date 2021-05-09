@@ -8,51 +8,63 @@ let timerState = document.querySelector(".app__timer p");
 const timerScreen = document.querySelector(".app__container");
 
 // Timer names and time in minutes
-let pomodoro, shortBreak, longBreak;
-let time;
+let pomodoro = 25;
+let shortBreak = 5;
+let longBreak = 15;
 let inverval = 0;
+let time;
 let isRunning = false;
 
+// Get or set items from local storage
 let pomodoroTimer = localStorage.getItem("pomodoroTimer");
 let shortTimer = localStorage.getItem("shortTimer");
 let longTimer = localStorage.getItem("longTimer");
 
+// Set pomodoro timer when the app loads
+// if(pomodoroTimer !== null){
+//   time = pomodoro * 60;
+//   updateTimer();
+// }
+
 if (pomodoroTimer == null) {
   localStorage.setItem("pomodoroTimer", 25);
   pomodoro = 25 * 60;
+  time = pomodoro;
+  updateTimer();
+} else if (pomodoroTimer !== null) {
+  time = pomodoroTimer * 60;
   updateTimer();
 }
 
 if (shortTimer == null) {
   localStorage.setItem("shortTimer", 5);
   shortBreak = 5 * 60;
-  updateTimer();
 }
 
 if (longTimer == null) {
   localStorage.setItem("longTimer", 15);
   longBreak = 15 * 60;
-  updateTimer();
 }
 
+// updateDuration
 timerOptions.forEach((element) => {
   element.addEventListener("click", (e) => {
     pauseTimer();
     timerName = e.path[1].innerText;
     if (timerName == "pomodoro") {
-      pomodoro = pomodoroTimer * 60;
-      console.log(pomodoro);
-      updateTimer(pomodoro);
+      time = pomodoro;
+      updateTimer();
     } else if (timerName == "short break") {
-      shortBreak = shortTimer * 60;
-      updateTimer(shortBreak);
+      time = shortBreak;
+      updateTimer();
     } else {
-      longBreak = longTimer * 60;
-      updateTimer(longBreak);
+      time = longBreak;
+      updateTimer();
     }
   });
 });
 
+// Start and stop timer on click
 timerScreen.addEventListener("click", () => {
   if (isRunning == true) {
     pauseTimer();
@@ -61,16 +73,15 @@ timerScreen.addEventListener("click", () => {
   }
 });
 
-// !Fix this function
-function updateTimer(value) {
-  let minutes = Math.floor(value / 60);
-  let seconds = value % 60;
+function updateTimer() {
+  let minutes = Math.floor(time / 60);
+  let seconds = time % 60;
   minutes = pad(minutes);
   seconds = pad(seconds);
 
   timer.innerHTML = `${minutes}:${seconds}`;
-  value--;
-  if (value < 0) {
+  time--;
+  if (time < 0) {
     clearInterval(inverval);
     timerState.innerHTML = "start";
   }
@@ -80,7 +91,7 @@ function pad(number) {
   return number < 10 ? "0" + number : number;
 }
 
-// Start / Stop timer
+// Start / Stop timer functions
 function startTimer() {
   timerState.innerHTML = "pause";
   inverval = setInterval(updateTimer, 1000);
