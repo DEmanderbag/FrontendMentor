@@ -362,7 +362,7 @@ input[type="text"]::placeholder {
 
   .countries {
     max-width: 95rem;
-    gap: 3rem;
+    gap: 2rem;
     margin: 0 auto;
     grid-template-columns: repeat(4, 1fr);
   }

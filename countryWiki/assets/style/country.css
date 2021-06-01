@@ -216,10 +216,6 @@ a {
     max-width: 95rem;
     margin: 0 auto;
   }
-
-  .container__left img {
-    object-fit: cover;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
