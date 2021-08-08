@@ -752,7 +752,6 @@ strong {
 
 
 .info {
-  /* border: 3px solid red; */
   width: 100%;
   text-align: center;
 }
@@ -760,8 +759,14 @@ strong {
 .info h1 {
   font-size: 2.625rem;
   margin-bottom: 2rem;
+  color: var(--title);
 }
 
 .info p {
   font-size: 1.5rem;
+  color: var(--title);
+}
+
+.info a {
+  color: var(--primary);
 }
