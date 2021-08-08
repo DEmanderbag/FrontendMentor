@@ -585,9 +585,9 @@ strong {
     place-items: center;
     max-width: 82rem;
     margin: 0 auto;
-    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(2, 1fr);
     gap: 5rem 2rem;
-    padding: 10rem 3.2rem 0 3.2rem;
+    padding: 10rem 3.2rem 0 3.2rem; */
   }
 
   .job {
@@ -717,7 +717,7 @@ strong {
 
   /* jobs styles */
   .jobs {
-    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: repeat(3, 1fr); */
     max-width: 120rem;
   }
 }
@@ -748,4 +748,20 @@ strong {
   .link--cta:hover {
     background-color: var(--primary-high);
   }
+}
+
+
+.info {
+  /* border: 3px solid red; */
+  width: 100%;
+  text-align: center;
+}
+
+.info h1 {
+  font-size: 2.625rem;
+  margin-bottom: 2rem;
+}
+
+.info p {
+  font-size: 1.5rem;
 }

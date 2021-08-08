@@ -16,11 +16,11 @@ const PROXY = "https://serene-basin-16003.herokuapp.com/";
 
 let data = [];
 
-async function requestData(page) {
-  const request = await fetch(`${PROXY}${API}?page=${page}`, { method: "GET" });
-  data = await request.json();
-  displayJob(data);
-}
+// async function requestData(page) {
+//   const request = await fetch(`${PROXY}${API}?page=${page}`, { method: "GET" });
+//   data = await request.json();
+//   displayJob(data);
+// }
 
 requestData(1);
 
