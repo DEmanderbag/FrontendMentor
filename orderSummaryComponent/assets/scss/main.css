@@ -1,0 +1,129 @@
+html {
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+h1 {
+  font-size: 1.375rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #e0e8ff;
+}
+
+button {
+  border: none;
+}
+
+img {
+  display: block;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.btn--change {
+  margin-left: auto;
+  background-color: transparent;
+  color: #1f2f56;
+}
+
+.btn--action {
+  color: white;
+  background-color: #3829e0;
+  -webkit-box-shadow: 0 4px 4px 0 rgba(56, 41, 224, 0.25);
+          box-shadow: 0 4px 4px 0 rgba(56, 41, 224, 0.25);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.btn--cancel {
+  background-color: transparent;
+}
+
+.card {
+  max-width: 20.4375rem;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  text-align: center;
+  background-color: white;
+  padding: 1rem;
+}
+
+.card__cover {
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.card__cover img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card__title {
+  margin-bottom: 1rem;
+}
+
+.card__text {
+  font-size: 0.9375rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #7280a7;
+}
+
+.card__plan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f5f7ff;
+  padding: 1rem;
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+}
+
+.card__plan--icon {
+  margin-right: 1rem;
+}
+
+.card__plan--group {
+  display: block;
+}
+
+.card__action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=main.css.map */

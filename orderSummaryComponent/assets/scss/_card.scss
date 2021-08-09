@@ -1,0 +1,47 @@
+.card {
+  max-width: 20.4375rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 4px 0 rgba($color: #000000, $alpha: .25);
+  text-align: center;
+  background-color: $white;
+  padding: 1rem;
+  &__cover {
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__title {
+    margin-bottom: 1rem;
+  }
+  &__text {
+    font-size: 0.9375rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: $desaturatedBlue;
+  }
+  &__plan {
+    display: flex;
+    align-items: center;
+    background-color: $veryPaleBlue;
+    padding: 1rem;
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+    &--icon {
+      margin-right: 1rem;
+    }
+    &--group {
+      display: block;
+    }
+  }
+  &__action {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

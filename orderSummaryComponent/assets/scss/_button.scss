@@ -1,0 +1,18 @@
+.btn {
+  cursor: pointer;
+  &--change {
+    margin-left: auto;
+    background-color: transparent;
+    color: $darkBlue;
+  }
+  &--action {
+    color: $white;
+    background-color: $brightBlue;
+    box-shadow: 0 4px 4px 0 rgba($color: $brightBlue, $alpha: .25);
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  &--cancel {
+    background-color: transparent;
+  }
+}
